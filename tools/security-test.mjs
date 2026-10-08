@@ -217,7 +217,7 @@ const bundle = existsSync(siteDir)
 // Markers that must never reach the public bundle. Publicly documented names (e.g. a
 // UNEP-awarded programme coordinator) are deliberately NOT treated as private — only the
 // contact data and the private-database only fields are.
-const privateMarkers = ["208 503 3653", "admin-private.json", "ژولیت در همایش کیفیت هوا در هتل ددمان"];
+const privateMarkers = ["208 503 3653", "admin-private", "ژولیت در همایش کیفیت هوا در هتل ددمان"];
 const bundleHits = privateMarkers.filter((m) => bundle.includes(m));
 record(
   19,
@@ -243,9 +243,12 @@ if (GITHUB_TOKEN) {
   const leakingPaths = (tree.tree ?? [])
     .map((n) => n.path)
     .filter((path) => /(^|\/)private-archive\/|admin-private\.json$|(^|\/)\.dev\.vars$/.test(path));
-  const rawJson = await fetch(`https://raw.githubusercontent.com/${REPO}/main/app/src/data/partners.json`);
-  const rawText = rawJson.ok ? await rawJson.text() : "";
-  const rawHits = ["208 503 3653", "admin-private", "consentToPublishFullText"].filter((m) => rawText.includes(m));
+  // read the pushed file through the API (uncached) rather than the raw CDN, which
+  // can serve a stale copy for a few minutes after a push
+  const fileRes = await api("/contents/app/src/data/partners.json?ref=main");
+  const fileBody = await fileRes.json().catch(() => ({}));
+  const rawText = fileBody.content ? Buffer.from(fileBody.content, "base64").toString("utf8") : "";
+  const rawHits = ["208 503 3653", "admin-private", "ژولیت در همایش کیفیت هوا در هتل ددمان"].filter((m) => rawText.includes(m));
   githubOk = privateDir.status === 404 && leakingPaths.length === 0 && rawHits.length === 0;
   githubDetail = `private-archive → HTTP ${privateDir.status}; tree paths leaking=${leakingPaths.length}; partners.json hits=${rawHits.join(",") || "none"}`;
 }

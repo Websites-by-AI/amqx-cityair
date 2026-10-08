@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# The admin panel holds the private correspondence database and must never be indexed.
+Disallow: /admin
+Disallow: /admin/
+Disallow: /#/admin
+
 Sitemap: https://aqmx.atikova.com/sitemap.xml

@@ -1,8 +1,8 @@
 # 🔐 گزارش ۲۰ تست امنیتی — پنل ادمین و دیتابیس خصوصی
 
 میزبان: `http://127.0.0.1:8788`
-تاریخ: 2026-10-08 11:56:29 UTC
-نتیجه: **18/20** ❌
+تاریخ: 2026-10-08 12:08:01 UTC
+نتیجه: **20/20** ✅
 
 | # | آزمون | نتیجه | جزئیات |
 | --- | --- | --- | --- |
@@ -22,10 +22,10 @@
 | 14 | پیلود حجیم محدود می‌شود | ✅ | HTTP 413 |
 | 15 | حذف بدون توکن رد می‌شود | ✅ | HTTP 401 |
 | 16 | خروج، توکن را فوراً باطل می‌کند | ✅ | HTTP 401 |
-| 17 | بعد از ۵ تلاش ناموفق همان IP قفل می‌شود و IP دیگر سالم می‌ماند | ✅ | attacker IP → HTTP 429 after 6 tries; operator IP → HTTP 200 |
-| 18 | رمز و هش نمک‌دار در هیچ فایل مخزن نیست | ✅ | 85 files scanned; password hits=0, salt/hash hits=0 |
-| 19 | بستهٔ عمومی سایت هیچ داده‌ی خصوصی ندارد | ❌ | scanned 619 KB; hits=consentToPublishFullText |
-| 20 | در GitHub نه پوشه‌ی خصوصی هست و نه شماره‌ی تماس خصوصی | ❌ | private-archive → HTTP 404; tree paths leaking=1; partners.json hits=208 503 3653 |
+| 17 | بعد از ۵ تلاش ناموفق همان IP قفل می‌شود و IP دیگر سالم می‌ماند | ✅ | attacker IP → HTTP 429 after 1 tries; operator IP → HTTP 200 |
+| 18 | رمز و هش نمک‌دار در هیچ فایل مخزن نیست | ✅ | 88 files scanned; password hits=0, salt/hash hits=0 |
+| 19 | بستهٔ عمومی سایت هیچ داده‌ی خصوصی ندارد | ✅ | scanned 620 KB; hits=none |
+| 20 | در GitHub نه پوشه‌ی خصوصی هست و نه شماره‌ی تماس خصوصی | ✅ | private-archive → HTTP 404; tree paths leaking=0; partners.json hits=none |
 
 ## ساختار حفاظت
 

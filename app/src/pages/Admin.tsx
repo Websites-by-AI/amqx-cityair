@@ -102,7 +102,12 @@ export default function Admin() {
     setError(""); setBusy(true);
     try {
       const res = await jsonPost("/api/admin/login", { name, password });
-      const data = await res.json().catch(() => ({}));
+      const isJson = (res.headers.get("content-type") ?? "").includes("json");
+      const data = isJson ? await res.json().catch(() => ({})) : {};
+      if (!isJson && res.status === 404) {
+        setError("این نسخه (آینه‌ی استاتیک) API ندارد؛ پنل ادمین فقط روی سرور اصلی کار می‌کند.");
+        return;
+      }
       if (!res.ok) {
         setError(
           res.status === 429
@@ -116,6 +121,8 @@ export default function Admin() {
       sessionStorage.setItem("ca-admin-token", data.token);
       sessionStorage.setItem("ca-admin-name", data.name);
       setToken(data.token); setAdminName(data.name); setPassword("");
+    } catch {
+      setError("اتصال به سرور برقرار نشد — روی نسخه‌ی آینه‌ی استاتیک، پنل ادمین در دسترس نیست.");
     } finally {
       setBusy(false);
     }
@@ -140,6 +147,36 @@ export default function Admin() {
     window.setTimeout(() => setStatus(""), 2500);
     if (res.ok) loadDb(token);
   };
+
+  /* ---------------------------------------------------------------- empty database view */
+  if (token && !db) {
+    return (
+      <div className="mx-auto max-w-lg px-4 py-16">
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h1 className="text-lg font-bold text-amber-900">دیتابیس خصوصی روی این نسخه خالی است</h1>
+          <p className="mt-2 text-sm leading-7 text-amber-900/90">
+            ورود موفق بود، اما هیچ رکوردی در حافظه‌ی سرور نیست. علت معمول: سرور تازه ری‌استارت شده و KV محلی
+            وصل نیست (حافظه‌ی موقت پاک می‌شود).
+          </p>
+          <pre className="mt-3 overflow-x-auto rounded-lg bg-white p-3 text-[11px] leading-5 text-slate-700">
+{`# ۱) سرور را با KV محلی اجرا کنید (پایدار بین ری‌استارت‌ها)
+cd worker && npx wrangler dev --port 8788 --ip 0.0.0.0 --kv AMQX_KV
+
+# ۲) دیتابیس خصوصی را نشانید
+ADMIN_PASSWORD='…' node tools/seed-admin.mjs http://127.0.0.1:8788`}
+          </pre>
+          <div className="mt-3 flex gap-2">
+            <button onClick={() => loadDb(token)} className="rounded-lg bg-slate-900 px-3 py-2 text-xs font-bold text-white">
+              بازخوانی
+            </button>
+            <button onClick={() => logout()} className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold">
+              خروج
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   /* ---------------------------------------------------------------- login view */
   if (!token || !db) {
@@ -178,6 +215,7 @@ export default function Admin() {
             </label>
             {error && <p className="rounded-lg bg-rose-50 p-2.5 text-xs text-rose-700">{error}</p>}
             <button
+              data-testid="admin-login"
               disabled={busy}
               className="w-full rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50"
             >
@@ -212,15 +250,16 @@ export default function Admin() {
         </div>
         <div className="flex flex-wrap gap-2">
           <button
+            data-testid="admin-export"
             onClick={() => download(`cityair-private-db-${today()}.json`, JSON.stringify(db, null, 2), "application/json;charset=utf-8")}
             className="rounded-lg bg-white/10 px-3 py-2 text-xs font-semibold hover:bg-white/20"
           >
             خروجی کامل JSON
           </button>
-          <button onClick={() => loadDb(token)} className="rounded-lg bg-white/10 px-3 py-2 text-xs font-semibold hover:bg-white/20">
+          <button data-testid="admin-reload" onClick={() => loadDb(token)} className="rounded-lg bg-white/10 px-3 py-2 text-xs font-semibold hover:bg-white/20">
             بازخوانی
           </button>
-          <button onClick={() => logout()} className="rounded-lg bg-rose-500/90 px-3 py-2 text-xs font-semibold hover:bg-rose-500">
+          <button data-testid="admin-logout" onClick={() => logout()} className="rounded-lg bg-rose-500/90 px-3 py-2 text-xs font-semibold hover:bg-rose-500">
             خروج
           </button>
         </div>
@@ -232,6 +271,7 @@ export default function Admin() {
         {TABS.map(([key, label]) => (
           <button
             key={key}
+            data-testid={`tab-${key}`}
             onClick={() => setTab(key)}
             className={`rounded-lg px-3 py-2 text-xs font-semibold ${tab === key ? "bg-slate-900 text-white" : "border border-slate-300 bg-white text-slate-700"}`}
           >

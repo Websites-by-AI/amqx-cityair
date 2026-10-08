@@ -21,3 +21,6 @@ Thumbs.db
 
 # private correspondence - never published (kept only in the workspace)
 private-archive/
+
+# preview PIN for local testing — never published
+private-archive/

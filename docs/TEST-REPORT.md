@@ -1,8 +1,8 @@
 # CityAir — browser test report
 
 Target : `http://127.0.0.1:8788`
-When   : 2026-10-08 11:47 UTC
-Result : **60/60 checks passed**
+When   : 2026-10-08 12:07 UTC
+Result : **68/68 checks passed**
 
 | # | Check | Result | Detail |
 | --- | --- | --- | --- |
@@ -60,12 +60,20 @@ Result : **60/60 checks passed**
 | 52 | Partners: letter copy-to-clipboard works | ✅ | copy button responded |
 | 53 | Partners: privacy + org strip present | ✅ | privacy list and organisation links |
 | 54 | Partners: header link reachable from the menu | ✅ | Partners in the navigation |
-| 55 | Unknown route shows 404 card | ✅ | 404 view |
-| 56 | Deep link /cities/bishkek resolves | ✅ | /cities/bishkek → hash=#/cities/bishkek h1='Bishkek, Kyrgyz Republic' |
-| 57 | Deep link /guidance works | ✅ | /guidance → hash=#/guidance |
-| 58 | Deep link /about works | ✅ | /about → hash=#/about |
-| 59 | Deep link /methodology works | ✅ | /methodology → hash=#/methodology |
-| 60 | Deep link /partners works | ✅ | /partners → hash=#/partners |
+| 55 | Admin: login screen loads and is marked noindex | ✅ | login card + robots meta |
+| 56 | Admin: wrong password is refused in the UI | ✅ | error message shown, no data loaded |
+| 57 | Admin: private database is not in the page source | ✅ | no private letter text before login |
+| 58 | Admin: correct credentials open the panel | ✅ | dashboard rendered |
+| 59 | Admin: full private letters are readable after login | ✅ | 4 letters with copy buttons |
+| 60 | Admin: contacts show the private-only fields | ✅ | private blocks + unverified flag |
+| 61 | Admin: important notes tab renders | ✅ | notes visible |
+| 62 | Admin: logout returns to the login screen | ✅ | session ended client-side |
+| 63 | Unknown route shows 404 card | ✅ | 404 view |
+| 64 | Deep link /cities/bishkek resolves | ✅ | /cities/bishkek → hash=#/cities/bishkek h1='Bishkek, Kyrgyz Republic' |
+| 65 | Deep link /guidance works | ✅ | /guidance → hash=#/guidance |
+| 66 | Deep link /about works | ✅ | /about → hash=#/about |
+| 67 | Deep link /methodology works | ✅ | /methodology → hash=#/methodology |
+| 68 | Deep link /partners works | ✅ | /partners → hash=#/partners |
 
 ## Console / page errors
 
@@ -93,6 +101,13 @@ Saved in `docs/screenshots`:
 - `16-partners-archive.png`
 - `17-partners-full.png`
 - `18-partners-live-hf.png`
+- `19-partners-coverage-live.png`
+- `20-admin-login.png`
+- `21-admin-letters.png`
+- `22-admin-contacts-private.png`
+- `23-admin-tasks.png`
+- `24-admin-log.png`
+- `25-admin-login-screen.png`
 - `menu-assistant.png`
 - `menu-cities.png`
 - `menu-guidance.png`

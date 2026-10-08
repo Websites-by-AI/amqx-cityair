@@ -47,6 +47,21 @@
 > **نکته‌ی مهم:** هیچ‌کدام از این‌ها «شراکت امضاشده» نیست. صفحه خودش اول از همه همین را می‌گوید
 > («status stated as it is — no partnership claimed») تا هیچ‌جا برداشت اشتباه ایجاد نشود.
 
+## ۱.۸) 🔐 پنل ادمین و دیتابیس خصوصی (جدید)
+
+| چه چیزی | لینک / مسیر |
+| --- | --- |
+| 🔐 پنل ادمین (روی سرور، نه روی آینه) | `http://127.0.0.1:8788/#/admin` — با نام `ann` و رمزی که در `private-archive/PREVIEW-PIN.txt` است |
+| 📖 راهنمای کامل فارسی | [https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/ADMIN.md](https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/ADMIN.md) |
+| 🛡️ گزارش ۲۰ تست امنیتی | [https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/SECURITY-REPORT.md](https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/SECURITY-REPORT.md) |
+| 🗄️ منبعِ دیتابیس (بیرون از گیت) | `private-archive/admin-private.json` — ۴ نامه، ۵ تماس، ۸ پیگیری، ۵ یادداشت |
+| 🚫 در GitHub نیست | `private-archive/` (تأییدشده: ۴۰۴) و `worker/.dev.vars` |
+
+**چه چیزی داخل پنل است:** متن کامل مکاتبات (شامل شماره‌ی واتساپ و متن فارسی یادداشت ژولیت)،
+اطلاعات تماس خصوصی هر شخص، ۸ تسک پیگیری با مهلت، ۵ یادداشت مهم (قاعده‌ی انتشار، هشدار «شریک متان» نبودن MoveGreen،
+خطر رمز کوتاه، وضعیت متن دریافتی، خط پایه‌ی XPRIZE) و گزارش دسترسی (هر ورود/خواندن/خروج با IP).
+در هر لحظه می‌توانید با دکمه‌ی «خروجی کامل JSON» از کل دیتابیس نسخه‌ی پشتیبان بگیرید.
+
 ## ۱.۷) سنجش درصدی پوشش بایگانی (جدید — ۸ اکتبر ۲۰۲۶)
 
 پاسخ به پرسش «چند درصد این مکاتبات تا حالا آرشیو شده و چه چیزی نشده؟»:

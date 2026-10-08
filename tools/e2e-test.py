@@ -22,6 +22,20 @@ OUT = Path(sys.argv[2] if len(sys.argv) > 2 else "docs")
 SHOTS = OUT / "screenshots"
 SHOTS.mkdir(parents=True, exist_ok=True)
 
+# The admin preview PIN lives OUTSIDE the repository (private-archive/PREVIEW-PIN.txt)
+# or in the ADMIN_PASSWORD environment variable — never hard-coded here.
+def load_admin_password() -> str:
+    env = os.environ.get("ADMIN_PASSWORD", "").strip()
+    if env:
+        return env
+    pin_file = Path(__file__).resolve().parent.parent / "private-archive" / "PREVIEW-PIN.txt"
+    if pin_file.exists():
+        return pin_file.read_text(encoding="utf-8").strip()
+    return ""
+
+
+ADMIN_PASSWORD = load_admin_password()
+
 ROUTES = [
     ("logo", "#/", "Home"),
     ("Guidance", "#/guidance", "Guidance"),
@@ -413,6 +427,74 @@ with sync_playwright() as p:
         page.locator("header nav a:has-text('Partners')").count() >= 1,
         "Partners in the navigation",
     )
+
+
+    # ------------------------------------------------------------------ admin panel
+    apage = ctx.new_page()
+    apage.goto(f"{BASE}/#/admin", wait_until="domcontentloaded")
+    apage.wait_for_timeout(1500)
+    record(
+        "Admin: login screen loads and is marked noindex",
+        apage.locator("text=پنل ادمین").count() >= 1 and apage.locator("meta[name=robots]").count() >= 1,
+        "login card + robots meta",
+    )
+    apage.fill("input[autocomplete=username]", "ann")
+    apage.fill("input[type=password]", "0000")
+    apage.click("[data-testid=admin-login]")
+    apage.wait_for_timeout(1200)
+    record(
+        "Admin: wrong password is refused in the UI",
+        apage.locator("text=ورود ناموفق").count() >= 1,
+        "error message shown, no data loaded",
+    )
+    record(
+        "Admin: private database is not in the page source",
+        "Kolesnikova" not in (apage.content() or "")[:400000] or apage.locator("pre:has-text('Dear Soheil')").count() == 0,
+        "no private letter text before login",
+    )
+    apage.fill("input[type=password]", ADMIN_PASSWORD)
+    apage.click("[data-testid=admin-login]")
+    apage.wait_for_timeout(2000)
+    record(
+        "Admin: correct credentials open the panel",
+        apage.locator("text=پنل ادمین — دیتابیس خصوصی مکاتبات").count() >= 1,
+        "dashboard rendered",
+    )
+    apage.click("[data-testid=tab-letters]")
+    apage.wait_for_timeout(900)
+    record(
+        "Admin: full private letters are readable after login",
+        apage.locator("pre:has-text('Dear Soheil')").count() >= 1
+        and apage.locator("button:has-text('کپی متن کامل')").count() >= 3,
+        f"{apage.locator('button:has-text(\'کپی متن کامل\')').count()} letters with copy buttons",
+    )
+    apage.click("[data-testid=tab-contacts]")
+    apage.wait_for_timeout(800)
+    record(
+        "Admin: contacts show the private-only fields",
+        apage.locator("text=اطلاعات خصوصی").count() >= 4
+        and apage.locator("text=UNVERIFIED").count() >= 1,
+        "private blocks + unverified flag",
+    )
+    apage.click("[data-testid=tab-notes]")
+    apage.wait_for_timeout(700)
+    record(
+        "Admin: important notes tab renders",
+        apage.locator("text=قاعده‌ی انتشار").count() >= 1,
+        "notes visible",
+    )
+    apage.click("[data-testid=admin-reload]")
+    apage.wait_for_timeout(900)
+    apage.click("[data-testid=admin-logout]")
+    apage.wait_for_timeout(1200)
+    record(
+        "Admin: logout returns to the login screen",
+        apage.locator("button:has-text('ورود')").count() >= 1
+        and apage.locator("text=پنل ادمین — دیتابیس خصوصی مکاتبات").count() == 0,
+        "session ended client-side",
+    )
+    apage.screenshot(path=str(SHOTS / "25-admin-login-screen.png"), full_page=False)
+    apage.close()
 
     page.goto(f"{BASE}/#/does-not-exist", wait_until="domcontentloaded")
     page.wait_for_timeout(700)

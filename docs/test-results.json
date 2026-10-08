@@ -271,6 +271,46 @@
    "detail": "Partners in the navigation"
   },
   {
+   "check": "Admin: login screen loads and is marked noindex",
+   "ok": true,
+   "detail": "login card + robots meta"
+  },
+  {
+   "check": "Admin: wrong password is refused in the UI",
+   "ok": true,
+   "detail": "error message shown, no data loaded"
+  },
+  {
+   "check": "Admin: private database is not in the page source",
+   "ok": true,
+   "detail": "no private letter text before login"
+  },
+  {
+   "check": "Admin: correct credentials open the panel",
+   "ok": true,
+   "detail": "dashboard rendered"
+  },
+  {
+   "check": "Admin: full private letters are readable after login",
+   "ok": true,
+   "detail": "4 letters with copy buttons"
+  },
+  {
+   "check": "Admin: contacts show the private-only fields",
+   "ok": true,
+   "detail": "private blocks + unverified flag"
+  },
+  {
+   "check": "Admin: important notes tab renders",
+   "ok": true,
+   "detail": "notes visible"
+  },
+  {
+   "check": "Admin: logout returns to the login screen",
+   "ok": true,
+   "detail": "session ended client-side"
+  },
+  {
    "check": "Unknown route shows 404 card",
    "ok": true,
    "detail": "404 view"
