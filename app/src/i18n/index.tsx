@@ -26,9 +26,23 @@ const STORAGE_KEY = "cityair-lang";
 
 const supported = LANGS.map((l) => l.code);
 
+/** Read ?lang= from both the real query string and any query that ended up inside the hash. */
+function langFromUrl(): string | null {
+  if (typeof window === "undefined") return null;
+  const inSearch = new URLSearchParams(window.location.search).get("lang");
+  if (inSearch) return inSearch;
+  const hash = window.location.hash || "";
+  const q = hash.indexOf("?");
+  if (q !== -1) {
+    const inHash = new URLSearchParams(hash.slice(q + 1)).get("lang");
+    if (inHash) return inHash;
+  }
+  return null;
+}
+
 function detect(): Lang {
   if (typeof window === "undefined") return "en";
-  const fromUrl = new URLSearchParams(window.location.search).get("lang");
+  const fromUrl = langFromUrl();
   if (fromUrl && supported.includes(fromUrl as Lang)) return fromUrl as Lang;
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -44,6 +58,17 @@ function detect(): Lang {
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => detect());
   const dir = dirOf(lang);
+
+  // A link whose query landed inside the hash (e.g. "#/partners?lang=ar") changes the hash only —
+  // no page reload — so pick the language up here as well.
+  useEffect(() => {
+    const onHash = () => {
+      const l = langFromUrl();
+      if (l && supported.includes(l as Lang)) setLangState(l as Lang);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;

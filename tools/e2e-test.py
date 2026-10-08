@@ -17,7 +17,26 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8787"
+def pick_base() -> str:
+    """Use the given URL, else the first dev-server port that answers (8788 is the
+    port documented in docs/STATUS.md and started by tools/deploy-cloudflare.sh docs)."""
+    if len(sys.argv) > 1:
+        return sys.argv[1]
+    import urllib.request
+
+    for candidate in ("http://127.0.0.1:8788", "http://127.0.0.1:8787"):
+        try:
+            with urllib.request.urlopen(f"{candidate}/api/health", timeout=3) as r:
+                if r.status < 500:
+                    print(f"dev server found on {candidate}")
+                    return candidate
+        except Exception:
+            continue
+    print("⚠ no dev server on 8788/8787 — starting with http://127.0.0.1:8788 anyway")
+    return "http://127.0.0.1:8788"
+
+
+BASE = pick_base()
 OUT = Path(sys.argv[2] if len(sys.argv) > 2 else "docs")
 SHOTS = OUT / "screenshots"
 SHOTS.mkdir(parents=True, exist_ok=True)
@@ -626,6 +645,21 @@ with sync_playwright() as p:
             except Exception as exc:
                 detail = f"{candidate.split(BASE)[-1]} → {str(exc)[:60]}"
         record(f"Deep link {extra} works", ok, detail)
+
+    # Regression: the pre-React deep-link fallback must keep ?lang= in the real query string
+    # (it used to send it inside the hash: /index.html#/partners?lang=fa → English page).
+    dl_ctx = browser.new_context(viewport={"width": 1300, "height": 900})
+    dl_page = dl_ctx.new_page()
+    try:
+        dl_page.goto(f"{BASE}/partners/index.html?lang=fa", wait_until="domcontentloaded", timeout=45000)
+        dl_page.wait_for_timeout(2000)
+        st = dl_page.evaluate("({lang:document.documentElement.lang, dir:document.documentElement.dir, search:location.search, hash:location.hash})")
+        ok = st["lang"] == "fa" and st["dir"] == "rtl" and "lang=fa" in st["search"]
+        record("Deep link keeps ?lang= outside the hash (fa/RTL)", ok,
+               f"lang={st['lang']} dir={st['dir']} search={st['search']!r} hash={st['hash']}")
+    except Exception as exc:
+        record("Deep link keeps ?lang= outside the hash (fa/RTL)", False, str(exc)[:70])
+    dl_ctx.close()
 
     ctx.close()
     mob.close()

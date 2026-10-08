@@ -4,6 +4,9 @@
  *
  *   ADMIN_PASSWORD='…' GITHUB_TOKEN=ghp_… node tools/security-test.mjs http://127.0.0.1:8788
  *
+ *   ADMIN_PASSWORD is optional locally: the script falls back to private-archive/PREVIEW-PIN.txt
+ *   (git-ignored). GITHUB_TOKEN is needed for check 20 (leak scan of the pushed repo).
+ *
  * The password is taken from the environment (falls back to worker/.dev.vars) and is
  * never printed. Checks marked [static] read files in the workspace / the pushed GitHub
  * tree instead of calling the server.
@@ -23,7 +26,22 @@ function devVar(key) {
   return line ? line.split("=").slice(1).join("=").trim().replace(/^"|"$/g, "") : "";
 }
 
-const PASSWORD = process.env.ADMIN_PASSWORD || devVar("ADMIN_PASSWORD") || "";
+/** The local PIN lives only in the git-ignored private archive (see docs/ADMIN.md). */
+function pinFile() {
+  const file = join(root, "private-archive", "PREVIEW-PIN.txt");
+  if (!existsSync(file)) return "";
+  return readFileSync(file, "utf8").trim().split("\n").pop().trim();
+}
+
+const PASSWORD = process.env.ADMIN_PASSWORD || devVar("ADMIN_PASSWORD") || pinFile() || "";
+if (!PASSWORD) {
+  console.error(
+    "\n✖ no admin password found — set ADMIN_PASSWORD, add ADMIN_PASSWORD to worker/.dev.vars,\n" +
+      "  or restore the git-ignored private-archive/PREVIEW-PIN.txt.\n" +
+      "  (refusing to run: the login checks would report misleading HTTP 0 failures)\n",
+  );
+  process.exit(2);
+}
 const NAME = process.env.ADMIN_NAME || devVar("ADMIN_NAME") || "ann";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "";
 const REPO = "Websites-by-AI/amqx-cityair";

@@ -389,6 +389,11 @@
    "check": "Deep link /partners works",
    "ok": true,
    "detail": "/partners \u2192 hash=#/partners"
+  },
+  {
+   "check": "Deep link keeps ?lang= outside the hash (fa/RTL)",
+   "ok": true,
+   "detail": "lang=fa dir=rtl search='?lang=fa' hash=#/partners"
   }
  ],
  "console": []

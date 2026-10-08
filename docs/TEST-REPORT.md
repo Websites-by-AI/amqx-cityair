@@ -1,8 +1,8 @@
 # CityAir — browser test report
 
 Target : `http://127.0.0.1:8788`
-When   : 2026-10-08 14:17 UTC
-Result : **78/78 checks passed**
+When   : 2026-10-08 16:14 UTC
+Result : **79/79 checks passed**
 
 | # | Check | Result | Detail |
 | --- | --- | --- | --- |
@@ -84,6 +84,7 @@ Result : **78/78 checks passed**
 | 76 | Deep link /about works | ✅ | /about → hash=#/about |
 | 77 | Deep link /methodology works | ✅ | /methodology → hash=#/methodology |
 | 78 | Deep link /partners works | ✅ | /partners → hash=#/partners |
+| 79 | Deep link keeps ?lang= outside the hash (fa/RTL) | ✅ | lang=fa dir=rtl search='?lang=fa' hash=#/partners |
 
 ## Console / page errors
 
@@ -124,6 +125,8 @@ Saved in `docs/screenshots`:
 - `29-lang-ar-home.png`
 - `30-lang-fa-cities.png`
 - `31-lang-ar-cities.png`
+- `32-live-ar-home.png`
+- `33-live-fa-partners-deeplink.png`
 - `menu-assistant.png`
 - `menu-cities.png`
 - `menu-guidance.png`

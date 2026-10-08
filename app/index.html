@@ -47,7 +47,8 @@
         if (/\.(js|css|json|png|jpe?g|svg|ico|txt|xml|webmanifest|woff2?)$/i.test(path)) return;
         path = "/" + path.replace(/^\/+|\/+$/g, "");
         if (path === "/") return;
-        location.replace(location.origin + "/#" + path + location.search);
+        // keep the query BEFORE the hash: "/?lang=fa#/partners" — "location.search" must stay readable
+        location.replace(location.origin + "/" + location.search + "#" + path);
       })();
     </script>
     <div id="root"></div>
