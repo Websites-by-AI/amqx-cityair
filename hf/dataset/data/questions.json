@@ -1,0 +1,14 @@
+[
+  {"id":"monitoring-01","category":"Air Quality Monitoring","question":"Does the city operate a quality-assured air-quality monitoring network with documented maintenance?","weight":1.2},
+  {"id":"source-01","category":"Source Attribution","question":"Does the city use measurements and analysis to identify major pollution sources?","weight":1},
+  {"id":"inventory-01","category":"Emissions Inventory","question":"Is a documented emissions inventory updated on a defined schedule?","weight":1.1},
+  {"id":"forecasting-01","category":"Air Quality Forecasting","question":"Can the city issue and evaluate short-term air-quality forecasts or alerts?","weight":0.8},
+  {"id":"health-01","category":"Health Impact Assessment","question":"Are air-pollution exposure and health outcomes assessed with public-health experts?","weight":1},
+  {"id":"eia-01","category":"Environmental Impact Assessment","question":"Do project reviews consistently assess air-quality impacts and mitigation?","weight":0.8},
+  {"id":"decision-01","category":"Decision Support","question":"Are monitoring, inventory and health findings routinely used in city decisions?","weight":1.1},
+  {"id":"engagement-01","category":"Public Engagement and Communication","question":"Does the city publish understandable, accessible air-quality information and response advice?","weight":0.9},
+  {"id":"legal-01","category":"Legal Framework and Policy Design","question":"Are responsibilities, standards, enforcement powers and clean-air goals clearly established?","weight":1.1},
+  {"id":"waste-01","category":"Waste Management","question":"Does the city track waste flows, disposal sites and operational environmental controls?","weight":1},
+  {"id":"burning-01","category":"Open Waste Burning","question":"Is there a coordinated system to detect, prevent and respond to open waste burning?","weight":1},
+  {"id":"methane-01","category":"Methane and Landfill Monitoring","question":"Are landfill gas risks screened and validated using appropriate measurement methods?","weight":1}
+]

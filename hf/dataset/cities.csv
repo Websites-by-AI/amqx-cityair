@@ -1,0 +1,21 @@
+id,name,country,region,population,band,score,confidence,sector,climate,lat,lon,Monitoring,Source attribution,Inventory,Forecasting,Health,EIA,Decision support,Engagement,Legal,Waste,Open burning,Methane
+istanbul,Istanbul,Türkiye,Europe & Central Asia,10M+,Established,66,72,Transport,Coastal temperate,41.0082,28.9784,78,62,69,74,58,72,65,73,70,64,55,48
+mexico-city,Mexico City,Mexico,Latin America & Caribbean,10M+,Advanced,77,82,Transport,High-altitude basin,19.4326,-99.1332,91,82,84,86,73,76,81,84,78,67,61,59
+bishkek,Bishkek,Kyrgyz Republic,Europe & Central Asia,1M–5M,Developing,41,48,Household Energy,Continental valley,42.8746,74.5698,48,37,39,45,34,42,40,52,49,46,38,27
+delhi,Delhi,India,Asia & Pacific,10M+,Established,60,74,Transport,Indo-Gangetic plain,28.6139,77.209,76,58,61,66,63,64,59,68,62,55,49,44
+lagos,Lagos,Nigeria,Africa,10M+,Developing,36,42,Transport,Coastal tropical,6.5244,3.3792,44,33,31,29,36,38,34,47,41,33,42,26
+bogota,Bogotá,Colombia,Latin America & Caribbean,5M–10M,Established,67,70,Transport,High-altitude plateau,4.711,-74.0721,82,71,68,77,64,70,72,75,74,60,52,41
+nairobi,Nairobi,Kenya,Africa,1M–5M,Developing,44,46,Household Energy,Highland tropical,-1.2921,36.8219,52,39,35,41,43,45,42,56,51,48,47,30
+krakow,Kraków,Poland,Europe & Central Asia,250k–1M,Advanced,76,84,Household Energy,Continental basin,50.0647,19.945,88,79,83,81,72,74,78,80,85,70,66,52
+sarajevo,Sarajevo,Bosnia and Herzegovina,Europe & Central Asia,250k–1M,Developing,49,54,Household Energy,Mountain valley,43.8563,18.4131,61,49,44,52,45,50,47,58,54,51,43,32
+accra,Accra,Ghana,Africa,1M–5M,Developing,41,44,Waste-site emissions,Coastal savanna,5.6037,-0.187,47,38,32,35,40,41,38,53,46,44,51,29
+oslo,Oslo,Norway,Europe & Central Asia,250k–1M,Advanced,82,90,Transport,Nordic coastal,59.9139,10.7522,94,86,88,89,84,82,90,88,90,76,62,58
+bangkok,Bangkok,Thailand,Asia & Pacific,5M–10M,Established,64,68,Transport,Tropical delta,13.7563,100.5018,79,66,63,72,61,67,64,70,68,59,54,45
+tehran,Tehran,Iran,Middle East & North Africa,5M–10M,Established,59,58,Transport,Mountain basin,35.6892,51.389,74,61,58,69,55,63,60,64,66,52,45,38
+cairo,Cairo,Egypt,Middle East & North Africa,10M+,Developing,50,55,Transport,Arid river valley,30.0444,31.2357,63,49,47,55,48,52,50,57,55,53,42,33
+jakarta,Jakarta,Indonesia,Asia & Pacific,10M+,Developing,53,57,Transport,Coastal tropical,-6.2088,106.8456,67,54,51,58,52,55,53,60,57,49,44,35
+lima,Lima,Peru,Latin America & Caribbean,5M–10M,Developing,47,51,Transport,Coastal desert,-12.0464,-77.0428,59,47,52,44,46,50,48,54,52,45,40,31
+tashkent,Tashkent,Uzbekistan,Europe & Central Asia,1M–5M,Developing,46,43,Household Energy,Semi-arid basin,41.2995,69.2401,58,44,41,49,42,47,45,52,56,48,39,30
+marrakesh,Marrakesh,Morocco,Middle East & North Africa,250k–1M,Developing,43,41,Dust,Semi-arid plain,31.6295,-7.9811,51,40,37,45,39,44,42,58,53,47,36,28
+warsaw,Warsaw,Poland,Europe & Central Asia,1M–5M,Advanced,72,78,Transport,Continental plain,52.2297,21.0122,86,74,76,79,70,72,75,77,79,66,58,47
+santiago,Santiago,Chile,Latin America & Caribbean,5M–10M,Advanced,73,76,Transport,Andean basin,-33.4489,-70.6693,85,77,80,78,71,73,79,76,81,68,60,50

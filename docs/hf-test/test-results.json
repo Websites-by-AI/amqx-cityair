@@ -1,0 +1,195 @@
+{
+ "results": [
+  {
+   "check": "Home loads and mounts React",
+   "ok": true,
+   "detail": "h1 = 'Turn fragmented city evidence into accountable clean-air action'"
+  },
+  {
+   "check": "Header navigation rendered",
+   "ok": true,
+   "detail": "11 nav links"
+  },
+  {
+   "check": "Hero image present",
+   "ok": true,
+   "detail": "public/images/hero-city.jpg"
+  },
+  {
+   "check": "menu \u201clogo\u201d \u2192 Home",
+   "ok": true,
+   "detail": "hash=#/ h1='Turn fragmented city evidence into accountable clean'"
+  },
+  {
+   "check": "menu \u201cGuidance\u201d \u2192 Guidance",
+   "ok": true,
+   "detail": "hash=#/guidance h1='Twelve domains of air-quality management capacity'"
+  },
+  {
+   "check": "menu \u201cAssess\u201d \u2192 Assess",
+   "ok": true,
+   "detail": "hash=#/assess h1='Score your city across twelve domains'"
+  },
+  {
+   "check": "menu \u201cResults\u201d \u2192 Results",
+   "ok": true,
+   "detail": "hash=#/results h1='No scored answers yet'"
+  },
+  {
+   "check": "menu \u201cAction plan\u201d \u2192 Action plan",
+   "ok": true,
+   "detail": "hash=#/action-plan h1='A phased improvement plan generated from your gaps'"
+  },
+  {
+   "check": "menu \u201cCities\u201d \u2192 Cities",
+   "ok": true,
+   "detail": "hash=#/cities h1='Compare context, capacity and evidence confidence'"
+  },
+  {
+   "check": "menu \u201cInnovations\u201d \u2192 Innovations",
+   "ok": true,
+   "detail": "hash=#/innovations h1='Innovations described honestly enough to assess'"
+  },
+  {
+   "check": "menu \u201cMatches\u201d \u2192 Matches",
+   "ok": true,
+   "detail": "hash=#/innovation-match h1='Innovation matching against your recorded context'"
+  },
+  {
+   "check": "menu \u201cResources\u201d \u2192 Resources",
+   "ok": true,
+   "detail": "hash=#/resources h1='References you can check yourself'"
+  },
+  {
+   "check": "menu \u201cMethod\u201d \u2192 Method",
+   "ok": true,
+   "detail": "hash=#/methodology h1='How CityAir computes a readiness score \u2014 and where i'"
+  },
+  {
+   "check": "menu \u201cAbout\u201d \u2192 About",
+   "ok": true,
+   "detail": "hash=#/about h1='About CityAir'"
+  },
+  {
+   "check": "menu \u201cAssistant\u201d \u2192 Assistant",
+   "ok": true,
+   "detail": "hash=#/assistant h1='Ask questions grounded in the CityAir knowledge base'"
+  },
+  {
+   "check": "Guidance accordion opens",
+   "ok": true,
+   "detail": "domain brief expanded"
+  },
+  {
+   "check": "Innovation brief expands",
+   "ok": true,
+   "detail": "implementation brief expanded"
+  },
+  {
+   "check": "City cards rendered",
+   "ok": true,
+   "detail": "20 compare buttons"
+  },
+  {
+   "check": "Compare 2 cities works",
+   "ok": true,
+   "detail": "grouped bar comparison shown"
+  },
+  {
+   "check": "City detail page",
+   "ok": true,
+   "detail": "hash=#/cities/oslo h1='Oslo, Norway'"
+  },
+  {
+   "check": "Live air-quality block on city page",
+   "ok": true,
+   "detail": "Open-Meteo reading section"
+  },
+  {
+   "check": "Assessment wizard completes \u2192 results",
+   "ok": true,
+   "detail": "h1='Test City \u00b7 Advanced stage'"
+  },
+  {
+   "check": "Results dashboard shows gauge + confidence",
+   "ok": true,
+   "detail": "gauge, confidence dial and domain bars"
+  },
+  {
+   "check": "Action plan generated from scores",
+   "ok": true,
+   "detail": "three phases rendered"
+  },
+  {
+   "check": "Chat widget answers (RAG or retrieval)",
+   "ok": true,
+   "detail": "answer bubble with sources"
+  },
+  {
+   "check": "Mobile: hamburger visible, desktop nav hidden",
+   "ok": true,
+   "detail": "responsive breakpoint behaves"
+  },
+  {
+   "check": "Mobile: drawer menu opens with all links",
+   "ok": true,
+   "detail": "12 links in drawer"
+  },
+  {
+   "check": "Mobile: navigation works from the drawer",
+   "ok": true,
+   "detail": "hash=#/assess"
+  },
+  {
+   "check": "Unknown route shows 404 card",
+   "ok": true,
+   "detail": "404 view"
+  },
+  {
+   "check": "Deep link /cities/bishkek resolves",
+   "ok": true,
+   "detail": "/cities/bishkek/index.html \u2192 hash=#/cities/bishkek h1='Bishkek, Kyrgyz Republic'"
+  },
+  {
+   "check": "Deep link /guidance works",
+   "ok": true,
+   "detail": "/guidance/index.html \u2192 hash=#/guidance"
+  },
+  {
+   "check": "Deep link /about works",
+   "ok": true,
+   "detail": "/about/index.html \u2192 hash=#/about"
+  },
+  {
+   "check": "Deep link /methodology works",
+   "ok": true,
+   "detail": "/methodology/index.html \u2192 hash=#/methodology"
+  }
+ ],
+ "console": [
+  {
+   "page": "desktop",
+   "text": "Failed to load resource: the server responded with a status of 404 ()"
+  },
+  {
+   "page": "desktop",
+   "text": "Failed to load resource: the server responded with a status of 404 ()"
+  },
+  {
+   "page": "desktop",
+   "text": "Failed to load resource: the server responded with a status of 404 ()"
+  },
+  {
+   "page": "desktop",
+   "text": "Failed to load resource: the server responded with a status of 404 ()"
+  },
+  {
+   "page": "desktop",
+   "text": "Failed to load resource: the server responded with a status of 404 ()"
+  },
+  {
+   "page": "desktop",
+   "text": "Failed to load resource: the server responded with a status of 404 ()"
+  }
+ ]
+}

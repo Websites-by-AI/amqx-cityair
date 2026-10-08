@@ -1,0 +1,812 @@
+{
+  "meta": {
+    "title": "Partnerships, outreach & archive",
+    "updated": "2026-10-08",
+    "intro": "Every conversation CityAir has had with a potential partner, recorded with its status, what was asked, what was answered and what happens next. Nothing here is a claim of partnership: statuses are stated as they are, including the ones that are still unanswered.",
+    "coverageMethod": "هر سند با ۵ معیار سنجیده می‌شود: فراداده ۲۰٪ (تاریخ، ساعت، کانال، فرستنده، گیرنده، موضوع) · متن پیام ۴۰٪ (واژه‌به‌واژه=۱۰۰، ترجمه=۹۵، خصوصی=۶۰، خلاصه=۵۰، ناقص=۳۵) · پیوست‌ها/لینک‌ها ۱۵٪ · وضعیت و قدم بعدی ۱۵٪ · برچسب حریم خصوصی ۱۰٪. درصد هر سند از همین فرمول در می‌آید و مجموع = میانگین اسناد.",
+    "coverageDate": "2026-10-08"
+  },
+  "milestones": [
+    {
+      "date": "23–24 September 2026",
+      "title": "International Clean Air Dialogue — Dedeman İstanbul Hotel",
+      "type": "event",
+      "body": "Two-day intergovernmental dialogue co-organised by UNECE (Convention on Long-range Transboundary Air Pollution), UNEP, the Climate and Clean Air Coalition (CCAC), the Forum for International Cooperation on Air Pollution and the Government of Türkiye, with support from the EU and the UN Development Account; a side event of the 7th International Day of Clean Air for blue skies. Sessions covered the global pollution landscape, science–policy cooperation, transport, financing for clean air, and — Session 6 — communicating air-quality information to the public: from data to action.",
+      "cityAirRole": "Attended as a participant. This is where the AQMx-side contact was made and where the first CityAir prototype pages were demonstrated.",
+      "sources": [
+        {
+          "label": "CCAC event page and agenda",
+          "url": "https://www.ccacoalition.org/events/international-clean-air-dialogue"
+        },
+        {
+          "label": "CCAC events calendar (venue: Dedeman İstanbul Hotel)",
+          "url": "https://www.ccacoalition.org/events"
+        },
+        {
+          "label": "Geneva Environment Network summary",
+          "url": "https://www.genevaenvironmentnetwork.org/resources/updates/international-day-of-clean-air-for-blue-skies/"
+        }
+      ]
+    },
+    {
+      "date": "7 October 2026, 15:28",
+      "title": "MoveGreen replies — positive interest",
+      "type": "correspondence",
+      "body": "Maria Kolesnikova, who coordinates the Air Quality Programme at MoveGreen, replied positively to the GreenHope outreach. She states clearly that methane monitoring is not currently a specific area of MoveGreen's work, but that they have strong experience in independent air-quality monitoring, environmental data, citizen engagement, public communication and advocacy. She identifies the opportunity to build the methane component together with a technical partner, and singles out as particularly relevant: validating Earth-observation and remote-sensing data with ground-based monitoring, identifying environmental risk hotspots, developing an air-quality baseline, and engaging local stakeholders.",
+      "cityAirRole": "Reply received. Next action: send the non-confidential one-page concept note and propose an introductory call.",
+      "sources": []
+    },
+    {
+      "date": "7 October 2026, 18:46",
+      "title": "Concept note email sent to MoveGreen (Mr. Muradyl)",
+      "type": "correspondence",
+      "body": "Outgoing email introducing GreenHope and the XPRIZE Mission Methane partner-development concept, with the five specific asks that structure the collaboration: validate satellite and thermal alerts with ground sensors; monitor waste-burning, landfill and environmental-risk hotspots; develop a methane / PM2.5 baseline; connect with a waste-management or landfill operator; support responsible media engagement.",
+      "cityAirRole": "Sent. Awaiting reply; the right focal point for the methane workstream still needs confirming.",
+      "sources": []
+    },
+    {
+      "date": "7–10 October 2026",
+      "title": "ISAF Smartex 2026 — company outreach at İFM Yeşilköy",
+      "type": "event",
+      "body": "The 15th International Smart Cities, Buildings, Transport, Management & Living Fair, co-located with ISAF International, MOBISAD IMEX, Data Center Eurasia, LANDSCAPE Istanbul and PetZoo Eurasia. 41 companies mapped for cooperation, with booth scripts in three languages.",
+      "cityAirRole": "Booth outreach in progress — see the EXPO 2026 page for the company table and cooperation models.",
+      "link": "#/expo",
+      "sources": []
+    },
+    {
+      "date": "9–20 November 2026",
+      "title": "COP31, Antalya Expo Center, Türkiye — green start-up track",
+      "type": "milestone",
+      "body": "The 31st UN Climate Change Conference is hosted by Türkiye (COP President: Murat Kurum) with Australia presiding over negotiations (Chris Bowen); the World Leaders' Summit meets 11–12 November. A green start-up AI model has been registered under the author's name for the COP31 innovation track.",
+      "cityAirRole": "Preparation. The waste-and-methane workstream is designed to have a documented pilot result before the conference opens.",
+      "sources": [
+        {
+          "label": "CISL Cambridge — COP31 dates and venue",
+          "url": "https://www.cisl.cam.ac.uk/cop-climate-change-conference/cop31-antalya-turkiye-9-20-november-2026"
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "org": "MoveGreen",
+      "country": "Kyrgyz Republic",
+      "type": "Civil society / youth environmental movement",
+      "programme": "Air Quality Programme — AQ.kg app, 100+ PM sensors in Bishkek and the region, Central Asian Air Quality Platform, 'School Breathes Easily'",
+      "contact": "Maria Kolesnikova — Director, Air Quality Programme coordinator (public role; UNEP Champion of the Earth 2021, Entrepreneurial Vision)",
+      "status": "Positive reply received — interested, methane to be built with a technical partner",
+      "proposal": "Joint waste-and-methane pilot in Bishkek: validate satellite/thermal alerts against their ground network, map burning and landfill hotspots, build a methane + PM₂.₅ baseline, and publish a joint case study.",
+      "response": "Methane is not currently a MoveGreen workstream; their monitoring, data, citizen-engagement, advocacy and communication strengths are available, and they rate EO validation, hotspot identification, baseline development and stakeholder engagement as particularly relevant.",
+      "next": "Send the one-page non-confidential concept note; propose a 45-minute introductory call; agree one pilot district.",
+      "priority": "A+",
+      "verification": "MoveGreen, Maria Kolesnikova's role and UNEP award are publicly documented (UNEP, UN Women, Green Alliance KG).",
+      "links": [
+        {
+          "label": "UNEP story on MoveGreen and AQ.kg",
+          "url": "https://www.unep.org/news-and-stories/story/kyrgyz-republic-one-youth-campaigner-takes-air-pollution"
+        },
+        {
+          "label": "UN Women profile",
+          "url": "https://www.unwomen.org/en/news/stories/2020/4/feature-maria-kolesnikova-an-activist-from-kyrgyzstan-leading-the-eco-movement"
+        }
+      ]
+    },
+    {
+      "org": "MoveGreen — second focal point",
+      "country": "Kyrgyz Republic",
+      "type": "Same organisation",
+      "programme": "Programme and partnerships lead",
+      "contact": "Mr. Muradyl (recorded as the recipient of the 7 October concept email)",
+      "status": "Email sent — awaiting reply",
+      "proposal": "Same concept as above; asking for a technical or pilot collaboration and an introduction to a waste-management, university or methane-measurement partner in Central Asia.",
+      "response": "—",
+      "next": "Confirm the correct focal point; do not duplicate requests to two contacts in one organisation.",
+      "priority": "B",
+      "verification": "Contact details withheld from this public page.",
+      "links": []
+    },
+    {
+      "org": "AQMx-side contact (referred to as Juliet)",
+      "country": "—",
+      "type": "Global air-quality knowledge platform",
+      "programme": "AQMx — a global one-stop-shop for knowledge, tools, data and guidance on air-quality management: nine guidance domains across five stages of capacity, an interactive questionnaire, sectoral guidance (agriculture, household energy, road transport, waste management — including 'Eliminating Open Waste Burning') and a resource exchange library indexing 935 organisations.",
+      "contact": "Recorded as Juliet, met at the Clean Air Dialogue; exact name, role and affiliation not yet confirmed in writing",
+      "status": "Met in person — mutual interest in continuing the conversation when they travel to France and Germany",
+      "proposal": "Align CityAir's method and outputs with the AQMx structure (five stages, sectoral guidance, interactive questionnaire), then contribute a Bishkek waste-and-methane case study and toolkit feedback through the proper channel.",
+      "response": "The demonstration of sites built during the conversation was received positively; follow-up agreed for the Europe trip.",
+      "next": "Send a short recap email with the CityAir links and one concrete question: which AQMx pathway (case study, sectoral guidance feedback, or exchange-library submission) fits best?",
+      "priority": "A",
+      "verification": "UNVERIFIED CONTACT: nothing about Juliet's role appears on this page as fact. AQMx itself is documented; the individual's role must be confirmed in writing before any public statement.",
+      "links": [
+        {
+          "label": "AQMx platform",
+          "url": "https://aqmx.org/"
+        },
+        {
+          "label": "AQMx interactive questionnaire",
+          "url": "https://aqmx.org/interactive-questionnaire"
+        },
+        {
+          "label": "AQMx sectoral guidance",
+          "url": "https://aqmx.org/content/aqmx-sectoral-guidance"
+        }
+      ]
+    },
+    {
+      "org": "XPRIZE Mission Methane",
+      "country": "United States (global competition)",
+      "type": "Competition / prize",
+      "programme": "Mission Methane targets diffuse, low-concentration methane — landfills, wastewater systems, agriculture and wetlands — spanning prevention, mitigation, destruction and atmospheric removal; modelled on XPRIZE Carbon Removal.",
+      "contact": "Competition team (no personal contact recorded)",
+      "status": "Partner-development concept in preparation on our side",
+      "proposal": "CityAir supplies the evidence layer: ground-validated hotspot detection, a documented baseline, an independent evaluation method, and a civil-society partner for community data. XPRIZE defines the competitive criteria.",
+      "response": "—",
+      "next": "Track the official launch and criteria; keep the two partners (technical + civil society) confirmed first, then register interest through the official channel.",
+      "priority": "A",
+      "verification": "Mission Methane is publicly documented by XPRIZE; team composition, timeline and prize fund are subject to XPRIZE's own announcements and must not be stated as fixed.",
+      "links": [
+        {
+          "label": "XPRIZE Mission Methane",
+          "url": "https://www.xprize.org/competitions/methane"
+        }
+      ]
+    },
+    {
+      "org": "International Clean Air Dialogue organisers (UNECE · UNEP · CCAC · FICAP · Türkiye)",
+      "country": "International",
+      "type": "Multilateral process",
+      "programme": "Session 6 — communicating air-quality information to the public: from data to action; Session 5 — unlocking investment for clean air.",
+      "contact": "Publicly listed session participants, including UNEP's air-quality coordinator and WHO's air-quality and health officer. No direct contact established.",
+      "status": "Attended; no follow-up sent yet",
+      "proposal": "Reference the Dialogue's takeaways in CityAir's method (especially the public-communication and finance sessions) and use the event as the citation basis for the 2026 outreach cycle.",
+      "response": "—",
+      "next": "Retrieve the public session summaries; align the public-communication domain wording with the Dialogue's language.",
+      "priority": "B",
+      "verification": "Agenda and organisers are public (CCAC event page).",
+      "links": [
+        {
+          "label": "Dialogue agenda",
+          "url": "https://www.ccacoalition.org/events/international-clean-air-dialogue"
+        }
+      ]
+    },
+    {
+      "org": "Waste operator partner (to be identified)",
+      "country": "Kyrgyzstan / Türkiye",
+      "type": "Operator",
+      "programme": "Landfill gas, waste collection, transfer stations — the counterpart that holds the operational data a methane baseline needs.",
+      "contact": "Not yet identified",
+      "status": "Open — introduction requested from MoveGreen",
+      "proposal": "Site-level cooperation: one landfill or transfer station, operational records plus a measurement plan, joint publication.",
+      "response": "—",
+      "next": "Ask MoveGreen for an introduction (this is ask #4 in the sent email); prepare the same ask for İSTAÇ in Istanbul.",
+      "priority": "A",
+      "verification": "—",
+      "links": []
+    },
+    {
+      "org": "Bishkek (city authority)",
+      "country": "Kyrgyz Republic",
+      "type": "Municipality",
+      "programme": "Air quality, waste management and heating; Bishkek winters are among the most polluted of any capital due to coal heating and the valley's inversion.",
+      "contact": "Not yet contacted",
+      "status": "Open — city assessment is ready to run",
+      "proposal": "Run the twelve-domain readiness assessment with city officials and MoveGreen together, then publish the first fully evidenced city record in CityAir (replacing the current illustrative Bishkek profile).",
+      "response": "—",
+      "next": "Offer the assessment as a free two-workshop programme, with MoveGreen as the local convenor.",
+      "priority": "A",
+      "verification": "CityAir already carries an illustrative Bishkek profile (score 43, Developing) — clearly labelled as synthetic.",
+      "links": [
+        {
+          "label": "Illustrative Bishkek profile on CityAir",
+          "url": "#/cities/bishkek"
+        }
+      ]
+    },
+    {
+      "org": "ISAF Smartex 2026 exhibitors and ecosystem targets",
+      "country": "Türkiye and international",
+      "type": "Companies",
+      "programme": "41 companies mapped across sensors, platforms, connectivity, waste, mobility and building technology.",
+      "contact": "Booth visits, 7–10 October 2026",
+      "status": "Outreach in progress",
+      "proposal": "Six cooperation models, from a six-month pilot to an independent evaluation with published results.",
+      "response": "—",
+      "next": "Log every meeting in the expo tracker the same day; send follow-ups within 24 hours.",
+      "priority": "A",
+      "verification": "See the EXPO 2026 page for which companies are confirmed in published exhibitor directories.",
+      "links": [
+        {
+          "label": "EXPO 2026 company table",
+          "url": "#/expo"
+        }
+      ]
+    }
+  ],
+  "cooperation": {
+    "partner": "MoveGreen (Bishkek, Kyrgyz Republic)",
+    "headline": "Five workstreams that match what MoveGreen already said they can do",
+    "principle": "MoveGreen is the local evidence authority; CityAir is the technical and publishing layer. Neither side claims the other's work, and every number published carries its method and its limits.",
+    "workstreams": [
+      {
+        "n": 1,
+        "title": "Validate Earth-observation and thermal alerts with ground sensors",
+        "lead": "Joint — MoveGreen's network, CityAir's method",
+        "body": "Match NASA FIRMS active-fire and thermal anomalies plus Sentinel-2 imagery against the PM readings of MoveGreen's ground network. Deliver a confusion matrix: how often a satellite alert corresponds to a real ground event, and how often it does not. Publish the false-positive rate instead of hiding it.",
+        "deliverable": "Validation note with method, false-positive rate and limits",
+        "timing": "Weeks 1–6"
+      },
+      {
+        "n": 2,
+        "title": "Map waste-burning and landfill environmental-risk hotspots",
+        "lead": "MoveGreen (local knowledge) + CityAir (satellite screening)",
+        "body": "Build a hotspot register for Bishkek and the surrounding valley: waste-burning sites, landfill fringes, small industrial clusters. Each entry records how it was detected, how it was checked, and who owns the site. This is the register a city needs before it can act.",
+        "deliverable": "Public hotspot register with provenance for every entry",
+        "timing": "Weeks 1–8"
+      },
+      {
+        "n": 3,
+        "title": "Develop the methane and PM₂.₅ baseline",
+        "lead": "CityAir (method) + MoveGreen (data and access)",
+        "body": "A defensible baseline separates what is measured from what is modelled. MoveGreen's PM network provides the particulate baseline; methane is handled as a measurement plan with named instruments — never as a satellite-derived number presented as quantification. The output is a baseline statement a reviewer can audit.",
+        "deliverable": "Baseline statement: measured, modelled and unknown, separated",
+        "timing": "Weeks 4–12"
+      },
+      {
+        "n": 4,
+        "title": "Connect a waste-management or landfill operator",
+        "lead": "MoveGreen introduces; CityAir negotiates the pilot",
+        "body": "The methane workstream needs one operator willing to share operational records (tonnages, gas wells, flaring, collection routes) for a single site. CityAir prepares the data request in the operator's language: what is needed, why, what they get back, and what stays confidential.",
+        "deliverable": "Signed site-level data agreement and a first dataset",
+        "timing": "Weeks 4–14"
+      },
+      {
+        "n": 5,
+        "title": "Responsible public communication and citizen engagement",
+        "lead": "MoveGreen leads — this is their established strength",
+        "body": "Bishkek residents already trust MoveGreen's air-quality messaging. This workstream turns new findings into communication that does not exaggerate: what is known, what is uncertain, what people can do this week. CityAir supplies the trilingual (EN/RU/FA) materials and the Telegram bot for field reports from the public.",
+        "deliverable": "Communication pack + field-reporting channel with a published moderation policy",
+        "timing": "Weeks 6–14"
+      }
+    ],
+    "cityAirAdds": [
+      "The twelve-domain readiness assessment, run with MoveGreen and the city, producing the first fully evidenced Bishkek record (replacing today's synthetic profile)",
+      "Evidence-confidence scoring, so a high score with weak proof is visible as such",
+      "Innovation briefs with required data, risks, adaptation notes and monitoring indicators",
+      "Public dashboard templates, print exports and a Telegram bot for field reporting",
+      "Open publication of the knowledge base and the method, so any reviewer can reproduce the result"
+    ],
+    "moveGreenBrings": [
+      "A 100+ sensor PM network with a track record in Bishkek and Central Asia",
+      "The AQ.kg app and its existing audience",
+      "Citizen engagement capacity and the 'School Breathes Easily' programme",
+      "Media and advocacy reach, and relationships with government",
+      "Convening power through the Central Asian Air Quality Platform"
+    ],
+    "aqmAlignment": [
+      "CityAir's twelve domains map onto AQMx's guidance areas (monitoring, source attribution, emissions inventory, forecasting, health impact, environmental impact assessment, decision support, public engagement, legal framework) — the assessment should be re-checked domain by domain against the current AQMx wording before any submission.",
+      "CityAir's five maturity stages follow the same 'stages of capacity' logic published by AQMx, which makes a CityAir result readable to an AQMx audience.",
+      "The waste workstream lands directly on AQMx's sectoral guidance 'Eliminating Open Waste Burning' and the waste-management sector guide — the natural home for the Bishkek case study.",
+      "The interactive questionnaire is the closest existing instrument; a Bishkek run could be done with both the AQMx questionnaire and the CityAir assessment and the two results compared openly — a genuine contribution rather than a competing product.",
+      "Submission route: the AQMx resource exchange library. What AQMx accepts, indexes or lists is AQMx's decision alone; CityAir has no authority to promise placement."
+    ],
+    "ninetyDays": [
+      {
+        "window": "Days 1–14",
+        "items": [
+          "Send the one-page concept note and hold the introductory call",
+          "Agree the pilot district and the two named focal points",
+          "Confirm the data-sharing terms in writing (what is public, what stays private)"
+        ]
+      },
+      {
+        "window": "Days 15–45",
+        "items": [
+          "Run the EO-versus-ground validation on historical data",
+          "Draft the hotspot register for the pilot district",
+          "Open the conversation with the waste operator, using MoveGreen's introduction"
+        ]
+      },
+      {
+        "window": "Days 46–90",
+        "items": [
+          "Publish the validation note and the baseline statement",
+          "Deliver the communication pack and enable field reporting",
+          "Package the case study for the AQMx exchange and for COP31 (Antalya, 9–20 November 2026)"
+        ]
+      }
+    ],
+    "asks": [
+      "One pilot district in Bishkek with a named MoveGreen focal point",
+      "Access to historical PM data for the pilot district, in whatever granularity is shareable",
+      "One introduction to a waste-management or landfill operator",
+      "Agreement on what may be published, with MoveGreen holding veto over anything describing their own network",
+      "Two hours per week of technical time from one MoveGreen staff member during the pilot"
+    ],
+    "risks": [
+      {
+        "risk": "Methane is not MoveGreen's current workstream and could overload a small team.",
+        "mitigation": "CityAir carries the methane method and the measurement plan; MoveGreen's involvement stays inside their strengths (monitoring, communication, convening)."
+      },
+      {
+        "risk": "Satellite alerts are already over-claimed in this field.",
+        "mitigation": "Publish the false-positive rate; state explicitly that remote sensing screens and does not quantify."
+      },
+      {
+        "risk": "A partnership announcement before results exist damages both sides.",
+        "mitigation": "No announcement until the first published output; this page records status, not promises."
+      },
+      {
+        "risk": "Third-party personal data could leak into a public repository.",
+        "mitigation": "Only roles and organisational contacts are published; private correspondence stays in the private archive."
+      }
+    ]
+  },
+  "archive": [
+    {
+      "id": "draft-2026-10-08-concept-note",
+      "date": "2026-10-08",
+      "direction": "outgoing",
+      "channel": "concept note (PDF, one page)",
+      "from": "Soheil Sabzevari — GreenHope Initiative",
+      "to": "MoveGreen",
+      "subject": "Concept note: a waste-and-methane pilot with MoveGreen (non-confidential, one page)",
+      "body": "DRAFT, READY TO SEND — the non-confidential one-pager that was offered in the message of 7 October 2026.\n\nA waste-and-methane pilot: validating satellite alerts with your ground network\n\nThe idea in three sentences. Satellite and thermal alerts (NASA FIRMS, Sentinel-2) already flag burning and hotspots around Bishkek, but nobody has published how often those alerts are actually right. MoveGreen has something almost nobody in the region has: a real ground network and public trust. Pairing the two produces a defensible answer for the city — and a method other cities can copy.\n\nWhat the pilot produces in 90 days: (1) a validation note — how many satellite alerts matched a real ground event, including the false-positive rate, published rather than hidden; (2) a hotspot register — waste-burning and landfill-risk sites in one district, each entry with how it was detected, how it was checked and who owns the site; (3) a baseline statement — measured, modelled and unknown kept apart, with methane handled as a measurement plan, never as a satellite number presented as quantification.\n\nDivision of work. MoveGreen brings the ground network and its data, local knowledge of sites and routes, citizen engagement and public communication, and convening power with the city and the region. CityAir brings the method (satellite screening, validation, confidence scoring), the publishing layer (dashboard, trilingual materials, field-report tool), the twelve-domain readiness assessment run jointly with the city, and open method and open data so others can reproduce it.\n\nWhat we ask for: one pilot district in Bishkek and one named focal point; historical PM data for that district in whatever granularity is comfortable; one introduction to a waste-management, landfill or university partner; written agreement on what may be published, with MoveGreen holding veto over anything describing its own network; and about two hours a week of one person's time during the pilot.\n\nData, privacy and publication rules. Your data stays yours; nothing is published or redistributed without written agreement. Anything presented as fact carries its method and its limits, and uncertainty is stated rather than smoothed over. No partnership is announced until there is a published output both sides have seen. If either side wants to stop, the pilot stops and the joint material is withdrawn on request.\n\nStatus: a reply from MoveGreen expressed interest in learning more; nothing is agreed, funded or announced.",
+      "status": "draft — ready to send",
+      "notes": "Built as an A4 PDF in English (the language of the correspondence). Contains no confidential content and no claim of partnership. Contact beyond LinkedIn is offered privately, not printed.",
+      "audit": {
+        "metadata": "full",
+        "body": "verbatim",
+        "attachments": "all",
+        "status": "full",
+        "privacy": "labelled"
+      },
+      "gaps": [
+        "هنوز ارسال نشده — ارسال = بستن این شکاف.",
+        "نسخه‌ی فارسی/روسی برای مخاطب قرقیزستانی آماده نشده (اختیاری)."
+      ],
+      "links": [
+        {
+          "label": "Concept note — PDF (A4, one page)",
+          "url": "https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/partners/cityair-movegreen-concept-note.pdf"
+        },
+        {
+          "label": "Concept note — PNG",
+          "url": "https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/partners/cityair-movegreen-concept-note.png"
+        },
+        {
+          "label": "HTML source",
+          "url": "https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/partners/cityair-movegreen-concept-note.html"
+        }
+      ],
+      "coveragePercent": 100,
+      "coverageBreakdown": {
+        "metadata": {
+          "state": "full",
+          "points": 20,
+          "max": 20
+        },
+        "body": {
+          "state": "verbatim",
+          "points": 40,
+          "max": 40
+        },
+        "attachments": {
+          "state": "all",
+          "points": 15,
+          "max": 15
+        },
+        "status": {
+          "state": "full",
+          "points": 15,
+          "max": 15
+        },
+        "privacy": {
+          "state": "labelled",
+          "points": 10,
+          "max": 10
+        }
+      }
+    },
+    {
+      "id": "out-2026-10-07-muradyl",
+      "date": "2026-10-07",
+      "time": "18:46",
+      "direction": "outgoing",
+      "channel": "message / email",
+      "from": "Soheil Sabzevari — GreenHope Initiative",
+      "to": "Mr. Muradyl — MoveGreen",
+      "subject": "GreenHope × XPRIZE Mission Methane — partner development",
+      "body": "Dear Mr. Muradyl,\n\nI attended the International Clean Air Dialogue in Istanbul on 23–24 September 2026, where I learned about MoveGreen's work in independent air-quality monitoring, public environmental data and advocacy.\n\nI am developing GreenHope, an environmental intelligence platform that combines satellite Earth-observation data, Sentinel-2 imagery, NASA FIRMS active-fire data, thermal anomaly detection, field sensors and public air-quality information.\n\nWe are preparing a concept for the partner-development phase of XPRIZE Mission Methane, focusing on diffuse methane emissions from landfills, waste-management systems and wastewater facilities.\n\nWe are looking for a technical and civil-society partner who could help us:\n\n1. Validate satellite and thermal-alert data with ground air-quality sensors;\n2. Monitor waste-burning, landfill and environmental-risk hotspots;\n3. Develop a baseline for methane, PM2.5 and other air-quality impacts;\n4. Connect with a waste-management company or landfill operator;\n5. Support responsible media engagement and public communication.\n\nCould you advise whether MoveGreen would be interested in a technical or pilot collaboration, or introduce us to an appropriate waste-management, university or methane-measurement partner in Central Asia?\n\nMay I send you a short, non-confidential one-page concept note and arrange a brief introductory call?",
+      "status": "sent",
+      "notes": "Reference links included in the original: XPRIZE Mission Methane; the XPRIZE Design Studio post featuring the waste-to-durable-carbon-removal concept; NASA FIRMS documentation. Recipient contact details are withheld from this public page.",
+      "audit": {
+        "metadata": "full",
+        "body": "verbatim",
+        "attachments": "all",
+        "status": "full",
+        "privacy": "labelled"
+      },
+      "gaps": [
+        "پاسخ این ایمیل تا امروز (۸ اکتبر ۲۰۲۶) در بایگانی نیست — چون هنوز نیامده است.",
+        "نسخه‌ی آفلاین (snapshot) صفحات لینک‌شده ذخیره نشده؛ فقط خودِ لینک ثبت شده است."
+      ],
+      "links": [
+        {
+          "label": "XPRIZE Mission Methane",
+          "url": "https://www.xprize.org/competitions/methane"
+        },
+        {
+          "label": "XPRIZE Design Studio post (waste-to-durable-carbon-removal)",
+          "url": "https://www.linkedin.com/posts/x-prize-foundation_xprizedesignstudio-activity-7337901334978801664-Js7U"
+        },
+        {
+          "label": "NASA FIRMS — active-fire data",
+          "url": "https://www.earthdata.nasa.gov/news/feature-articles/data-tool-focus-fire-information-resource-management-system"
+        },
+        {
+          "label": "LinkedIn — Soheil Sabzevari",
+          "url": "https://www.linkedin.com/in/soheil-sabzevari-746237173/"
+        }
+      ],
+      "signature": "Soheil Sabzevari — GreenHope Initiative · LinkedIn (منتشرشده روی سایت). شماره‌ی تماس و واتساپ عمداً منتشر نمی‌شود و فقط در دیتابیس خصوصی (پنل ادمین) نگهداری می‌شود.",
+      "privateArchive": "private-archive/letters/2026-10-07-1846-outgoing-muradyl.md",
+      "coveragePercent": 100,
+      "coverageBreakdown": {
+        "metadata": {
+          "state": "full",
+          "points": 20,
+          "max": 20
+        },
+        "body": {
+          "state": "verbatim",
+          "points": 40,
+          "max": 40
+        },
+        "attachments": {
+          "state": "all",
+          "points": 15,
+          "max": 15
+        },
+        "status": {
+          "state": "full",
+          "points": 15,
+          "max": 15
+        },
+        "privacy": {
+          "state": "labelled",
+          "points": 10,
+          "max": 10
+        }
+      }
+    },
+    {
+      "id": "in-2026-10-07-kolesnikova",
+      "date": "2026-10-07",
+      "time": "15:28",
+      "direction": "incoming",
+      "channel": "message",
+      "from": "Maria Kolesnikova — Air Quality Programme coordinator, MoveGreen",
+      "to": "Soheil Sabzevari",
+      "subject": "Re: partnership concept — reply from MoveGreen",
+      "body": "SUMMARY (paraphrased — the full text is kept in the private project archive). MoveGreen thanks CityAir for the outreach after the International Clean Air Dialogue in Istanbul and says they are very interested in learning more about the concept. They confirm that methane monitoring is not currently a specific area of their work, while describing strong experience in independent air-quality monitoring, environmental data, citizen engagement, public communication and advocacy — and experience working with communities and local stakeholders on environmental risks. They see a good opportunity to build the methane-related component together with a relevant technical partner. The four areas outlined in the outreach — validating Earth-observation and other remote-sensing data with ground-based monitoring, identifying environmental risk hotspots, developing an air-quality baseline, and engaging local stakeholders — are described as particularly relevant to their experience.",
+      "status": "positive reply — awaiting our concept note and a call",
+      "notes": "QUOTE POLICY: the full message is stored in the private project archive and is published here only as a summary, to respect the sender's privacy. If MoveGreen gives written permission, the full quotation can be placed here verbatim. SOURCE COMPLETENESS: the copy we hold ends mid-sentence ('… are particularly relevant to our experience. I') — the remainder has not been recovered.",
+      "audit": {
+        "metadata": "full",
+        "body": "private",
+        "attachments": "n/a",
+        "status": "full",
+        "privacy": "labelled"
+      },
+      "gaps": [
+        "متن کامل پیام روی سایت عمومی نیست — در بایگانی خصوصی است (نیاز به اجازه‌ی کتبی).",
+        "ادامه‌ی پیام در دست نیست: نسخه‌ی موجود با «I» قطع می‌شود.",
+        "تاریخ/ساعت دقیق پاسخ‌مان هنوز ثبت نشده؛ وضعیت «در انتظار پاسخ» است."
+      ],
+      "privateArchive": "private-archive/letters/2026-10-07-1528-incoming-kolesnikova.md",
+      "coveragePercent": 84,
+      "coverageBreakdown": {
+        "metadata": {
+          "state": "full",
+          "points": 20,
+          "max": 20
+        },
+        "body": {
+          "state": "private",
+          "points": 24,
+          "max": 40
+        },
+        "attachments": {
+          "state": "n/a",
+          "points": 15,
+          "max": 15
+        },
+        "status": {
+          "state": "full",
+          "points": 15,
+          "max": 15
+        },
+        "privacy": {
+          "state": "labelled",
+          "points": 10,
+          "max": 10
+        }
+      }
+    },
+    {
+      "id": "inperson-2026-09-23-aqmx",
+      "date": "2026-09-23",
+      "direction": "in person",
+      "channel": "International Clean Air Dialogue, Dedeman İstanbul Hotel",
+      "from": "Contact referred to as Juliet (AQMx-side)",
+      "to": "Soheil Sabzevari",
+      "subject": "AQMx model, cities and air data — possible replication in waste",
+      "body": "Recorded from the field notes of 7 October 2026, 18:54: at the Dialogue the contact discussed AQMx with three other people present, describing a model that serves cities with air-quality data and services, and the idea of replicating that model for waste. Prototype pages built during the same conversation were received positively, and it was agreed to continue the conversation when the contact travels to France and Germany. The note also records a green start-up AI model registered for COP31 under the author's own name. The Persian original of the note is kept in the private archive.",
+      "status": "informal — written follow-up pending",
+      "notes": "UNVERIFIED: the person's exact name, role and organisational affiliation are not confirmed in writing. The note itself says 'I think' and 'as far as I understood' about the affiliation, so nothing about the individual is stated here as fact. Persian original and the confidence table (which claims are verified / unverified) are in the private archive. COP31 registration is personal and not republished.",
+      "audit": {
+        "metadata": "partial",
+        "body": "private",
+        "attachments": "n/a",
+        "status": "partial",
+        "privacy": "labelled"
+      },
+      "gaps": [
+        "نام و نقش دقیق ایشان تأییدنشده است.",
+        "نام سه نفری که در گفت‌وگو بودند ثبت نشده.",
+        "ادعای «بنیان‌گذار بودن» و «وابستگی به سازمان ملل» تأییدنشده — در بایگانی خصوصی با جدول اطمینان ثبت شده.",
+        "پیام پیگیری مکتوب هنوز ارسال نشده (باید پس از سفر اروپا زمان‌بندی شود)."
+      ],
+      "privateArchive": "private-archive/letters/2026-10-07-1854-juliet-note-fa.md",
+      "coveragePercent": 67,
+      "coverageBreakdown": {
+        "metadata": {
+          "state": "partial",
+          "points": 10,
+          "max": 20
+        },
+        "body": {
+          "state": "private",
+          "points": 24,
+          "max": 40
+        },
+        "attachments": {
+          "state": "n/a",
+          "points": 15,
+          "max": 15
+        },
+        "status": {
+          "state": "partial",
+          "points": 7.5,
+          "max": 15
+        },
+        "privacy": {
+          "state": "labelled",
+          "points": 10,
+          "max": 10
+        }
+      }
+    },
+    {
+      "id": "note-2026-10-07-cop31",
+      "date": "2026-10-07",
+      "direction": "internal",
+      "channel": "field note",
+      "from": "Soheil Sabzevari",
+      "to": "project record",
+      "subject": "COP31 green start-up track — registration under the author's name",
+      "body": "A green start-up AI model has been registered under the author's own name for the COP31 track, which runs 9–20 November 2026 at Antalya Expo Center, Türkiye. The waste-and-methane workstream is designed to produce a documented pilot result before the conference opens.",
+      "status": "preparation",
+      "notes": "Registration details are personal and not republished here.",
+      "audit": {
+        "metadata": "full",
+        "body": "verbatim",
+        "attachments": "n/a",
+        "status": "full",
+        "privacy": "labelled"
+      },
+      "gaps": [
+        "شماره‌ی ثبت‌نام و جزئیات شخصی COP31 عمداً منتشر نشده است."
+      ],
+      "coveragePercent": 100,
+      "coverageBreakdown": {
+        "metadata": {
+          "state": "full",
+          "points": 20,
+          "max": 20
+        },
+        "body": {
+          "state": "verbatim",
+          "points": 40,
+          "max": 40
+        },
+        "attachments": {
+          "state": "n/a",
+          "points": 15,
+          "max": 15
+        },
+        "status": {
+          "state": "full",
+          "points": 15,
+          "max": 15
+        },
+        "privacy": {
+          "state": "labelled",
+          "points": 10,
+          "max": 10
+        }
+      }
+    }
+  ],
+  "organisationStrip": [
+    {
+      "label": "International Clean Air Dialogue",
+      "note": "Dedeman İstanbul Hotel, 23–24 Sep 2026 — the event where the AQMx contact was made",
+      "url": "https://www.ccacoalition.org/events/international-clean-air-dialogue"
+    },
+    {
+      "label": "UNECE",
+      "note": "Convention on Long-range Transboundary Air Pollution — co-organiser of the Dialogue",
+      "url": "https://unece.org/environment-policy/air"
+    },
+    {
+      "label": "UNEP",
+      "note": "Co-organiser; Air Quality coordinator spoke on recent initiatives",
+      "url": "https://www.unep.org/explore-topics/air"
+    },
+    {
+      "label": "CCAC",
+      "note": "Climate and Clean Air Coalition — co-organiser; methane and waste-burning focus",
+      "url": "https://www.ccacoalition.org/"
+    },
+    {
+      "label": "WHO",
+      "note": "Guideline values used as CityAir's reference benchmark",
+      "url": "https://www.who.int/publications/i/item/9789240034228"
+    },
+    {
+      "label": "AQMx",
+      "note": "Global air-quality knowledge exchange; alignment target for the waste workstream",
+      "url": "https://aqmx.org/"
+    },
+    {
+      "label": "MoveGreen",
+      "note": "Bishkek — pilot partner in discussion; 100+ sensor PM network and AQ.kg",
+      "url": "https://movegreen.kg/"
+    },
+    {
+      "label": "XPRIZE Mission Methane",
+      "note": "Diffuse-methane competition; partner-development concept in preparation",
+      "url": "https://www.xprize.org/competitions/methane"
+    },
+    {
+      "label": "NASA FIRMS",
+      "note": "Active-fire and thermal-anomaly data used for screening",
+      "url": "https://firms.modaps.eosdis.nasa.gov/"
+    },
+    {
+      "label": "ISAF Smartex 2026",
+      "note": "İFM Yeşilköy, 7–10 Oct 2026 — 41 companies mapped for cooperation",
+      "url": "#/expo"
+    },
+    {
+      "label": "COP31 Antalya",
+      "note": "Antalya Expo Center, 9–20 Nov 2026 — pilot result targeted before opening",
+      "url": "https://unfccc.int/"
+    },
+    {
+      "label": "Open-Meteo",
+      "note": "Live air-quality and geocoding data used by the platform",
+      "url": "https://open-meteo.com/"
+    }
+  ],
+  "privacy": [
+    "Only organisational roles and publicly documented names are published on this page.",
+    "Private email addresses, phone numbers and the full text of third-party correspondence are withheld from the public build and kept in the private project archive.",
+    "Incoming messages are summarised, not quoted, unless the sender has given written permission.",
+    "Unverified contacts are labelled as such and carry no claim of affiliation.",
+    "Anyone named here can ask for their entry to be corrected or removed, and it will be done without argument."
+  ],
+  "gapRegister": [
+    {
+      "item": "متن کامل پیام خانم Kolesnikova",
+      "where": "بایگانی خصوصی (متن کامل موجود)",
+      "owner": "ما",
+      "how": "اجازه‌ی کتبی از خودشان → انتشار واژه‌به‌واژه روی همین صفحه"
+    },
+    {
+      "item": "ادامه‌ی پیام دریافتی (بعد از «I»)",
+      "where": "موجود نیست",
+      "owner": "آن‌ها",
+      "how": "در مکاتبه‌ی بعدی بخواهیم که نسخه‌ی کامل را بفرستند"
+    },
+    {
+      "item": "اطلاعات تماس شخصی (واتساپ/ایمیل)",
+      "where": "بایگانی خصوصی",
+      "owner": "ما",
+      "how": "عمداً منتشر نمی‌شود؛ فقط با رضایت صریح"
+    },
+    {
+      "item": "نام، نقش و وابستگی «ژولیت»",
+      "where": "تأییدنشده",
+      "owner": "آن‌ها",
+      "how": "ایمیل کوتاه پیگیری پس از سفر فرانسه/آلمان"
+    },
+    {
+      "item": "سه نفر دیگر حاضر در گفت‌وگو",
+      "where": "ثبت نشده",
+      "owner": "ما",
+      "how": "در پیام پیگیری بپرسیم و در یادداشت کامل کنیم"
+    },
+    {
+      "item": "پاسخ MoveGreen به ایمیل ۱۸:۴۶",
+      "where": "نیامده",
+      "owner": "خارج از کنترل ما",
+      "how": "پیگیری مؤدبانه بعد از ۷ روز + ارسال همین concept note"
+    },
+    {
+      "item": "snapshot صفحات لینک‌شده (XPRIZE/NASA/LinkedIn)",
+      "where": "فقط لینک",
+      "owner": "ما",
+      "how": "ذخیره‌ی آفلاین نسخه‌ی صفحات در همان روز ارسال"
+    },
+    {
+      "item": "اسکرین‌شات‌های اصلی تلگرام",
+      "where": "نسخه‌ی متنی هست، تصویر نیست",
+      "owner": "ما",
+      "how": "خروجی تصویری از تلگرام و افزودن به بایگانی خصوصی"
+    },
+    {
+      "item": "نسخه‌ی فارسی/روسی concept note",
+      "where": "ساخته نشده",
+      "owner": "ما",
+      "how": "در صورت درخواست MoveGreen، ترجمه‌ی یک‌صفحه‌ای"
+    },
+    {
+      "item": "مجوز نقل‌قول برای انتشار عمومی",
+      "where": "گرفته نشده",
+      "owner": "آن‌ها",
+      "how": "بند مشخص در ایمیل بعدی: «اجازه می‌دهید متن شما را منتشر کنیم؟»"
+    }
+  ],
+  "coverageNote": "این درصدها «کامل بودن آرشیو» را می‌سنجند، نه پیشرفت همکاری. هیچ‌کدام از این اسناد شراکت امضاشده نیست. هر شکافی که مال ماست، در ستون «چطور بسته می‌شود» یک اقدام مشخص دارد.",
+  "coverageSummary": {
+    "updated": "2026-10-08",
+    "method": "هر سند با ۵ معیار سنجیده می‌شود: فراداده ۲۰٪ (تاریخ، ساعت، کانال، فرستنده، گیرنده، موضوع) · متن پیام ۴۰٪ (واژه‌به‌واژه=۱۰۰، ترجمه=۹۵، خصوصی=۶۰، خلاصه=۵۰، ناقص=۳۵) · پیوست‌ها/لینک‌ها ۱۵٪ · وضعیت و قدم بعدی ۱۵٪ · برچسب حریم خصوصی ۱۰٪. درصد هر سند از همین فرمول در می‌آید و مجموع = میانگین اسناد.",
+    "overallPercent": 90,
+    "documents": 5,
+    "completeDocuments": 3,
+    "partialDocuments": 2,
+    "privateOnlyDocuments": 2,
+    "gapCount": 10,
+    "gapsOurs": 6,
+    "perDocument": [
+      {
+        "id": "draft-2026-10-08-concept-note",
+        "subject": "Concept note: a waste-and-methane pilot with MoveGreen (non-confidential, one page)",
+        "percent": 100
+      },
+      {
+        "id": "out-2026-10-07-muradyl",
+        "subject": "GreenHope × XPRIZE Mission Methane — partner development",
+        "percent": 100
+      },
+      {
+        "id": "in-2026-10-07-kolesnikova",
+        "subject": "Re: partnership concept — reply from MoveGreen",
+        "percent": 84
+      },
+      {
+        "id": "inperson-2026-09-23-aqmx",
+        "subject": "AQMx model, cities and air data — possible replication in waste",
+        "percent": 67
+      },
+      {
+        "id": "note-2026-10-07-cop31",
+        "subject": "COP31 green start-up track — registration under the author's name",
+        "percent": 100
+      }
+    ]
+  }
+}

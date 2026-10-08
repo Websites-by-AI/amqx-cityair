@@ -1,0 +1,28 @@
+{
+  "name": "amqx-cityair",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CityAir by AQMx — independent air-quality readiness, city explorer, innovation matching and AI assistant.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:fast": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "kb": "node ../tools/build-kb.mjs"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

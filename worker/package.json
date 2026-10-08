@@ -1,0 +1,19 @@
+{
+  "name": "amqx-cityair-worker",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CityAir API — RAG assistant, live air-quality proxy and Telegram bot webhook, served together with the static site via Cloudflare Workers Static Assets.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run --outdir dist",
+    "types": "wrangler types",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250927.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.42.0"
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d3a5a" />
+    <title>CityAir by AQMx — Air-Quality Readiness &amp; Innovation Exchange</title>
+    <meta
+      name="description"
+      content="CityAir is an independent platform that helps city teams assess air-quality management readiness, explore evidence gaps, plan action, match innovations and ask an AI assistant grounded in a public knowledge base."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://aqmx.atikova.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CityAir by AQMx — Air-Quality Readiness Platform" />
+    <meta
+      property="og:description"
+      content="Assess city air-quality readiness, compare cities, match innovations and ask an AI assistant."
+    />
+    <meta property="og:url" content="https://aqmx.atikova.com/" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <noscript>
+      <style>
+        [data-reveal] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <script>
+      /* Pre-React deep-link redirect so direct links work on every host:
+           /cities/bishkek               -> /#/cities/bishkek
+           /cities/bishkek/index.html    -> /#/cities/bishkek
+           /cities/bishkek/              -> /#/cities/bishkek
+         Runs before the bundle loads, so it works even if JS bundling is delayed. */
+      (function () {
+        var path = location.pathname.replace(/\/index\.html$/i, "/");
+        if (location.hash || path === "/") return;
+        if (/\.(js|css|json|png|jpe?g|svg|ico|txt|xml|webmanifest|woff2?)$/i.test(path)) return;
+        path = "/" + path.replace(/^\/+|\/+$/g, "");
+        if (path === "/") return;
+        location.replace(location.origin + "/#" + path + location.search);
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

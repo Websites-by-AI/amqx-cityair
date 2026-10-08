@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   CityAir design tokens — institutional blue with a clean-air teal
+   accent, health green and a data amber. (Inspired by UN-style air
+   quality platforms; CityAir itself is independent.)
+------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --color-brand-50: #eef7fc;
+  --color-brand-100: #d8ecf8;
+  --color-brand-200: #b3d9f1;
+  --color-brand-300: #7fc0e6;
+  --color-brand-400: #45a2d4;
+  --color-brand-500: #1f85c2;
+  --color-brand-600: #1169a4;
+  --color-brand-700: #0e5485;
+  --color-brand-800: #0e466c;
+  --color-brand-900: #0d3a5a;
+  --color-brand-950: #082641;
+
+  --color-accent-50: #e8fafc;
+  --color-accent-100: #c5f2f7;
+  --color-accent-200: #8fe6ef;
+  --color-accent-300: #54d3e3;
+  --color-accent-400: #22b8cf;
+  --color-accent-500: #0e9bb4;
+  --color-accent-600: #0a7c94;
+  --color-accent-700: #0b6276;
+  --color-accent-800: #104f61;
+  --color-accent-900: #124252;
+
+  --color-leaf-50: #ecfdf5;
+  --color-leaf-100: #d1fae5;
+  --color-leaf-300: #6ee7b7;
+  --color-leaf-500: #10b981;
+  --color-leaf-600: #059669;
+  --color-leaf-700: #047857;
+  --color-leaf-800: #065f46;
+
+  --color-sun-50: #fffbeb;
+  --color-sun-100: #fef3c7;
+  --color-sun-400: #fbbf24;
+  --color-sun-600: #d97706;
+  --color-sun-800: #92400e;
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-brand-950);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent-400);
+    outline-offset: 2px;
+  }
+
+  section[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    body {
+      background: #fff;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  .card {
+    border-radius: 1rem;
+    border: 1px solid var(--color-slate-200);
+    background: #fff;
+    padding: 1.25rem;
+    box-shadow: 0 1px 2px rgb(8 38 65 / 0.04);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .prose-site p {
+    line-height: 1.75;
+  }
+}
+
+/* Scroll-reveal (progressively enhanced — falls back to visible) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Print / PDF export, screenshots and any environment without JS:
+   never hide content behind the scroll animation. */
+@media print {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+html.no-js [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Partners & archive page ------------------------------------- */
+.oh-letter-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+  body {
+    background: #fff !important;
+  }
+  [data-site-chrome="true"] {
+    display: none !important;
+  }
+  .oh-page {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .oh-page article,
+  .oh-page ol > li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .oh-page h1,
+  .oh-page h2,
+  .oh-page h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .oh-letter {
+    max-height: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+  .oh-page a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 10px;
+    color: #475569;
+    word-break: break-all;
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "amqx-cityair",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // The site (app/dist) is served by the same Worker as the API, so /api/* is
+  // same-origin: no CORS, no second deployment, one custom domain.
+  "assets": {
+    "directory": "../app/site",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+
+  "observability": { "enabled": true },
+
+  "vars": {
+    "SITE_URL": "https://aqmx.atikova.com",
+    "SITE_NAME": "CityAir",
+    "BOT_USERNAME": "AQMX_cityair_tracker_bot",
+    "AI_MODEL": "@cf/meta/llama-3.1-8b-instruct",
+    "HF_MODEL": "Qwen/Qwen2.5-7B-Instruct",
+    "KB_VERSION": "1.0.0"
+  }
+
+  // Bindings below are OPTIONAL — the code degrades gracefully without them.
+  // Uncomment after `wrangler kv namespace create AMQX_KV` /
+  // `wrangler d1 create amqx-cityair`:
+  //
+  // "kv_namespaces": [{ "binding": "AMQX_KV", "id": "<kv-id>" }],
+  // "d1_databases": [
+  //   { "binding": "DB", "database_name": "amqx-cityair", "database_id": "<d1-id>" }
+  // ],
+  //
+  // Workers AI is enabled by uncommenting the binding below (needs the Workers
+  // AI product enabled on the account; free tier included):
+  // "ai": { "binding": "AI" },
+  //
+  // Custom domain (needs the zone atikova.com in the SAME Cloudflare account):
+  // "routes": [{ "pattern": "aqmx.atikova.com", "custom_domain": true }]
+}

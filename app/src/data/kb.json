@@ -1,0 +1,1528 @@
+[
+ {
+  "id": "platform-overview",
+  "title": "What CityAir is",
+  "text": "CityAir is an independent, open air-quality readiness and innovation-exchange platform for city teams. It has four core functions: (1) a twelve-domain readiness assessment scored from self-reported answers, (2) a city explorer with illustrative profiles and live readings, (3) an innovation implementation library with explainable matching, and (4) an AI assistant grounded in this knowledge base. CityAir is a prototype. It is not an official product of AQMx, CCAC, WRI, NASA, XPRIZE or the World Health Organization, it does not rank or certify cities, and demonstration city data is illustrative.",
+  "tags": [
+   "overview",
+   "platform",
+   "about",
+   "what is cityair"
+  ],
+  "source": "CityAir — platform overview"
+ },
+ {
+  "id": "platform-disclaimers",
+  "title": "Limits, disclaimers and responsible use",
+  "text": "CityAir must not be used as a certification, audit, compliance check or official ranking. Illustrative city scores are synthetic demonstration values and must never be quoted as facts about a real city. AI answers are machine generated from a prototype knowledge base and can be incomplete or wrong. Live air-quality readings come from a third-party open API (Open-Meteo) and are model-based, not quality-assured regulatory measurements. Satellite and remote-sensing products must not be presented as direct methane quantification or as verification of emission reductions. Assessment answers stay in the user's browser unless the user explicitly exports them.",
+  "tags": [
+   "disclaimer",
+   "limits",
+   "responsible use",
+   "risk"
+  ],
+  "source": "CityAir — methodology and disclaimers"
+ },
+ {
+  "id": "scoring-method",
+  "title": "How the readiness score is calculated",
+  "text": "Each of the twelve questions belongs to one domain and carries a weight between 0.8 and 1.2. A scored answer from 0 (absent) to 4 (leading) is normalised: (answer / 4) * 100. The domain score is the weighted mean of its questions: sum(normalised * weight) / sum(weight). The overall readiness score is the weighted mean of the domain scores that were actually answered. Answers marked \"unknown\" or \"not applicable\" are excluded from both numerator and denominator, so honest gaps reduce completeness rather than silently lowering the score. Maturity bands: Starting 0-34, Developing 35-54, Established 55-69, Advanced 70-84, Leading 85-100. Scores are planning prompts, not certifications.",
+  "tags": [
+   "scoring",
+   "formula",
+   "method",
+   "weights",
+   "band",
+   "maturity"
+  ],
+  "source": "CityAir — methodology"
+ },
+ {
+  "id": "confidence-method",
+  "title": "Evidence confidence model",
+  "text": "Evidence confidence is a 0-100 figure built from three components: 60% confirmed evidence systems (nine source types: regulatory monitoring stations, low-cost sensors, emissions inventories, satellite data, waste-site data, methane measurements, health data, public reporting systems, verified historical records); 25% the share of scored answers that carry an evidence note or link; 15% questionnaire completeness across the twelve domains. A high score with low confidence is the most common self-assessment failure mode: the practice may exist informally and not survive staff turnover. Fewer than 60% of domains scored triggers an insufficient-evidence warning.",
+  "tags": [
+   "confidence",
+   "evidence",
+   "quality",
+   "method"
+  ],
+  "source": "CityAir — methodology"
+ },
+ {
+  "id": "five-stages",
+  "title": "The five stages of air-quality management capacity",
+  "text": "1 Diagnose — frame the problem and the mandate: agree ownership, pollutants, areas and the decisions the evidence must support. 2 Measure — build a trustworthy evidence base: quality-assured monitoring, documented QA/QC, reference stations, sensors and satellite screening combined honestly. 3 Attribute — identify sources and exposure: emissions inventories, dispersion analysis and health evidence so measures can target dominant sources. 4 Act — prioritise, implement and fund: turn evidence into phased measures with owners, budgets, legal instruments and feedback loops. 5 Sustain — communicate, evaluate and iterate: publish results accessibly, evaluate effectiveness and institutionalise improvement.",
+  "tags": [
+   "stages",
+   "maturity",
+   "process",
+   "framework"
+  ],
+  "source": "CityAir — method"
+ },
+ {
+  "id": "action-plan-logic",
+  "title": "How the phased action plan is generated",
+  "text": "The action plan uses the lowest-scoring domains and the city's recorded priorities. Phase 1 (0-6 months) stabilises the evidence base: owners, scope, inventory of existing data, QA/QC and completeness notes, and a workshop to confirm priorities. Phase 2 (6-18 months) closes analytical gaps: connect measurements to source attribution, set measurable indicators per priority sector, prepare a costed funding case, and establish a monthly evidence-decision review. Phase 3 (18-36 months) scales, communicates and institutionalises: publish an annual progress report, evaluate delivered measures, re-run the assessment every 12-24 months, and exchange results with peer cities. Every action needs a named owner, a costed option set, a legal or procurement route, an indicator with a baseline and a review date.",
+  "tags": [
+   "action plan",
+   "phases",
+   "implementation",
+   "budget"
+  ],
+  "source": "CityAir — action planning"
+ },
+ {
+  "id": "who-guidelines",
+  "title": "WHO air-quality guideline reference levels",
+  "text": "Reference levels (micrograms per cubic metre except CO in mg/m3, from the WHO global air-quality guidelines): PM2.5 annual: interim targets 35, 25, 15, 10; guideline level 5. PM2.5 24-hour: interim targets 75, 50, 37.5, 25; guideline level 15. PM10 annual: interim targets 70, 50, 30, 20; guideline level 15. PM10 24-hour: interim targets 150, 100, 75, 50; guideline level 45. Ozone peak season: interim targets 100, 70; guideline level 60. Ozone 8-hour: interim targets 160, 120; level 100. NO2 annual: interim targets 40, 30, 20; guideline level 10. NO2 24-hour: interim targets 120, 50; level 25. SO2 24-hour: interim targets 125, 50; guideline level 40. CO 24-hour: interim target 7; guideline level 4. Always confirm current values with the WHO source before regulatory use.",
+  "tags": [
+   "who",
+   "guidelines",
+   "pm2.5",
+   "no2",
+   "ozone",
+   "so2",
+   "co",
+   "benchmark"
+  ],
+  "source": "CityAir — methodology (WHO reference values)"
+ },
+ {
+  "id": "air-quality-basics",
+  "title": "Core air-quality concepts used by the platform",
+  "text": "PM2.5 and PM10 are particulate matter with diameters below 2.5 and 10 micrometres; the smaller fraction penetrates deeper into the lungs and bloodstream and dominates health burden in most cities. NO2 is largely traffic- and combustion-related; ozone is formed photochemically and peaks in warm sunny conditions; SO2 is associated with sulphur-bearing fuels and some industry; CO comes from incomplete combustion. Source attribution combines emissions inventories, dispersion and chemical-transport modelling, receptor modelling, speciation and meteorology. Ambient concentrations depend on emissions plus meteorology and topography, which is why valleys and basins show severe winter episodes and why dust events must be separated from managed sources. Exposure is not the same as concentration: it also depends on where people live, work and travel.",
+  "tags": [
+   "pm2.5",
+   "pm10",
+   "no2",
+   "ozone",
+   "so2",
+   "attribution",
+   "exposure",
+   "science"
+  ],
+  "source": "CityAir — guidance synthesis"
+ },
+ {
+  "id": "domain-monitoring",
+  "title": "Guidance domain: Air Quality Monitoring",
+  "text": "Build a fit-for-purpose, quality-assured picture of ambient pollution. Guiding questions: Which pollutants and places matter most? | How is quality assurance documented?. Recommended actions: Define monitoring objectives | Design representative sites | Publish QA and completeness metrics. Data the domain needs: Reference observations | Site metadata | Calibration and maintenance logs. Maturity sequence: Map needs -> Pilot measurements -> Operate QA system -> Optimize network -> Share interoperable evidence. Public references: AQMx, WHO air-quality guidance.",
+  "tags": [
+   "guidance",
+   "domain",
+   "monitoring",
+   "air quality monitoring"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-source-attribution",
+  "title": "Guidance domain: Source Attribution",
+  "text": "Identify source contributions using multiple, converging lines of evidence. Guiding questions: Which sources drive exposure? | How do contributions change by season?. Recommended actions: Develop a study plan | Combine inventory and measurement evidence | Document uncertainty. Data the domain needs: Pollutant speciation | Meteorology | Activity data. Maturity sequence: Form hypotheses -> Gather evidence -> Run analysis -> Validate findings -> Update routinely. Public references: AQMx sectoral guidance.",
+  "tags": [
+   "guidance",
+   "domain",
+   "source-attribution",
+   "source attribution"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-inventory",
+  "title": "Guidance domain: Emissions Inventory",
+  "text": "Estimate emissions consistently enough to guide and evaluate policy. Guiding questions: Which sectors dominate? | When was the inventory updated?. Recommended actions: Set scope and base year | Collect activity factors | Quality-check and publish. Data the domain needs: Activity data | Emission factors | Spatial proxies. Maturity sequence: Scope -> Compile -> Quality assure -> Use in scenarios -> Institutionalize updates. Public references: AQMx sectoral guidance.",
+  "tags": [
+   "guidance",
+   "domain",
+   "inventory",
+   "emissions inventory"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-forecasting",
+  "title": "Guidance domain: Air Quality Forecasting",
+  "text": "Anticipate episodes and communicate uncertainty for timely action. Guiding questions: Who needs forecasts? | How is performance evaluated?. Recommended actions: Define use cases | Pilot models | Verify forecasts and alerts. Data the domain needs: Observations | Meteorology | Emissions inputs. Maturity sequence: Define -> Pilot -> Validate -> Operationalize -> Continuously improve. Public references: AQMx.",
+  "tags": [
+   "guidance",
+   "domain",
+   "forecasting",
+   "air quality forecasting"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-health",
+  "title": "Guidance domain: Health Impact Assessment",
+  "text": "Connect pollution exposure with health burdens and policy benefits. Guiding questions: Which populations are most exposed? | Which outcomes can be assessed responsibly?. Recommended actions: Engage health authorities | Select validated methods | Communicate uncertainty. Data the domain needs: Population | Exposure surfaces | Baseline health rates. Maturity sequence: Align partners -> Assemble data -> Estimate impacts -> Evaluate interventions -> Embed health evidence. Public references: WHO guidelines.",
+  "tags": [
+   "guidance",
+   "domain",
+   "health",
+   "health impact assessment"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-eia",
+  "title": "Guidance domain: Environmental Impact Assessment",
+  "text": "Assess and manage air impacts of plans and projects before approval. Guiding questions: Are cumulative impacts included? | Are mitigations enforceable?. Recommended actions: Set assessment rules | Review baseline evidence | Monitor commitments. Data the domain needs: Project emissions | Baseline concentrations | Sensitive receptors. Maturity sequence: Set criteria -> Build review capacity -> Track mitigations -> Audit outcomes -> Improve standards. Public references: National EIA guidance.",
+  "tags": [
+   "guidance",
+   "domain",
+   "eia",
+   "environmental impact assessment"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-decision",
+  "title": "Guidance domain: Decision Support",
+  "text": "Turn evidence into transparent choices, budgets and measurable action. Guiding questions: Who owns decisions? | How are trade-offs documented?. Recommended actions: Create a shared evidence register | Compare measures | Track decisions and outcomes. Data the domain needs: Costs | Benefits | Distributional impacts. Maturity sequence: Map decisions -> Organize evidence -> Compare options -> Track outcomes -> Institutionalize learning. Public references: GreenHope methodology.",
+  "tags": [
+   "guidance",
+   "domain",
+   "decision",
+   "decision support"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-engagement",
+  "title": "Guidance domain: Public Engagement and Communication",
+  "text": "Enable residents to understand risks, contribute knowledge and act. Guiding questions: Which audiences are underserved? | Are messages tested?. Recommended actions: Co-design communication | Use accessible channels | Evaluate comprehension. Data the domain needs: Audience research | Alert reach | Feedback. Maturity sequence: Listen -> Prototype -> Publish -> Evaluate -> Co-govern. Public references: WHO health communication.",
+  "tags": [
+   "guidance",
+   "domain",
+   "engagement",
+   "public engagement and communication"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-legal",
+  "title": "Guidance domain: Legal Framework and Policy Design",
+  "text": "Clarify mandates, standards, accountability and enforceable clean-air measures. Guiding questions: Are responsibilities clear? | Can standards be enforced fairly?. Recommended actions: Map legal powers | Close mandate gaps | Publish accountability measures. Data the domain needs: Legal instruments | Compliance records | Policy evaluations. Maturity sequence: Map framework -> Clarify roles -> Implement policy -> Evaluate compliance -> Update adaptively. Public references: AQMx.",
+  "tags": [
+   "guidance",
+   "domain",
+   "legal",
+   "legal framework and policy design"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-waste",
+  "title": "Guidance domain: Waste Management",
+  "text": "Reduce air and climate harms through controlled, inclusive waste systems. Guiding questions: Where does waste flow? | Which sites lack controls?. Recommended actions: Build a site register | Prioritize risks | Improve collection and controls. Data the domain needs: Waste flows | Site operations | Inspection records. Maturity sequence: Map -> Stabilize -> Control -> Optimize -> Recover resources. Public references: AQMx sectoral guidance.",
+  "tags": [
+   "guidance",
+   "domain",
+   "waste",
+   "waste management"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-burning",
+  "title": "Guidance domain: Open Waste Burning",
+  "text": "Prevent burning through detection, viable services and coordinated response. Guiding questions: Why does burning occur? | How are reports validated?. Recommended actions: Map recurrence | Provide alternatives | Track response and recurrence. Data the domain needs: Community reports | Fire screening | Local PM measurements. Maturity sequence: Identify -> Validate -> Respond -> Prevent -> Sustain zero-burning systems. Public references: NASA FIRMS caveats, AQMx sectoral guidance.",
+  "tags": [
+   "guidance",
+   "domain",
+   "burning",
+   "open waste burning"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "domain-methane",
+  "title": "Guidance domain: Methane and Landfill Monitoring",
+  "text": "Screen landfill-gas risks, then quantify and verify with suitable measurements. Guiding questions: Which sites need qualified measurement? | How will mitigation be verified?. Recommended actions: Review site operations | Plan safe measurement | Verify mitigation over time. Data the domain needs: Waste composition | Site geometry | Ground or airborne methane measurements. Maturity sequence: Screen -> Measure -> Diagnose -> Mitigate -> Verify. Public references: XPRIZE Mission Methane reference.",
+  "tags": [
+   "guidance",
+   "domain",
+   "methane",
+   "methane and landfill monitoring"
+  ],
+  "source": "CityAir — guidance domains"
+ },
+ {
+  "id": "question-monitoring-01",
+  "title": "Assessment question (Air Quality Monitoring)",
+  "text": "Does the city operate a quality-assured air-quality monitoring network with documented maintenance? This question belongs to the domain \"Air Quality Monitoring\" and carries weight 1.2 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "air quality monitoring",
+   "monitoring-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-source-01",
+  "title": "Assessment question (Source Attribution)",
+  "text": "Does the city use measurements and analysis to identify major pollution sources? This question belongs to the domain \"Source Attribution\" and carries weight 1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "source attribution",
+   "source-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-inventory-01",
+  "title": "Assessment question (Emissions Inventory)",
+  "text": "Is a documented emissions inventory updated on a defined schedule? This question belongs to the domain \"Emissions Inventory\" and carries weight 1.1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "emissions inventory",
+   "inventory-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-forecasting-01",
+  "title": "Assessment question (Air Quality Forecasting)",
+  "text": "Can the city issue and evaluate short-term air-quality forecasts or alerts? This question belongs to the domain \"Air Quality Forecasting\" and carries weight 0.8 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "air quality forecasting",
+   "forecasting-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-health-01",
+  "title": "Assessment question (Health Impact Assessment)",
+  "text": "Are air-pollution exposure and health outcomes assessed with public-health experts? This question belongs to the domain \"Health Impact Assessment\" and carries weight 1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "health impact assessment",
+   "health-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-eia-01",
+  "title": "Assessment question (Environmental Impact Assessment)",
+  "text": "Do project reviews consistently assess air-quality impacts and mitigation? This question belongs to the domain \"Environmental Impact Assessment\" and carries weight 0.8 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "environmental impact assessment",
+   "eia-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-decision-01",
+  "title": "Assessment question (Decision Support)",
+  "text": "Are monitoring, inventory and health findings routinely used in city decisions? This question belongs to the domain \"Decision Support\" and carries weight 1.1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "decision support",
+   "decision-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-engagement-01",
+  "title": "Assessment question (Public Engagement and Communication)",
+  "text": "Does the city publish understandable, accessible air-quality information and response advice? This question belongs to the domain \"Public Engagement and Communication\" and carries weight 0.9 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "public engagement and communication",
+   "engagement-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-legal-01",
+  "title": "Assessment question (Legal Framework and Policy Design)",
+  "text": "Are responsibilities, standards, enforcement powers and clean-air goals clearly established? This question belongs to the domain \"Legal Framework and Policy Design\" and carries weight 1.1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "legal framework and policy design",
+   "legal-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-waste-01",
+  "title": "Assessment question (Waste Management)",
+  "text": "Does the city track waste flows, disposal sites and operational environmental controls? This question belongs to the domain \"Waste Management\" and carries weight 1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "waste management",
+   "waste-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-burning-01",
+  "title": "Assessment question (Open Waste Burning)",
+  "text": "Is there a coordinated system to detect, prevent and respond to open waste burning? This question belongs to the domain \"Open Waste Burning\" and carries weight 1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "open waste burning",
+   "burning-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "question-methane-01",
+  "title": "Assessment question (Methane and Landfill Monitoring)",
+  "text": "Are landfill gas risks screened and validated using appropriate measurement methods? This question belongs to the domain \"Methane and Landfill Monitoring\" and carries weight 1 in that domain's score. It is answered on a 0-4 scale, or marked unknown / not applicable.",
+  "tags": [
+   "assessment",
+   "question",
+   "methane and landfill monitoring",
+   "methane-01"
+  ],
+  "source": "CityAir — question set"
+ },
+ {
+  "id": "city-istanbul",
+  "title": "City profile: Istanbul, Türkiye",
+  "text": "Istanbul (Türkiye, Europe & Central Asia, population 10M+) is profiled with an illustrative readiness score of 66 (Established band) and evidence confidence 72. Climate and topography: Coastal temperate. Dominant sector of concern: Transport. Documented challenges: Road transport exposure; Industrial and port sources; Cross-agency data integration. Actions under consideration: Expand exposure-focused monitoring; Link transport measures to indicators; Publish a shared evidence register. Domain scores: Monitoring 78, Source attribution 62, Inventory 69, Forecasting 74, Health 58, EIA 72, Decision support 65, Engagement 73, Legal 70, Waste 64, Open burning 55, Methane 48. Sources: Municipal open-data portals; National monitoring sources; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Istanbul.",
+  "tags": [
+   "city",
+   "profile",
+   "istanbul",
+   "türkiye",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-mexico-city",
+  "title": "City profile: Mexico City, Mexico",
+  "text": "Mexico City (Mexico, Latin America & Caribbean, population 10M+) is profiled with an illustrative readiness score of 77 (Advanced band) and evidence confidence 82. Climate and topography: High-altitude basin. Dominant sector of concern: Transport. Documented challenges: Ozone episodes; Transport emissions; Regional airshed coordination. Actions under consideration: Refine cross-boundary attribution; Strengthen health-outcome evaluation; Test targeted public alerts. Domain scores: Monitoring 91, Source attribution 82, Inventory 84, Forecasting 86, Health 73, EIA 76, Decision support 81, Engagement 84, Legal 78, Waste 67, Open burning 61, Methane 59. Sources: Public monitoring networks; Public emissions information; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Mexico City.",
+  "tags": [
+   "city",
+   "profile",
+   "mexico city",
+   "mexico",
+   "latin america & caribbean"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-bishkek",
+  "title": "City profile: Bishkek, Kyrgyz Republic",
+  "text": "Bishkek (Kyrgyz Republic, Europe & Central Asia, population 1M–5M) is profiled with an illustrative readiness score of 41 (Developing band) and evidence confidence 48. Climate and topography: Continental valley. Dominant sector of concern: Household Energy. Documented challenges: Winter particulate pollution; Household coal heating; Limited evidence coverage. Actions under consideration: Build a quality-assurance plan; Characterize seasonal sources; Coordinate health and exposure indicators. Domain scores: Monitoring 48, Source attribution 37, Inventory 39, Forecasting 45, Health 34, EIA 42, Decision support 40, Engagement 52, Legal 49, Waste 46, Open burning 38, Methane 27. Sources: Publicly reported measurements; Satellite context; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Bishkek.",
+  "tags": [
+   "city",
+   "profile",
+   "bishkek",
+   "kyrgyz republic",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-delhi",
+  "title": "City profile: Delhi, India",
+  "text": "Delhi (India, Asia & Pacific, population 10M+) is profiled with an illustrative readiness score of 60 (Established band) and evidence confidence 74. Climate and topography: Indo-Gangetic plain. Dominant sector of concern: Transport. Documented challenges: Intense winter episodes; Multiple co-located sources; High population exposure. Actions under consideration: Expand source-apportionment studies; Tighten enforcement around priority sites; Publish hyperlocal exposure communication. Domain scores: Monitoring 76, Source attribution 58, Inventory 61, Forecasting 66, Health 63, EIA 64, Decision support 59, Engagement 68, Legal 62, Waste 55, Open burning 49, Methane 44. Sources: Public monitoring summaries; Published research; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Delhi.",
+  "tags": [
+   "city",
+   "profile",
+   "delhi",
+   "india",
+   "asia & pacific"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-lagos",
+  "title": "City profile: Lagos, Nigeria",
+  "text": "Lagos (Nigeria, Africa, population 10M+) is profiled with an illustrative readiness score of 36 (Developing band) and evidence confidence 42. Climate and topography: Coastal tropical. Dominant sector of concern: Transport. Documented challenges: Traffic and generator emissions; Limited network coverage; Waste burning near communities. Actions under consideration: Stabilise core monitoring sites; Formalise waste-burning reporting; Link transport data to exposure estimates. Domain scores: Monitoring 44, Source attribution 33, Inventory 31, Forecasting 29, Health 36, EIA 38, Decision support 34, Engagement 47, Legal 41, Waste 33, Open burning 42, Methane 26. Sources: Institutional reporting; Regional datasets; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Lagos.",
+  "tags": [
+   "city",
+   "profile",
+   "lagos",
+   "nigeria",
+   "africa"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-bogota",
+  "title": "City profile: Bogotá, Colombia",
+  "text": "Bogotá (Colombia, Latin America & Caribbean, population 5M–10M) is profiled with an illustrative readiness score of 67 (Established band) and evidence confidence 70. Climate and topography: High-altitude plateau. Dominant sector of concern: Transport. Documented challenges: Fleet and freight emissions; Seasonal wildfire smoke; Equity of exposure. Actions under consideration: Extend freight route analysis; Integrate wildfire smoke forecasting; Target communication to exposed districts. Domain scores: Monitoring 82, Source attribution 71, Inventory 68, Forecasting 77, Health 64, EIA 70, Decision support 72, Engagement 75, Legal 74, Waste 60, Open burning 52, Methane 41. Sources: Public monitoring network; Published plans; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Bogotá.",
+  "tags": [
+   "city",
+   "profile",
+   "bogotá",
+   "colombia",
+   "latin america & caribbean"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-nairobi",
+  "title": "City profile: Nairobi, Kenya",
+  "text": "Nairobi (Kenya, Africa, population 1M–5M) is profiled with an illustrative readiness score of 44 (Developing band) and evidence confidence 46. Climate and topography: Highland tropical. Dominant sector of concern: Household Energy. Documented challenges: Cooking and heating emissions; Informal-sector exposure; Fragmented data ownership. Actions under consideration: Document data ownership; Pilot neighbourhood campaigns; Align waste and air programmes. Domain scores: Monitoring 52, Source attribution 39, Inventory 35, Forecasting 41, Health 43, EIA 45, Decision support 42, Engagement 56, Legal 51, Waste 48, Open burning 47, Methane 30. Sources: Research collaborations; Civil-society monitoring; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Nairobi.",
+  "tags": [
+   "city",
+   "profile",
+   "nairobi",
+   "kenya",
+   "africa"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-krakow",
+  "title": "City profile: Kraków, Poland",
+  "text": "Kraków (Poland, Europe & Central Asia, population 250k–1M) is profiled with an illustrative readiness score of 76 (Advanced band) and evidence confidence 84. Climate and topography: Continental basin. Dominant sector of concern: Household Energy. Documented challenges: Historic coal heating legacy; Winter inversion trapping; Street-level exposure hot spots. Actions under consideration: Maintain the coal-phase-out evidence trail; Evaluate heating-replacement outcomes; Publish hyperlocal exposure maps. Domain scores: Monitoring 88, Source attribution 79, Inventory 83, Forecasting 81, Health 72, EIA 74, Decision support 78, Engagement 80, Legal 85, Waste 70, Open burning 66, Methane 52. Sources: Regional monitoring data; Municipal programme reports; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Kraków.",
+  "tags": [
+   "city",
+   "profile",
+   "kraków",
+   "poland",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-sarajevo",
+  "title": "City profile: Sarajevo, Bosnia and Herzegovina",
+  "text": "Sarajevo (Bosnia and Herzegovina, Europe & Central Asia, population 250k–1M) is profiled with an illustrative readiness score of 49 (Developing band) and evidence confidence 54. Climate and topography: Mountain valley. Dominant sector of concern: Household Energy. Documented challenges: Severe winter inversions; Solid-fuel heating; Limited open data. Actions under consideration: Publish validated winter datasets; Quantify solid-fuel contributions; Coordinate a heating subsidy reform. Domain scores: Monitoring 61, Source attribution 49, Inventory 44, Forecasting 52, Health 45, EIA 50, Decision support 47, Engagement 58, Legal 54, Waste 51, Open burning 43, Methane 32. Sources: National monitoring reports; Donor studies; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Sarajevo.",
+  "tags": [
+   "city",
+   "profile",
+   "sarajevo",
+   "bosnia and herzegovina",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-accra",
+  "title": "City profile: Accra, Ghana",
+  "text": "Accra (Ghana, Africa, population 1M–5M) is profiled with an illustrative readiness score of 41 (Developing band) and evidence confidence 44. Climate and topography: Coastal savanna. Dominant sector of concern: Waste-site emissions. Documented challenges: Open burning; Landfill proximity; Rapid urban expansion. Actions under consideration: Map burning locations systematically; Formalise waste-collection monitoring; Link landfill operations to air data. Domain scores: Monitoring 47, Source attribution 38, Inventory 32, Forecasting 35, Health 40, EIA 41, Decision support 38, Engagement 53, Legal 46, Waste 44, Open burning 51, Methane 29. Sources: Municipal statistics; Research partnerships; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Accra.",
+  "tags": [
+   "city",
+   "profile",
+   "accra",
+   "ghana",
+   "africa"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-oslo",
+  "title": "City profile: Oslo, Norway",
+  "text": "Oslo (Norway, Europe & Central Asia, population 250k–1M) is profiled with an illustrative readiness score of 82 (Advanced band) and evidence confidence 90. Climate and topography: Nordic coastal. Dominant sector of concern: Transport. Documented challenges: Winter studded-tyre dust; Port and construction sources; Ensuring equitable exposure gains. Actions under consideration: Refine road-dust forecasting; Evaluate low-emission-zone outcomes; Publish equity analysis. Domain scores: Monitoring 94, Source attribution 86, Inventory 88, Forecasting 89, Health 84, EIA 82, Decision support 90, Engagement 88, Legal 90, Waste 76, Open burning 62, Methane 58. Sources: Open city data; National inventories; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Oslo.",
+  "tags": [
+   "city",
+   "profile",
+   "oslo",
+   "norway",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-bangkok",
+  "title": "City profile: Bangkok, Thailand",
+  "text": "Bangkok (Thailand, Asia & Pacific, population 5M–10M) is profiled with an illustrative readiness score of 64 (Established band) and evidence confidence 68. Climate and topography: Tropical delta. Dominant sector of concern: Transport. Documented challenges: Traffic-related particulates; Seasonal agricultural smoke; Industrial estate proximity. Actions under consideration: Coordinate regional smoke forecasting; Strengthen traffic measures evaluation; Expand exposure communication. Domain scores: Monitoring 79, Source attribution 66, Inventory 63, Forecasting 72, Health 61, EIA 67, Decision support 64, Engagement 70, Legal 68, Waste 59, Open burning 54, Methane 45. Sources: Public monitoring dashboards; Regional programmes; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Bangkok.",
+  "tags": [
+   "city",
+   "profile",
+   "bangkok",
+   "thailand",
+   "asia & pacific"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-tehran",
+  "title": "City profile: Tehran, Iran",
+  "text": "Tehran (Iran, Middle East & North Africa, population 5M–10M) is profiled with an illustrative readiness score of 59 (Established band) and evidence confidence 58. Climate and topography: Mountain basin. Dominant sector of concern: Transport. Documented challenges: Winter inversion episodes; Ageing vehicle fleet; Data-access limitations. Actions under consideration: Document network performance publicly; Review fleet-retirement evidence; Improve warning thresholds. Domain scores: Monitoring 74, Source attribution 61, Inventory 58, Forecasting 69, Health 55, EIA 63, Decision support 60, Engagement 64, Legal 66, Waste 52, Open burning 45, Methane 38. Sources: Published measurements; Academic research; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Tehran.",
+  "tags": [
+   "city",
+   "profile",
+   "tehran",
+   "iran",
+   "middle east & north africa"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-cairo",
+  "title": "City profile: Cairo, Egypt",
+  "text": "Cairo (Egypt, Middle East & North Africa, population 10M+) is profiled with an illustrative readiness score of 50 (Developing band) and evidence confidence 55. Climate and topography: Arid river valley. Dominant sector of concern: Transport. Documented challenges: Dust and resuspended particles; Dense traffic corridors; Waste burning on the periphery. Actions under consideration: Separate natural dust from managed sources; Strengthen corridor monitoring; Register waste-burning incidents. Domain scores: Monitoring 63, Source attribution 49, Inventory 47, Forecasting 55, Health 48, EIA 52, Decision support 50, Engagement 57, Legal 55, Waste 53, Open burning 42, Methane 33. Sources: National reports; Research networks; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Cairo.",
+  "tags": [
+   "city",
+   "profile",
+   "cairo",
+   "egypt",
+   "middle east & north africa"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-jakarta",
+  "title": "City profile: Jakarta, Indonesia",
+  "text": "Jakarta (Indonesia, Asia & Pacific, population 10M+) is profiled with an illustrative readiness score of 53 (Developing band) and evidence confidence 57. Climate and topography: Coastal tropical. Dominant sector of concern: Transport. Documented challenges: Congestion-related emissions; Industrial clusters; Seasonal burning episodes. Actions under consideration: Quantify congestion measure benefits; Align industrial and air permits; Expand citizen reporting. Domain scores: Monitoring 67, Source attribution 54, Inventory 51, Forecasting 58, Health 52, EIA 55, Decision support 53, Engagement 60, Legal 57, Waste 49, Open burning 44, Methane 35. Sources: Public dashboards; Sector studies; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Jakarta.",
+  "tags": [
+   "city",
+   "profile",
+   "jakarta",
+   "indonesia",
+   "asia & pacific"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-lima",
+  "title": "City profile: Lima, Peru",
+  "text": "Lima (Peru, Latin America & Caribbean, population 5M–10M) is profiled with an illustrative readiness score of 47 (Developing band) and evidence confidence 51. Climate and topography: Coastal desert. Dominant sector of concern: Transport. Documented challenges: Fleet and industrial emissions; Limited dispersion in winter; Informal transport share. Actions under consideration: Improve winter dispersion analysis; Register informal fleet data; Publish health-linked indicators. Domain scores: Monitoring 59, Source attribution 47, Inventory 52, Forecasting 44, Health 46, EIA 50, Decision support 48, Engagement 54, Legal 52, Waste 45, Open burning 40, Methane 31. Sources: Municipal monitoring; Published studies; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Lima.",
+  "tags": [
+   "city",
+   "profile",
+   "lima",
+   "peru",
+   "latin america & caribbean"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-tashkent",
+  "title": "City profile: Tashkent, Uzbekistan",
+  "text": "Tashkent (Uzbekistan, Europe & Central Asia, population 1M–5M) is profiled with an illustrative readiness score of 46 (Developing band) and evidence confidence 43. Climate and topography: Semi-arid basin. Dominant sector of concern: Household Energy. Documented challenges: Winter heating emissions; Dust events; Inter-agency data sharing. Actions under consideration: Formalise a data-sharing protocol; Quantify heating contributions; Coordinate dust-health messaging. Domain scores: Monitoring 58, Source attribution 44, Inventory 41, Forecasting 49, Health 42, EIA 47, Decision support 45, Engagement 52, Legal 56, Waste 48, Open burning 39, Methane 30. Sources: National reports; Regional datasets; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Tashkent.",
+  "tags": [
+   "city",
+   "profile",
+   "tashkent",
+   "uzbekistan",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-marrakesh",
+  "title": "City profile: Marrakesh, Morocco",
+  "text": "Marrakesh (Morocco, Middle East & North Africa, population 250k–1M) is profiled with an illustrative readiness score of 43 (Developing band) and evidence confidence 41. Climate and topography: Semi-arid plain. Dominant sector of concern: Dust. Documented challenges: Mineral dust episodes; Traffic corridor exposure; Tourism-season variability. Actions under consideration: Separate dust from managed sources; Tighten corridor controls; Maintain consistent reporting. Domain scores: Monitoring 51, Source attribution 40, Inventory 37, Forecasting 45, Health 39, EIA 44, Decision support 42, Engagement 58, Legal 53, Waste 47, Open burning 36, Methane 28. Sources: National measurements; Research collaborations; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Marrakesh.",
+  "tags": [
+   "city",
+   "profile",
+   "marrakesh",
+   "morocco",
+   "middle east & north africa"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-warsaw",
+  "title": "City profile: Warsaw, Poland",
+  "text": "Warsaw (Poland, Europe & Central Asia, population 1M–5M) is profiled with an illustrative readiness score of 72 (Advanced band) and evidence confidence 78. Climate and topography: Continental plain. Dominant sector of concern: Transport. Documented challenges: Winter heating legacy; Traffic corridors; Cross-border transport of pollution. Actions under consideration: Evaluate low-emission-zone outcomes; Improve regional modelling; Publish annual progress reporting. Domain scores: Monitoring 86, Source attribution 74, Inventory 76, Forecasting 79, Health 70, EIA 72, Decision support 75, Engagement 77, Legal 79, Waste 66, Open burning 58, Methane 47. Sources: Open data portals; National inventories; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Warsaw.",
+  "tags": [
+   "city",
+   "profile",
+   "warsaw",
+   "poland",
+   "europe & central asia"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "city-santiago",
+  "title": "City profile: Santiago, Chile",
+  "text": "Santiago (Chile, Latin America & Caribbean, population 5M–10M) is profiled with an illustrative readiness score of 73 (Advanced band) and evidence confidence 76. Climate and topography: Andean basin. Dominant sector of concern: Transport. Documented challenges: Winter inversion episodes; Wood heating in the periphery; Industrial source mix. Actions under consideration: Quantify wood-heating measures; Strengthen forecasting and alerts; Evaluate health outcomes. Domain scores: Monitoring 85, Source attribution 77, Inventory 80, Forecasting 78, Health 71, EIA 73, Decision support 79, Engagement 76, Legal 81, Waste 68, Open burning 60, Methane 50. Sources: Public monitoring data; Published programme evaluations; Illustrative assessment inputs. These values are illustrative demonstration data created for the prototype and must not be cited as an official assessment of Santiago.",
+  "tags": [
+   "city",
+   "profile",
+   "santiago",
+   "chile",
+   "latin america & caribbean"
+  ],
+  "source": "CityAir — illustrative city library"
+ },
+ {
+  "id": "innovation-waste-burning-monitoring",
+  "title": "Innovation brief: Open Waste Burning Monitoring and Response",
+  "text": "Sector: Open Waste Burning. Status: Illustrative GreenHope demonstration. Region: Adaptable. Problem addressed: Uncontrolled waste burning and related particulate exposure Required capacity: Developing. Required data: Satellite screening; Local air-quality measurements; Waste-site information; Community reports. Benefits: Faster detection and coordinated prevention at priority sites. Delivery steps: Map priority sites -> Validate with local observations -> Agree response roles -> Implement prevention measures -> Track recurrence. Risks to manage: False positives from remote screening; Enforcement without community support. Adaptation note: Define locally lawful response protocols and accessible alternatives to burning. Monitoring indicators: Reported events; PM2.5 near sites; Response time; Recurrence rate. Source: GreenHope concept synthesis; validate with local experts.",
+  "tags": [
+   "innovation",
+   "solution",
+   "open waste burning",
+   "waste-burning-monitoring",
+   "open waste burning monitoring and response"
+  ],
+  "source": "CityAir — innovation library"
+ },
+ {
+  "id": "innovation-landfill-methane-screening",
+  "title": "Innovation brief: Tiered Landfill Methane Screening",
+  "text": "Sector: Methane. Status: Illustrative GreenHope demonstration. Region: Adaptable. Problem addressed: Limited visibility of landfill-gas risks and emission hotspots Required capacity: Developing. Required data: Waste-site boundaries; Operational records; Appropriate ground or airborne methane measurements. Benefits: Prioritizes measurement and mitigation resources without overstating remote observations. Delivery steps: Compile site records -> Screen operational risks -> Plan qualified measurements -> Investigate hotspots -> Design and verify mitigation. Risks to manage: Treating thermal anomalies as methane measurements; Unsafe field access. Adaptation note: Use qualified practitioners, site safety controls and fit-for-purpose quantification. Monitoring indicators: Sites screened; Sites measured; Verified methane flux; Mitigation performance. Source: Illustrative workflow informed by public methane-management practice.",
+  "tags": [
+   "innovation",
+   "solution",
+   "methane",
+   "landfill-methane-screening",
+   "tiered landfill methane screening"
+  ],
+  "source": "CityAir — innovation library"
+ },
+ {
+  "id": "innovation-community-monitoring",
+  "title": "Innovation brief: Community Sensor Stewardship Network",
+  "text": "Sector: Air Quality. Status: Illustrative GreenHope demonstration. Region: Adaptable. Problem addressed: Exposure blind spots and limited community trust Required capacity: Starting. Required data: Reference monitor co-location; Low-cost sensor feeds; Site metadata. Benefits: Improves spatial awareness and public participation when quality controls are explicit. Delivery steps: Co-design objectives -> Select sites -> Co-locate and calibrate -> Train stewards -> Publish qualified data. Risks to manage: Sensor drift; Misinterpretation of indicative data. Adaptation note: Set expectations, maintenance ownership and data-quality labels. Monitoring indicators: Data completeness; Co-location checks; Community participants; Resolved maintenance issues. Source: GreenHope illustrative implementation pattern.",
+  "tags": [
+   "innovation",
+   "solution",
+   "air quality",
+   "community-monitoring",
+   "community sensor stewardship network"
+  ],
+  "source": "CityAir — innovation library"
+ },
+ {
+  "id": "innovation-clean-air-action-plan",
+  "title": "Innovation brief: Evidence-to-Action Clean Air Sprint",
+  "text": "Sector: Policy and Governance. Status: Illustrative GreenHope demonstration. Region: Adaptable. Problem addressed: Evidence exists but is not translated into accountable action Required capacity: Established. Required data: Monitoring trends; Emissions inventory; Policy baseline; Cost and feasibility data. Benefits: Creates a sequenced, owned and measurable city action portfolio. Delivery steps: Define outcomes -> Review evidence -> Shortlist measures -> Assess equity and feasibility -> Assign owners and indicators. Risks to manage: Unfunded commitments; Weak cross-agency ownership. Adaptation note: Align with legal mandates, budgets and affected communities. Monitoring indicators: Funded actions; Milestones met; Exposure indicators; Public progress updates. Source: GreenHope original planning pattern.",
+  "tags": [
+   "innovation",
+   "solution",
+   "policy and governance",
+   "clean-air-action-plan",
+   "evidence-to-action clean air sprint"
+  ],
+  "source": "CityAir — innovation library"
+ },
+ {
+  "id": "innovation-public-communication",
+  "title": "Innovation brief: Health-Centered Air Quality Communication",
+  "text": "Sector: Public Engagement. Status: Illustrative GreenHope demonstration. Region: Adaptable. Problem addressed: Technical air data is difficult for residents to act on Required capacity: Developing. Required data: Quality-assured observations; Forecasts; Health guidance; Audience research. Benefits: Makes risk communication timely, accessible and action-oriented. Delivery steps: Map audiences -> Agree health messages -> Prototype formats -> Test accessibility -> Evaluate reach and action. Risks to manage: Alert fatigue; Unequal access to digital channels. Adaptation note: Use local languages, trusted messengers and non-digital channels. Monitoring indicators: Alert reach; Message comprehension; Protective action; Accessibility coverage. Source: GreenHope illustrative communication design.",
+  "tags": [
+   "innovation",
+   "solution",
+   "public engagement",
+   "public-communication",
+   "health-centered air quality communication"
+  ],
+  "source": "CityAir — innovation library"
+ },
+ {
+  "id": "innovation-waste-site-prioritization",
+  "title": "Innovation brief: Data-Driven Waste-Site Prioritization",
+  "text": "Sector: Waste Management. Status: Illustrative GreenHope demonstration. Region: Adaptable. Problem addressed: Inspection resources are not targeted to highest environmental risk Required capacity: Starting. Required data: Site register; Complaints; Fire history; Population proximity; Inspection findings. Benefits: Supports transparent risk-based inspection scheduling. Delivery steps: Create site register -> Define risk criteria -> Clean and score data -> Review with inspectors -> Publish an audit trail. Risks to manage: Incomplete site records; Automated scores replacing professional judgment. Adaptation note: Review criteria for local law, equity and data gaps. Monitoring indicators: High-risk sites inspected; Data gaps closed; Repeat incidents; Corrective actions completed. Source: GreenHope illustrative decision-support concept.",
+  "tags": [
+   "innovation",
+   "solution",
+   "waste management",
+   "waste-site-prioritization",
+   "data-driven waste-site prioritization"
+  ],
+  "source": "CityAir — innovation library"
+ },
+ {
+  "id": "resource-air-quality-management-exchange-aqmx-",
+  "title": "Public resource: Air Quality Management Exchange (AQMx)",
+  "text": "Air Quality Management Exchange (AQMx) — AQMx (2024), type: Platform, region: Global. Public knowledge exchange for air-quality management approaches. Link: https://aqmx.org/",
+  "tags": [
+   "resource",
+   "reference",
+   "air-quality management",
+   "aqmx"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-aqmx-interactive-questionnaire",
+  "title": "Public resource: AQMx Interactive Questionnaire",
+  "text": "AQMx Interactive Questionnaire — AQMx (2024), type: Assessment, region: Global. Public reference for structured air-quality management capacity reflection. Link: https://aqmx.org/interactive-questionnaire",
+  "tags": [
+   "resource",
+   "reference",
+   "capacity assessment",
+   "aqmx"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-aqmx-sectoral-guidance",
+  "title": "Public resource: AQMx Sectoral Guidance",
+  "text": "AQMx Sectoral Guidance — AQMx (2024), type: Guidance, region: Global. Public sector-focused air-quality guidance collection. Link: https://aqmx.org/content/aqmx-sectoral-guidance",
+  "tags": [
+   "resource",
+   "reference",
+   "sector guidance",
+   "aqmx"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-fire-information-for-resource-management-system",
+  "title": "Public resource: Fire Information for Resource Management System",
+  "text": "Fire Information for Resource Management System — NASA Earthdata (2025), type: Data tool, region: Global. Near-real-time satellite fire and thermal-anomaly context; not direct methane quantification. Link: https://www.earthdata.nasa.gov/news/feature-articles/data-tool-focus-fire-information-resource-management-system",
+  "tags": [
+   "resource",
+   "reference",
+   "fire and thermal anomalies",
+   "nasa earthdata"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-firms-active-fire-data-attributes",
+  "title": "Public resource: FIRMS Active Fire Data Attributes",
+  "text": "FIRMS Active Fire Data Attributes — NASA Earthdata (2025), type: Technical reference, region: Global. Definitions and caveats for MODIS and VIIRS active-fire attributes. Link: https://www.earthdata.nasa.gov/data/tools/firms/active-fire-data-attributes-modis-viirs",
+  "tags": [
+   "resource",
+   "reference",
+   "fire data methodology",
+   "nasa earthdata"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-mission-methane",
+  "title": "Public resource: Mission Methane",
+  "text": "Mission Methane — XPRIZE (2025), type: Competition reference, region: Global. Public competition reference on methane detection and mitigation innovation. Link: https://www.xprize.org/competitions/methane",
+  "tags": [
+   "resource",
+   "reference",
+   "methane",
+   "xprize"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-xprize-design-studio-reference",
+  "title": "Public resource: XPRIZE Design Studio reference",
+  "text": "XPRIZE Design Studio reference — XPRIZE (2025), type: Social media reference, region: Global. Public post referenced for innovation-design context; no affiliation is implied. Link: https://www.linkedin.com/posts/x-prize-foundation_xprizedesignstudio-activity-7337901334978801664-Js7U",
+  "tags": [
+   "resource",
+   "reference",
+   "innovation design",
+   "xprize"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "resource-who-global-air-quality-guidelines",
+  "title": "Public resource: WHO Global Air Quality Guidelines",
+  "text": "WHO Global Air Quality Guidelines — World Health Organization (2021), type: Guideline, region: Global. Evidence-informed guideline levels and good-practice statements for key pollutants. Link: https://www.who.int/publications/i/item/9789240034228",
+  "tags": [
+   "resource",
+   "reference",
+   "health",
+   "world health organization"
+  ],
+  "source": "CityAir — public resources"
+ },
+ {
+  "id": "faq-where-data",
+  "title": "Where is assessment data stored?",
+  "text": "Assessment answers, evidence notes and priorities are stored only in your browser's localStorage under the key cityair-assessment-v1. Nothing is uploaded unless you export the JSON file or explicitly send a summary to the AI assistant. There are no accounts and no third-party analytics.",
+  "tags": [
+   "data",
+   "privacy",
+   "storage",
+   "localstorage",
+   "gdpr"
+  ],
+  "source": "CityAir — platform"
+ },
+ {
+  "id": "faq-ai-architecture",
+  "title": "How the AI assistant is built",
+  "text": "The assistant retrieves the most relevant passages from the published CityAir knowledge base (BM25 keyword retrieval with an embeddings rerank where an inference provider is available), then asks a language model to answer only from those passages and returns the passages it used as sources. If the language model is unavailable, the assistant returns the retrieved passages verbatim instead of inventing an answer, so the service degrades to a search interface rather than failing or hallucinating. The knowledge base is published as an open dataset on Hugging Face, and the API runs as a Cloudflare Worker.",
+  "tags": [
+   "ai",
+   "assistant",
+   "rag",
+   "architecture",
+   "api",
+   "worker",
+   "hugging face"
+  ],
+  "source": "CityAir — platform"
+ },
+ {
+  "id": "faq-telegram-bot",
+  "title": "The Telegram air tracker bot",
+  "text": "The companion Telegram bot reports current PM2.5, PM10 and European AQI for any city using the open Open-Meteo air-quality API, answers knowledge-base questions, and links back to the platform. Commands: /start, /aqi <city>, /city <name>, /ask <question>, /help, /about. Readings are model-based and are not quality-assured regulatory measurements.",
+  "tags": [
+   "telegram",
+   "bot",
+   "air tracker",
+   "commands"
+  ],
+  "source": "CityAir — platform"
+ },
+ {
+  "id": "faq-compare-cities",
+  "title": "Comparing cities fairly",
+  "text": "City profiles use the same twelve domains so comparisons are structurally fair, but context differs: baseline meteorology, topography, industrial history and data availability all shape what is achievable. A lower score in a difficult setting can represent more honest reporting than a higher score with weak evidence, which is exactly why the evidence-confidence figure accompanies every score. Comparisons are for peer learning, not league tables.",
+  "tags": [
+   "compare",
+   "cities",
+   "benchmark",
+   "equity"
+  ],
+  "source": "CityAir — guidance synthesis"
+ },
+ {
+  "id": "faq-start",
+  "title": "How to start using CityAir",
+  "text": "1 Read the twelve guidance domains to understand what capacity looks like. 2 Open the assessment and complete city context, then score the domains you can evidence. 3 Review the readiness dashboard: score, band, evidence confidence and priority gaps. 4 Generate the phased action plan and attach owners, costs and review dates. 5 Use innovation matching to find implementation options that fit your capacity. 6 Ask the assistant to explain any result, and re-run the assessment every 12-24 months.",
+  "tags": [
+   "start",
+   "how to",
+   "workflow",
+   "onboarding"
+  ],
+  "source": "CityAir — platform"
+ },
+ {
+  "id": "expo-smartex-2026",
+  "title": "ISAF Smartex 2026 (Istanbul smart-city fair) — event facts",
+  "text": "ISAF Smartex 2026 — 15th International Smart Cities, Buildings, Transport, Management & Living Fair. Co-located event: ISAF International 2026 (30th International Security, Fire, Smart Buildings & OSH Fair). Editions: 15th (Smartex) / 30th (ISAF International). Dates: 2026-10-07 to 2026-10-10 at İstanbul Fuar Merkezi (İFM / Istanbul Expo Center), Yeşilköy, Yeşilköy Mah. Atatürk Cad. 5/5, 34149 Bakırköy / İstanbul, Türkiye. Halls: ISAF International in Halls 2-4-8; Smartex in the same venue — confirm your target's hall at the information desk. Organiser: Marmara Tanıtım Fuarcılık Org. Rek. ve Tic. A.Ş. (Marmara Fair Organization) (https://www.marmarafuar.com.tr/). Official site: https://www.isaffuari.com/en/. Scale as published: Exhibition area (ISAF): 20,000 m²; Exhibitors (ISAF 2026, official pre-release): 200 companies from 10 countries; Brands on display: 800+ local & international; Expected professional visitors: 15,000+ (30,000+ headline figure); Countries represented: 20–37 depending on source; International buyer programme: 3,000+ buyers. Thematic tracks: Smart cities & urban data platforms, Smart transport & mobility, Smart buildings & building automation, Smart living products, Security & fire safety, Cyber security & data centres, Occupational health & safety, Energy efficiency & sustainability. Co-located fairs under one ticket: ISAF International (security, fire, smart buildings, OSH); ISAF Smart Life (smart buildings & connected living); MOBISAD IMEX 2026 (mobile communication & information technologies); Data Center Eurasia 2026; LANDSCAPE Istanbul Fair 2026; PetZoo Eurasia 2026. Why it matters for CityAir: The co-located fairs place the exact suppliers a city needs — IoT connectivity, sensor hardware, urban platforms, building automation, mobility and waste/logistics integrators — in one venue, while CityAir brings the missing layer: a documented, comparable assessment of whether a city can actually use that technology, plus an innovation exchange that states what a deployment requires, risks and what to monitor. Sources: ISAF International official site (https://www.isaffuari.com/en/) | SMARTEX 2026 event profile (venue, themes, dates) (https://www.expointurkey.org/smartex-2026) | ISAF exhibitor directory (current edition, partial) (https://10times.com/isaf-smart-houses/exhibitors) | ISAF 2026 at Istanbul Expo Center (dates, scale) (https://exposale.net/tr/exhibition/isaf) | İstanbul Chamber of Commerce 2026 fair calendar (organizer, hall) (https://ito.org.tr/documents/2026-ana-fuar-takvimi.pdf). Verification note: public directories publish only part of the exhibitor list and stands change on site, so every company entry is labelled either \"At the fair\" (found in a published exhibitor directory) or \"Ecosystem target\" (not confirmed).",
+  "tags": [
+   "expo",
+   "istanbul",
+   "smartex",
+   "isaf",
+   "fair",
+   "2026",
+   "smart city",
+   "venue"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 cooperation brief"
+ },
+ {
+  "id": "expo-cooperation-models",
+  "title": "Cooperation models with CityAir and the AQMx pathway (ISAF Smartex 2026)",
+  "text": "1 · City pilot with a documented evidence trail: WITH CITYAIR — The company provides sensors, connectivity or a platform for one district; CityAir provides the 12-domain readiness baseline, the evidence-confidence framework, the public dashboard text and the impact indicators. We publish what worked and what did not. WITH AQMX — undefined WE ASK — One pilot city, 3–6 sensors, 6 months, one agreed indicator set WE GIVE — Independent assessment, transparent publication, no hidden endorsement 2 · Data and interoperability: WITH CITYAIR — Their operational data (traffic counts, waste routes, building energy, gas detection) is mapped into CityAir's twelve domains so the assessment can cite real evidence instead of self-declared answers. WITH AQMX — undefined WE ASK — A documented data schema + a named data owner + an update cycle WE GIVE — A public evidence register entry with provenance and quality notes 3 · Co-authored innovation brief: WITH CITYAIR — The company submits a solution; CityAir co-authors the brief in the library template: problem, required capacity, required data, delivery steps, risks, adaptation notes, monitoring indicators. WITH AQMX — undefined WE ASK — One product, one honest limitation statement, one reference deployment WE GIVE — Publication with full attribution and a link to the company 4 · Sponsorship with a firewall: WITH CITYAIR — A company can fund an assessment cycle, a methane-screening study or a workshop series. Sponsors never set scores, never edit findings and are named as funders only. WITH AQMX — undefined WE ASK — Funding with a written conflict-of-interest clause WE GIVE — Public acknowledgement, no influence over results or rankings 5 · Capacity building and training: WITH CITYAIR — Joint webinars and municipal workshops in Turkish, English and Persian on reading evidence quality, procurement of monitoring and communicating air-quality risk. WITH AQMX — undefined WE ASK — Two experts and a venue or a webinar slot WE GIVE — Trilingual materials, recorded sessions, a certificate of participation for municipal staff 6 · Independent evaluation partnership: WITH CITYAIR — Before-and-after indicator tracking on a deployed system, with baseline, method and uncertainty stated in public. WITH AQMX — undefined WE ASK — Access to the deployment's operational data and permission to publish WE GIVE — Third-party evaluation with a stated method — the strongest sales argument a vendor can hold Important: the AQMx column describes how a company COULD contribute to the AQMx knowledge exchange. CityAir is an independent prototype, is not an AQMx product, and has no authority to approve or speak for AQMx.",
+  "tags": [
+   "expo",
+   "cooperation",
+   "partnership",
+   "aqmx",
+   "models",
+   "sponsorship",
+   "pilot"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 cooperation brief"
+ },
+ {
+  "id": "expo-company-mavili",
+  "title": "Expo company: Mavili Elektronik",
+  "text": "Mavili Elektronik (Türkiye, Gas & fire detection). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: Fire and gas detection systems for buildings and industry — detector networks, control panels, alarm integration. Air-quality angle: Gas detection is the industrial sibling of ambient air monitoring: same sensor engineering, calibration discipline and alarm logic. Their installers already maintain sensor fleets in Istanbul. Proposed cooperation with CityAir: Pilot: extend an existing industrial gas-detection network with an ambient PM₂.₅/NO₂ layer; CityAir supplies the assessment baseline, calibration documentation standards and the public dashboard wording. Proposed pathway to the AQMx exchange: Contribute a sectoral contribution on industrial gas-safety data as an evidence source in the emissions-inventory and decision-support domains. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Ask at their booth for the technical manager; mention CityAir's calibration-documentation standard.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "gas & fire detection",
+   "mavili",
+   "elektronik"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-aspentech",
+  "title": "Expo company: AspenTech (Aspen Technology)",
+  "text": "AspenTech (Aspen Technology) (United States / Türkiye, Industrial software). Status: ISAF 2026 exhibitor (published testimonial on the ISAF site) — category: at the fair (published exhibitor directory). What they do: Industrial process optimisation and asset-performance software for refineries, chemicals and energy. Air-quality angle: Their customers are the same plants that dominate industrial emission inventories. Emissions accounting that lands in the same database as production data is the fastest route to a verifiable inventory. Proposed cooperation with CityAir: Joint offer to industry: CityAir maps their facility emissions data into the city's inventory domain so the city assessment counts verified rather than estimated industry emissions. Proposed pathway to the AQMx exchange: Propose an industrial-emissions data-interoperability note for the exchange: same schema, different cities. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Request the sustainability / ESG lead, not generic sales.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "industrial software",
+   "aspentech",
+   "aspen",
+   "technology"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-eking",
+  "title": "Expo company: Ekingen Elektronik",
+  "text": "Ekingen Elektronik (Türkiye, Security technology distribution). Status: ISAF 2026 exhibitor (published testimonial) — category: at the fair (published exhibitor directory). What they do: Distributor of electronic security brands in Türkiye with a wide installer network. Air-quality angle: Distributors are the shortest path to hundreds of municipal and building installations — a distribution channel for low-cost indoor air-quality sensors with minimal extra sales effort. Proposed cooperation with CityAir: Bundle an IAQ module into their existing building installations; CityAir provides the health-domain questions and the reporting template for building managers. Proposed pathway to the AQMx exchange: Feed building-level IAQ data into the health-impact and public-engagement domains as a documented evidence source. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Ask for the product-management lead.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "security technology distribution",
+   "ekingen",
+   "elektronik"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-art-sistem",
+  "title": "Expo company: Art Sistem",
+  "text": "Art Sistem (Türkiye, Security & smart building integration). Status: ISAF 2026 exhibitor (published testimonial) — category: at the fair (published exhibitor directory). What they do: Security and building technology integrator: access control, CCTV, building automation. Air-quality angle: Building automation platforms already carry CO₂, temperature and ventilation signals — the cheapest IAQ dataset in any city, usually thrown away. Proposed cooperation with CityAir: Integration brief: publish building IAQ indicators through CityAir's public-engagement domain; assessment question on ventilation and school/office exposure. Proposed pathway to the AQMx exchange: Contribute the 'buildings as sensors' approach as an innovation brief other cities can adapt. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Technical director.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "security & smart building integration",
+   "sistem"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-reolink",
+  "title": "Expo company: Reolink",
+  "text": "Reolink (China / global, Smart cameras & IoT). Status: Named in the ISAF 2026 exhibitor testimonial (Reolink participation) — category: at the fair (published exhibitor directory). What they do: Smart visual technology: cameras, NVRs, solar-powered IoT units for homes and sites. Air-quality angle: Solar-powered outdoor edge devices are exactly the enclosure, power and connectivity package an off-grid air-quality node needs; open burning and waste-site detection is a camera-plus-sensor problem. Proposed cooperation with CityAir: Co-develop a waste-burning observation kit: camera evidence + PM spike correlation, feeding the open-waste-burning domain. Proposed pathway to the AQMx exchange: Document the method as a replicable 'evidence for informal burning' case study. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Regional business-development manager.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "smart cameras & iot",
+   "reolink"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-nova-grup",
+  "title": "Expo company: Nova Grup Mühendislik",
+  "text": "Nova Grup Mühendislik (Türkiye, Engineering & contracting). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: Engineering and installation contractor for technical systems in public and private projects. Air-quality angle: Municipal air-quality projects fail in installation and maintenance, not in procurement. Contractors own the maintenance contract that decides whether a sensor network survives its second winter. Proposed cooperation with CityAir: Add a maintenance-and-QA clause template to CityAir's procurement guidance, tested on their next municipal installation. Proposed pathway to the AQMx exchange: Share the maintenance data (calibration intervals, failure rates, uptime) as an evidence-quality contribution. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Project manager for municipal works.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "engineering & contracting",
+   "nova",
+   "grup",
+   "hendislik"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-yuksekguyenlik",
+  "title": "Expo company: Yüksek Güvenlik",
+  "text": "Yüksek Güvenlik (Türkiye, Occupational health & safety). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: OSH services and equipment: worker protection, risk assessment, compliance. Air-quality angle: Workers in the informal sector (waste pickers, roadside vendors, construction) are the most exposed and the least measured group — an equity gap CityAir's health domain already flags. Proposed cooperation with CityAir: Street-level exposure and worker-protection pilot: personal exposure sampling plus CityAir's equity indicators. Proposed pathway to the AQMx exchange: Contribute the occupational-exposure angle to the health-impact guidance. Priority: C (A = fastest route to a published result, C = opportunistic). Route in: OSH specialist.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "occupational health & safety",
+   "ksek",
+   "venlik"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-egesan",
+  "title": "Expo company: Egesan Teknoloji Pazarlama",
+  "text": "Egesan Teknoloji Pazarlama (Türkiye, Industrial supplies & abrasive technology). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: Supplier of abrasive and industrial technology products since 1973. Air-quality angle: Industrial dust sources are a documented but rarely measured PM₁₀ contributor; suppliers see the processes that generate it. Proposed cooperation with CityAir: Dust-source inventory walkthrough: map their customer processes to the inventory domain and quantify what can be measured cheaply. Proposed pathway to the AQMx exchange: Optional: a short note on industrial dust as a city inventory category. Priority: C (A = fastest route to a published result, C = opportunistic). Route in: Sales engineering.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "industrial supplies & abrasive technology",
+   "egesan",
+   "teknoloji",
+   "pazarlama"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-sectec",
+  "title": "Expo company: Sectec Security Technology",
+  "text": "Sectec Security Technology (Türkiye, Security technology). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: Security systems supplier serving municipal and commercial projects. Air-quality angle: Their municipal relationships are the entry point; the ask is a joint proposal to a municipality that already buys security but has no air-quality line item. Proposed cooperation with CityAir: Joint municipal pitch: add an air-quality evidence line to an existing security/maintenance contract. Proposed pathway to the AQMx exchange: Not applicable at this stage. Priority: C (A = fastest route to a published result, C = opportunistic). Route in: Municipal accounts manager.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "security technology",
+   "sectec",
+   "security",
+   "technology"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-teknim",
+  "title": "Expo company: Teknim",
+  "text": "Teknim (Türkiye, Alarm & detection systems). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: Alarm-system manufacturer in Türkiye since 2003: fire detection, intruder alarms, integrated panels. Air-quality angle: Alarm infrastructure and municipal dispatch integration — the same channel that could carry a PM threshold alert to a school or a worksite. Proposed cooperation with CityAir: Alerting pilot: route CityAir's threshold alerts (for example PM₂.₅ above the 24-hour interim target) into their municipal dashboards. Proposed pathway to the AQMx exchange: Contribution on alert delivery as part of the public-communication domain. Priority: C (A = fastest route to a published result, C = opportunistic). Route in: Product manager.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "alarm & detection systems",
+   "teknim"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-istac",
+  "title": "Expo company: İSTAÇ A.Ş. (İstanbul Metropolitan Municipality environmental company)",
+  "text": "İSTAÇ A.Ş. (İstanbul Metropolitan Municipality environmental company) (Türkiye, Waste & landfill operations). Status: Ecosystem target — İBB group company; verify attendance at the municipal pavilions — category: ecosystem target (presence to verify). What they do: İstanbul's waste management, landfill gas, transfer stations and disposal operations. Air-quality angle: Landfill methane and open burning are two of the twelve CityAir domains and the hardest for any city to evidence. İSTAÇ holds the operational data. Proposed cooperation with CityAir: Istanbul readiness assessment with real waste data; landfill-methane screening brief applied to one site; waste-burning reporting workflow with CityAir's Telegram bot for field crews. Proposed pathway to the AQMx exchange: Case study: how a megacity evidences methane and waste burning — directly useful to the exchange's waste and methane themes. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Environmental management department; ask for the landfill-gas and reporting units separately.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "waste & landfill operations",
+   "stanbul",
+   "metropolitan",
+   "municipality"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-ibb",
+  "title": "Expo company: İBB — Istanbul Metropolitan Municipality (Smart City Directorate)",
+  "text": "İBB — Istanbul Metropolitan Municipality (Smart City Directorate) (Türkiye, Municipal authority). Status: Ecosystem target — municipalities are typically visitors or hosts at the venue — category: ecosystem target (presence to verify). What they do: City authority: environment, transport, waste, health and digital services. Air-quality angle: Istanbul is already in the CityAir city library as an illustrative profile; a real assessment would replace the synthetic score with documented evidence — the most valuable single upgrade the platform can get. Proposed cooperation with CityAir: Official 12-domain assessment of Istanbul, municipal workshop, and a public dashboard template they can host themselves. Proposed pathway to the AQMx exchange: City-authored case study and a peer-review partner for the exchange's methodology discussions. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Smart City / Environment department; city delegations often meet at the fair's conference programme.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "municipal authority",
+   "istanbul",
+   "metropolitan",
+   "municipality"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-havelsan",
+  "title": "Expo company: HAVELSAN",
+  "text": "HAVELSAN (Türkiye, Urban command & control platforms). Status: Ecosystem target — verify at the venue; HAVELSAN exhibits at Turkish smart-city events regularly — category: ecosystem target (presence to verify). What they do: Command-and-control and smart-city platforms, urban digital twin and data integration for municipalities. Air-quality angle: A city platform without an air-quality layer shows traffic but not exposure. Their dashboard is the ideal host for CityAir's domain scores and live readings. Proposed cooperation with CityAir: Embed the CityAir assessment widget and API into their municipal dashboard; joint tender for a pilot city. Proposed pathway to the AQMx exchange: Joint session proposal on interoperable air-quality layers inside urban platforms. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Smart city solutions director.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "urban command & control platforms",
+   "havelsan"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-netas",
+  "title": "Expo company: Netaş",
+  "text": "Netaş (Türkiye, Systems integration & IoT). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Systems integration, network infrastructure and IoT solutions for public authorities. Air-quality angle: Integration and maintenance contracts are what keep a sensor network alive; their service organisation covers most Turkish provinces. Proposed cooperation with CityAir: Service-level agreement template for air-quality networks; joint municipal bid. Proposed pathway to the AQMx exchange: Contribution on uptime and data quality reporting as standard practice. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Public sector business unit.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "systems integration & iot",
+   "neta"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-telecoms",
+  "title": "Expo company: Türk Telekom · Turkcell · Vodafone Business",
+  "text": "Türk Telekom · Turkcell · Vodafone Business (Türkiye, Connectivity & IoT networks). Status: Ecosystem target — mobile operators exhibit at the co-located MOBISAD IMEX fair — category: ecosystem target (presence to verify). What they do: National mobile networks, NB-IoT / LTE-M connectivity, IoT platforms and cloud services. Air-quality angle: Every low-cost sensor node needs a SIM, a data plan and an uplink that survives a power cut. Connectivity is the single largest recurring cost in a city sensor programme. Proposed cooperation with CityAir: Sponsored connectivity for a pilot network (for example 20 nodes, 12 months) plus data-plan templates so other cities can budget accurately. Proposed pathway to the AQMx exchange: Publish a costed connectivity guideline for city sensor programmes in the exchange library. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: IoT / smart city business development.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "connectivity & iot networks",
+   "telekom",
+   "turkcell",
+   "vodafone"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-arvento",
+  "title": "Expo company: Arvento",
+  "text": "Arvento (Türkiye, Fleet telematics). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Vehicle tracking and fleet telematics, widely deployed in Turkish municipalities and logistics. Air-quality angle: Traffic emission inventories usually rely on modelled traffic counts. Fleet telematics gives measured movement of the vehicles that pollute most. Proposed cooperation with CityAir: Traffic-domain pilot: derive activity data for the emissions inventory from fleet traces, with privacy protection built in. Proposed pathway to the AQMx exchange: Method note: telematics-derived traffic activity as an inventory input. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Data / partnerships lead.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "fleet telematics",
+   "arvento"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-netcad",
+  "title": "Expo company: Netcad",
+  "text": "Netcad (Türkiye, GIS & urban data). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Geographic information systems and urban data platforms used by many Turkish municipalities. Air-quality angle: Exposure is a map problem: population, schools, hospitals, industry and monitoring sites must share one geometry. Most cities have the layers but not the overlay. Proposed cooperation with CityAir: Exposure-mapping workshop: CityAir supplies the indicator definitions, Netcad supplies the geometry. Proposed pathway to the AQMx exchange: Share the exposure-layer schema so other cities can reuse it. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Municipal solutions team.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "gis & urban data",
+   "netcad"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-evreka",
+  "title": "Expo company: Evreka",
+  "text": "Evreka (Türkiye, Waste management software). Status: Ecosystem target — Turkish waste-tech scale-up — category: ecosystem target (presence to verify). What they do: Software platform for waste collection fleets, routes, containers and reporting. Air-quality angle: Open burning and landfill fires are visible in collection data: missed pickups, overflowing containers and route gaps correlate with burning incidents. Proposed cooperation with CityAir: Pilot: correlate collection anomalies with CityAir's burning reports and PM spikes; publish a joint indicator set. Proposed pathway to the AQMx exchange: Innovation brief: 'collection data as an open-burning early-warning signal'. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Head of partnerships.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "waste management software",
+   "evreka"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-sensgreen",
+  "title": "Expo company: Sensgreen",
+  "text": "Sensgreen (Türkiye, Indoor air quality IoT). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Indoor air-quality monitoring and building analytics, deployed in offices, schools and public buildings. Air-quality angle: Indoor and outdoor data are rarely joined, so cities cannot show whether a ventilation measure actually protected children in classrooms. Proposed cooperation with CityAir: School pilot: pair indoor sensors with the nearest outdoor station and CityAir's health-domain indicators; publish the before/after. Proposed pathway to the AQMx exchange: Contribute the indoor–outdoor pairing method to the health-impact guidance. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Founder / partnerships.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "indoor air quality iot",
+   "sensgreen"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-aselsan",
+  "title": "Expo company: ASELSAN",
+  "text": "ASELSAN (Türkiye, Sensors & electronics). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Defence electronics, sensor systems, imaging and communication technologies. Air-quality angle: Reference-grade photometers and optical particle sensors are a sensor-engineering problem; Türkiye imports most of this equipment. Local calibration capability is the bottleneck for credible low-cost networks. Proposed cooperation with CityAir: Co-designed sensor programme with a documented calibration protocol against a reference station — CityAir supplies the QA/QC rubric and publishes the comparison. Proposed pathway to the AQMx exchange: Method contribution on low-cost sensor validation in the exchange. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: R&D partnerships.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "sensors & electronics",
+   "aselsan"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-mikrodev",
+  "title": "Expo company: Mikrodev",
+  "text": "Mikrodev (Türkiye, IoT hardware). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Turkish IoT hardware and telemetry devices for industrial and municipal monitoring. Air-quality angle: Hardware, enclosures and telemetry are commodity items; local manufacturing shortens repair cycles and lowers the cost of a city network. Proposed cooperation with CityAir: Costed hardware BOM for a 20-node network, published openly in CityAir's resources so every city can compare prices. Proposed pathway to the AQMx exchange: Contribute the open BOM to the exchange as a practical procurement aid. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Product manager.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "iot hardware",
+   "mikrodev"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-mobility",
+  "title": "Expo company: Karsan · Otokar · Bozankaya · Togg",
+  "text": "Karsan · Otokar · Bozankaya · Togg (Türkiye, Electric mobility & buses). Status: Ecosystem target — mobility suppliers attend the Smartex transport track — category: ecosystem target (presence to verify). What they do: Bus and vehicle manufacturers: electric buses, e-mobility, charging infrastructure. Air-quality angle: Fleet electrification is the biggest single NO₂ lever in most Turkish cities, and it is measurable at depot level. Proposed cooperation with CityAir: Indicator partnership: track depot-level NO₂ and exposure reduction from e-bus deployment using CityAir's transport indicators. Proposed pathway to the AQMx exchange: Case study: measured (not modelled) bus-fleet electrification impact. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Fleet electrification / municipal sales.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "electric mobility & buses",
+   "karsan",
+   "otokar",
+   "bozankaya"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-energy",
+  "title": "Expo company: Enerjisa · Zorlu Enerji",
+  "text": "Enerjisa · Zorlu Enerji (Türkiye, Energy & heating transition). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: Electricity distribution and generation, energy services and efficiency programmes. Air-quality angle: Household solid-fuel heating is the dominant winter PM source in Balkan and Anatolian cities; the heating transition is an energy-sector programme, not an environmental one. Proposed cooperation with CityAir: Heating-replacement evidence pack: join subsidy data with winter PM trends and CityAir's household-energy domain questions. Proposed pathway to the AQMx exchange: Contribute the heating-transition method to the sectoral guidance. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Sustainability / efficiency programmes.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "energy & heating transition",
+   "enerjisa",
+   "zorlu",
+   "enerji"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-hvac",
+  "title": "Expo company: Daikin Türkiye · Bosch Termoteknik · Vaillant Türkiye",
+  "text": "Daikin Türkiye · Bosch Termoteknik · Vaillant Türkiye (Türkiye / global, Heating, ventilation & cooling). Status: Ecosystem target — smart-building halls host HVAC brands — category: ecosystem target (presence to verify). What they do: Heat pumps, boilers, ventilation and climate systems for residential and public buildings. Air-quality angle: Every heat-pump or ventilation upgrade changes both indoor exposure and outdoor emissions; almost none of it is documented for city planning. Proposed cooperation with CityAir: Public-building retrofit pilot with before/after indicators (energy, indoor PM/CO₂, outdoor contribution). Proposed pathway to the AQMx exchange: Adaptation brief: retrofits as a co-benefit measure for both the household-energy and health domains. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Government / projects division.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "heating, ventilation & cooling",
+   "daikin",
+   "rkiye",
+   "bosch"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-analytics",
+  "title": "Expo company: Urban platform vendors in the smart-city hall (IBM · Siemens · Cisco · local integrators)",
+  "text": "Urban platform vendors in the smart-city hall (IBM · Siemens · Cisco · local integrators) (Global / Türkiye, Smart city platforms). Status: Ecosystem target — walk the smart-city hall and note who shows an environment module — category: ecosystem target (presence to verify). What they do: City operating systems, dashboards, digital twins, data-marketplace products. Air-quality angle: Platforms promise integration but usually display whatever data a city already had. Air quality is the classic missing module because it needs domain expertise, not only software. Proposed cooperation with CityAir: Module partnership: CityAir provides the air-quality and waste domain logic, assessment and knowledge base; the platform provides hosting, identity and municipal distribution. Proposed pathway to the AQMx exchange: Propose a common air-quality module specification so cities can compare platform offers. Priority: B (A = fastest route to a published result, C = opportunistic). Route in: Smart city portfolio lead at each stand.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "smart city platforms",
+   "urban",
+   "platform",
+   "vendors"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-startups",
+  "title": "Expo company: Start-up zone participants (Smartex start-up exhibition)",
+  "text": "Start-up zone participants (Smartex start-up exhibition) (Türkiye / international, Start-ups). Status: Ecosystem target — scouting list built on site — category: ecosystem target (presence to verify). What they do: Early-stage teams in mobility, sensors, waste, energy and urban data. Air-quality angle: Start-ups can supply the missing measurement in a district for a few thousand euros, but rarely have a way to prove it changed anything. Proposed cooperation with CityAir: Offer the route to credibility: a CityAir innovation brief, an assessment-based baseline and a published pilot report in exchange for open data. Proposed pathway to the AQMx exchange: Channel for their pilots to reach other cities, with the honesty template attached. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Scout 10 stands, collect 10 cards, log them in the tracker below.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "start-ups",
+   "start",
+   "zone",
+   "participants"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-marmara-union",
+  "title": "Expo company: Marmara Municipalities Union & municipal pavilions",
+  "text": "Marmara Municipalities Union & municipal pavilions (Türkiye, Municipal network). Status: Ecosystem target — municipal associations participate in Turkish smart-city events — category: ecosystem target (presence to verify). What they do: Network of municipalities around the Marmara region, training and cooperation programmes for local governments. Air-quality angle: One agreement with a municipal network distributes the readiness assessment to dozens of cities at once — the highest-leverage partnership available. Proposed cooperation with CityAir: Regional programme: train municipal staff, run assessments for member cities, publish a regional readiness map. Proposed pathway to the AQMx exchange: Regional case study plus a pipeline of cities for the exchange. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Environment / climate working group.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "municipal network",
+   "marmara",
+   "municipalities",
+   "union"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-ministry",
+  "title": "Expo company: Ministry of Environment, Urbanisation and Climate Change (ÇŞB)",
+  "text": "Ministry of Environment, Urbanisation and Climate Change (ÇŞB) (Türkiye, National policy). Status: Ecosystem target — national authorities attend the conference programme — category: ecosystem target (presence to verify). What they do: National air-quality law, monitoring network, permits, climate policy. Air-quality angle: CityAir's legal-domain questions must match national obligations; the ministry holds the authoritative monitoring network and the permits register. Proposed cooperation with CityAir: Alignment review: check the twelve domains against Turkish regulation and the national network so assessments are legally literate. Proposed pathway to the AQMx exchange: Contribute the national regulatory mapping as a reusable template for other countries. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Air management department.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "national policy",
+   "ministry",
+   "environment",
+   "urbanisation"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-research",
+  "title": "Expo company: TÜBİTAK MAM (Climate & Environment) · İTÜ · Boğaziçi · METU",
+  "text": "TÜBİTAK MAM (Climate & Environment) · İTÜ · Boğaziçi · METU (Türkiye, Research & academia). Status: Ecosystem target — category: ecosystem target (presence to verify). What they do: National research institutes and universities working on air quality, modelling, source apportionment and environmental engineering. Air-quality angle: Source apportionment and inventory QA are the two domains cities most often fail; the scientific capability already exists in Türkiye. Proposed cooperation with CityAir: Scientific advisory board: review the scoring weights and confidence model, co-author one domain guidance, supervise one student project per year. Proposed pathway to the AQMx exchange: Peer review of method changes; co-publication of the corrected framework. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Department of environmental / meteorological engineering.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "research & academia",
+   "climate",
+   "environment",
+   "metu"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-intl-vendors",
+  "title": "Expo company: International sensor vendors (Airly · AQMesh/Enviro Technology · Clarity · PurpleAir distributors)",
+  "text": "International sensor vendors (Airly · AQMesh/Enviro Technology · Clarity · PurpleAir distributors) (Poland / UK / US / global, Air-quality instruments). Status: Ecosystem target — approach their Turkish distributors and the foreign pavilions — category: ecosystem target (presence to verify). What they do: Low-cost and mid-cost air-quality sensor networks, calibration services and cloud platforms. Air-quality angle: Their hardware is proven; what is missing is an independent, comparable statement of what it achieved in a city — the exact product CityAir's evaluation model produces. Proposed cooperation with CityAir: Pilot evaluation: install, run six months, compare against a reference station, publish uptime, drift and data-quality results in a CityAir brief. Proposed pathway to the AQMx exchange: Validation results go into the exchange so municipalities can compare vendors on measured performance, not marketing. Priority: A (A = fastest route to a published result, C = opportunistic). Route in: Turkish distributor + regional manager.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "air-quality instruments",
+   "international",
+   "sensor",
+   "vendors"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-company-press",
+  "title": "Expo company: Industry media present at the fair (Sanayi Haber Ajansı · Savunma Gazetesi · sector press)",
+  "text": "Industry media present at the fair (Sanayi Haber Ajansı · Savunma Gazetesi · sector press) (Türkiye, Media & associations). Status: Listed in the current ISAF exhibitor directory — category: at the fair (published exhibitor directory). What they do: Trade press and news agencies covering the fair and the security/industrial sectors. Air-quality angle: A cooperation call only becomes real when it is public; trade media is the cheapest way to reach municipal buyers during the fair. Proposed cooperation with CityAir: One-page press note: what CityAir offers cities and suppliers, plus an invitation to publish their pilot results. Proposed pathway to the AQMx exchange: Announcement channel for new knowledge products and city case studies. Priority: C (A = fastest route to a published result, C = opportunistic). Route in: Editorial desk at their stand.",
+  "tags": [
+   "expo",
+   "company",
+   "smartex",
+   "media & associations",
+   "industry",
+   "media",
+   "present"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 company map"
+ },
+ {
+  "id": "expo-outreach-kit",
+  "title": "Fair outreach kit: booth script, follow-up and field checklist",
+  "text": "Booth visit — 20-second opener (English): Hello — I am with CityAir (aqmx.atikova.com), an independent platform that scores how ready a city actually is to use air-quality technology, and publishes implementation briefs. We are not selling sensors; we are building the evidence layer that makes your deployments defensible. Two questions: (1) do you have a municipal reference deployment in Türkiye we could document together, and (2) would you fund a six-month independent evaluation with published results? Here is a one-page brief and my card. Stant ziyareti — 20 saniyelik giriş (Türkçe): Merhaba — ben CityAir'den (aqmx.atikova.com). Bağımsız bir platformuz: bir şehrin hava kalitesi teknolojisini gerçekten kullanmaya ne kadar hazır olduğunu puanlıyor ve uygulama brifleri yayımlıyoruz. Sensör satmıyoruz; yatırımınızı savunulabilir kılan kanıt katmanını kuruyoruz. İki soru: (1) Türkiye'de birlikte belgeleyebileceğimiz bir belediye referans kurulumunuz var mı, (2) altı aylık bağımsız bir değerlendirmeyi ve sonuçların yayımlanmasını finanse eder misiniz? Bir sayfalık özet ve kartvizitim burada. ملاقات در غرفه — شروع ۲۰ ثانیهای (فارسی): سلام — من از CityAir هستم (aqmx.atikova.com)، یک پلتفرم مستقل که میسنجد یک شهر تا چه اندازه برای استفاده واقعی از فناوری کیفیت هوا آماده است و بریفهای اجرایی منتشر میکند. ما سنسور نمیفروشیم؛ لایهی شواهدی را میسازیم که سرمایهگذاری شما را قابلدفاع میکند. دو پرسش: (۱) آیا یک پروژهی مرجع شهرداری در ترکیه دارید که بتوانیم مشترکاً مستند کنیم؟ (۲) آیا حاضرید یک ارزیابی مستقل ششماهه با انتشار نتایج را تأمین مالی کنید؟ این هم خلاصهی یکصفحهای و کارت من. Follow-up email within 24 hours: Subject: CityAir — the independent evidence layer for your air-quality deployment Dear [Name], Thank you for the time at ISAF Smartex ([date], stand [no.]). As discussed, CityAir is an independent platform that assesses city readiness across twelve domains and publishes implementation briefs with stated risks and monitoring indicators. What we propose: [model — city pilot / innovation brief / independent evaluation]. What we need from you: [one sensor set / data schema / funding / access for six months]. What we deliver: a public brief with method, limits and results, attributed to you. Our rule is simple: no sponsor sets a score, and every limitation is published. That is what makes the result usable by a municipality. Next step: 30 minutes next week to agree scope and timeline? [Name] · CityAir · aqmx.atikova.com 24 saat içinde takip e-postası: Konu: CityAir — hava kalitesi yatırımınız için bağımsız kanıt katmanı Sayın [İsim], ISAF Smartex'te ([tarih], [stand no.]) ayırdığınız zaman için teşekkürler. Görüştüğümüz gibi CityAir, on iki alanda şehir hazırlığını değerlendiren ve riskleri ile izleme göstergeleri açıkça belirtilmiş uygulama brifleri yayımlayan bağımsız bir platformdur. Önerimiz: [model — şehir pilotu / uygulama brifi / bağımsız değerlendirme]. Sizden ihtiyacımız: [sensör seti / veri şeması / finansman / altı ay boyunca erişim]. Sunduğumuz: yöntemi, sınırları ve sonuçları açık, size atfedilen bir kamuya açık brif. Kuralımız basit: hiçbir sponsor puan belirlemez ve her sınırlama yayımlanır. Bir belediyenin sonucu kullanabilmesini sağlayan da budur. Sonraki adım: gelecek hafta kapsam ve takvimi netleştirmek için 30 dakika? [İsim] · CityAir · aqmx.atikova.com Field checklist: Before the hall: write the top five targets on paper, with the exact question you will ask each one. | Bring A5 one-pagers in EN and TR: what CityAir is, the six cooperation models, one example indicator. | Ask every vendor the same three questions: a named reference city, real uptime figures, and whether they will publish results. | Never argue about prices at the fair — ask for the person who owns the municipal account and the data. | Collect the data schema, not the brochure: how is their data structured, who owns it, how often is it updated? | Photograph the hall plan and note the stand number for every serious conversation. | Log every card in the tracker table the same evening, while the context is fresh (the tracker table is below). | Send the follow-up within 24 hours with one specific ask and one specific deliverable. | Mark the follow-up date in the calendar; a promise made at a fair and not followed within a week is dead.",
+  "tags": [
+   "expo",
+   "outreach",
+   "template",
+   "email",
+   "booth",
+   "follow-up",
+   "turkish",
+   "persian"
+  ],
+  "source": "CityAir — ISAF Smartex 2026 cooperation brief"
+ },
+ {
+  "id": "partners-clean-air-dialogue-2026",
+  "title": "International Clean Air Dialogue, Istanbul (23–24 Sep 2026) — event facts",
+  "text": "Two-day international meeting co-organised by UNECE (Convention on Long-range Transboundary Air Pollution), UNEP, the Climate and Clean Air Coalition (CCAC), the Forum for International Cooperation on Air Pollution and the Government of Türkiye, with support from the EU and the UN; a side event of the 7th International Day of Clean Air for blue skies. Venue: Dedeman İstanbul Hotel, Istanbul. Dates: 23–24 September 2026. Day 1 covered the global air-pollution landscape, the session \"Advancing clean air action\" with UNEP, WHO, the CCAC Secretariat and the United Kingdom, and a science-policy session with WMO, AirQo (Uganda), Morocco, Saudi Arabia, UNESCAP, EANET, Brazil and South Africa. Day 2 covered transport (ADB, UNECE), unlocking investment for clean air, and Session 6 \"Communicating air quality information to the public: from data to action\" — the session most relevant to this platform, since it is about turning air-quality data into public action. CityAir's role: attended as a participant; the AQMx-side contact was made here and the first prototype pages were demonstrated. Sources: CCAC event page and agenda (https://www.ccacoalition.org/events/international-clean-air-dialogue) | CCAC events calendar (venue: Dedeman İstanbul Hotel) (https://www.ccacoalition.org/events) | Geneva Environment Network summary (https://www.genevaenvironmentnetwork.org/resources/updates/international-day-of-clean-air-for-blue-skies/).",
+  "tags": [
+   "partners",
+   "dialogue",
+   "istanbul",
+   "unece",
+   "unep",
+   "ccac",
+   "2026",
+   "clean air",
+   "event"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-movegreen",
+  "title": "MoveGreen (Kyrgyzstan) — pilot partner in discussion, and what they bring",
+  "text": "MoveGreen is a youth environmental movement in Kyrgyzstan; Maria Kolesnikova coordinates its Air Quality Programme and is a UNEP Champion of the Earth (2021, Entrepreneurial Vision). MoveGreen runs 100+ PM sensors in Bishkek and the region, the AQ.kg (Aba.kg) public air-quality app covering about twelve cities with PM2.5, PM10 and NO2, the Central Asian Air Quality Platform, and the \"School Breathes Easily\" programme, and works on Bishkek landfill fires and waste-management financing. Status of the conversation (as recorded on 7 October 2026): a positive reply was received. MoveGreen states that methane monitoring is NOT currently a specific area of their work, while offering strong experience in independent air-quality monitoring, environmental data, citizen engagement, public communication and advocacy. They identify the best route as building the methane component together with a technical partner, and rate four things as particularly relevant: validating Earth-observation and remote-sensing data with ground-based monitoring, identifying environmental risk hotspots, developing an air-quality baseline, and engaging local stakeholders. Important: this is an expression of interest, NOT a signed partnership. CityAir must not describe MoveGreen as a partner until there is a written agreement.",
+  "tags": [
+   "partners",
+   "movegreen",
+   "kyrgyzstan",
+   "bishkek",
+   "pilot",
+   "sensors",
+   "aq.kg",
+   "contact",
+   "reply"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-aqmx-outreach",
+  "title": "AQMx-side contact (Juliet) and the AQMx alignment pathway",
+  "text": "At the International Clean Air Dialogue in Istanbul a contact on the AQMx side (referred to as Juliet) discussed how AQMx serves cities with air-quality data and guidance, and the idea of replicating a similar model for waste. The prototype pages built during that conversation were received positively, and a follow-up was agreed for when the contact travels to France and Germany. UNVERIFIED: the person's exact name, role and affiliation are not confirmed in writing. Do not state or imply any affiliation on their behalf, and do not present this as an AQMx endorsement. Alignment pathway (CityAir's understanding, subject to AQMx's own decision): CityAir's twelve assessment domains map onto AQMx's guidance areas; CityAir's five maturity stages follow the same stages-of-capacity logic published by AQMx; the waste workstream lands on AQMx's sectoral guidance \"Eliminating Open Waste Burning\" and the waste-management sector guide; the AQMx interactive questionnaire is the closest existing instrument, so a Bishkek run could be done with both instruments and the two results compared openly; the natural submission route is the AQMx resource exchange library. Whether AQMx lists, indexes or accepts anything is AQMx's decision alone. Sources: AQMx platform (https://aqmx.org/) | AQMx interactive questionnaire (https://aqmx.org/interactive-questionnaire) | AQMx sectoral guidance (https://aqmx.org/content/aqmx-sectoral-guidance).",
+  "tags": [
+   "partners",
+   "aqmx",
+   "juliet",
+   "alignment",
+   "waste",
+   "questionnaire",
+   "exchange library",
+   "unverified"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-xprize-mission-methane",
+  "title": "XPRIZE Mission Methane — what the competition is and how CityAir fits",
+  "text": "XPRIZE Mission Methane targets diffuse, low-concentration methane emissions that conventional mitigation misses — landfills, wastewater systems, agriculture, wetlands and the atmosphere — across four intervention categories: prevention, mitigation, destruction and atmospheric removal. It is modelled on the proven XPRIZE Carbon Removal structure and, at the time of writing, sits in the partner-development phase; prize fund, timeline and final criteria are whatever XPRIZE announces, and must never be presented as fixed. CityAir's fit: the evidence layer, not the technology. Ground-validated hotspot detection (matching satellite and thermal alerts against sensor networks and publishing the false-positive rate), a documented methane and PM2.5 baseline that separates measured from modelled from unknown, an independent evaluation method with confidence scoring, a civil-society partner for community data, and open publication of method and data so a reviewer can reproduce the result. Sequencing: confirm one technical partner and one civil-society partner first (MoveGreen is the candidate), produce one documented pilot result, then approach the official channel. No announcement before the first published output. Source: https://www.xprize.org/competitions/methane",
+  "tags": [
+   "partners",
+   "xprize",
+   "methane",
+   "landfill",
+   "waste",
+   "competition",
+   "baseline",
+   "pilot"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-outgoing-letter-movegreen",
+  "title": "Outgoing message to MoveGreen (7 October 2026, 18:46)",
+  "text": "The full text of the outreach message CityAir sent to MoveGreen on 7 October 2026 at 18:46, addressed to Mr. Muradyl, is archived on the partnerships page of this site (route #/partners, section \"Archive\") and is downloadable there as .txt and .md. It is published in full because it is CityAir's own outgoing message. Summary of its content: it introduces GreenHope and the partner-development concept for XPRIZE Mission Methane; describes the platform (satellite Earth observation, Sentinel-2 imagery, NASA FIRMS active-fire data, thermal anomaly detection, field sensors and public air-quality information); explains the focus on diffuse methane from landfills, waste-management systems and wastewater facilities; and lists five asks — (1) validate satellite and thermal alerts with ground air-quality sensors, (2) monitor waste-burning, landfill and environmental-risk hotspots, (3) develop a baseline for methane and PM2.5, (4) connect with a waste-management company or landfill operator, (5) support responsible media engagement and public communication — ending with a request to send a short non-confidential one-page concept note and arrange a brief introductory call.",
+  "tags": [
+   "partners",
+   "letter",
+   "movegreen",
+   "outreach",
+   "email",
+   "archive",
+   "xprize"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-cop31-2026",
+  "title": "COP31 (Antalya, 9–20 November 2026) and the green start-up track",
+  "text": "The 31st UN Climate Change Conference is held in Türkiye at Antalya Expo Center from 9 to 20 November 2026, with Türkiye holding the presidency (COP President: Murat Kurum) and Australia presiding over negotiations (Chris Bowen); the World Leaders' Summit meets 11–12 November. A green start-up AI model has been registered under the author's name for the COP31 innovation track. CityAir's preparation: the waste-and-methane workstream is designed to have one documented pilot result before the conference opens, so any statement made at COP31 is backed by a published evidence trail rather than an intention. Source: https://www.cisl.cam.ac.uk/cop-climate-change-conference/cop31-antalya-turkiye-9-20-november-2026",
+  "tags": [
+   "partners",
+   "cop31",
+   "antalya",
+   "2026",
+   "climate",
+   "startup",
+   "milestone",
+   "türkiye"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-archive-coverage",
+  "title": "Archive coverage audit — how complete the correspondence archive is (percentages)",
+  "text": "The archive is audited with five weighted criteria per document: metadata 20% (date, time, channel, from, to, subject), message body 40% (verbatim 100, translated 95, private 60, summary 50, partial 35, missing 0), attachments and links 15%, status and next step 15%, privacy labelling 10%. A document's score is the weighted sum; the overall figure is the mean of all documents. The audit is reproducible: node tools/archive-coverage.mjs regenerates it. Current result: 90% overall across 5 documents — 3 complete at 100%, 2 with gaps, 2 whose full text is stored privately rather than published. Per document: Concept note: a waste-and-methane pilot with MoveGreen (non-confidential, one page) — 100%; GreenHope × XPRIZE Mission Methane — partner development — 100%; Re: partnership concept — reply from MoveGreen — 84%; AQMx model, cities and air data — possible replication in waste — 67%; COP31 green start-up track — registration under the author's name — 100%. 10 gaps are registered, of which 6 can be closed by an action on our side. Key gaps: the full text of the MoveGreen reply is private pending written permission; the copy we hold of that reply ends mid-sentence; the exact name, role and affiliation of the AQMx-side contact are unverified; no reply has yet arrived to the message of 7 October 18:46; no offline snapshot exists of the linked pages; the original Telegram screenshots were not saved as images; and the Persian/Russian versions of the concept note have not been made. How to read this: the percentage measures archive completeness, NOT partnership progress. Zero percent of this page is a signed partnership — every document records a status, not a promise.",
+  "tags": [
+   "partners",
+   "coverage",
+   "percentage",
+   "audit",
+   "archive",
+   "gaps",
+   "90 percent",
+   "private"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-concept-note",
+  "title": "Concept note for MoveGreen — the promised one-page document (draft, ready to send)",
+  "text": "The non-confidential one-pager offered in the message of 7 October 2026 now exists as an A4 PDF in English: docs/partners/cityair-movegreen-concept-note.pdf (plus PNG and the HTML source). Its content: the idea in three sentences (satellite and thermal alerts already flag burning and hotspots around Bishkek but nobody has published how often those alerts are right; MoveGreen has a real ground network and public trust; pairing the two produces a defensible answer for the city and a method other cities can copy); what the pilot produces in 90 days (a validation note including the false-positive rate, a hotspot register with provenance for every entry, and a baseline statement that keeps measured, modelled and unknown apart, with methane handled as a measurement plan rather than a satellite number); the division of work (MoveGreen brings the ground network and its data, local knowledge, citizen engagement, communication and convening power; CityAir brings the method, the publishing layer, the twelve-domain assessment and open data); the five asks (one pilot district and a named focal point, historical PM data, one introduction to a waste or university partner, written publication agreement with MoveGreen holding veto over its own network, and about two hours a week of one person's time); the data, privacy and publication rules; and the honest status line that nothing is agreed, funded or announced. A PDF of the note is available on the partnerships page under the archive section.",
+  "tags": [
+   "partners",
+   "concept note",
+   "movegreen",
+   "one page",
+   "pilot",
+   "pdf",
+   "waste",
+   "methane",
+   "ready to send"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ },
+ {
+  "id": "partners-cooperation-plan",
+  "title": "Cooperation plan with MoveGreen — five workstreams, 90-day map, asks and risks",
+  "text": "Principle: MoveGreen is the local evidence authority; CityAir is the technical and publishing layer. Neither side claims the other's work, and every published number carries its method and its limits. Five workstreams: (1) validate Earth-observation and thermal alerts with ground sensors — deliver a validation note including the false-positive rate (weeks 1–6); (2) map waste-burning and landfill environmental-risk hotspots into a public register with provenance for every entry (weeks 1–8); (3) develop the methane and PM2.5 baseline as a baseline statement that separates measured, modelled and unknown (weeks 4–12); (4) connect a waste-management or landfill operator and sign a site-level data agreement (weeks 4–14); (5) responsible public communication and citizen engagement, led by MoveGreen, with trilingual materials and the Telegram bot for field reports (weeks 6–14). CityAir adds: the twelve-domain readiness assessment producing the first fully evidenced Bishkek record, evidence-confidence scoring, innovation briefs with required data and risks, public dashboard templates and print exports, and open publication of the knowledge base and method. MoveGreen brings: the 100+ sensor PM network, the AQ.kg app and its audience, citizen-engagement capacity, media and advocacy reach, and convening power through the Central Asian Air Quality Platform. Ninety-day map: days 1–14 send the concept note, hold the introductory call, agree the pilot district and focal points, confirm data-sharing terms in writing; days 15–45 run the EO-versus-ground validation on historical data, draft the hotspot register, open the waste-operator conversation; days 46–90 publish the validation note and baseline statement, deliver the communication pack, package the case study for the AQMx exchange and COP31. Five asks: one pilot district with a named focal point; historical PM data for that district; one introduction to a waste-management or landfill operator; written agreement on what may be published (MoveGreen holds veto over anything describing their own network); two hours per week of technical time from one staff member. Risks and mitigations: methane is not MoveGreen's current workstream and could overload a small team — CityAir carries the methane method; satellite alerts are already over-claimed in this field — publish the false-positive rate and state that remote sensing screens rather than quantifies; a premature partnership announcement damages both sides — no announcement before the first published output; third-party personal data could leak into a public repository — publish roles and organisational contacts only.",
+  "tags": [
+   "partners",
+   "cooperation",
+   "movegreen",
+   "plan",
+   "90 days",
+   "asks",
+   "risks",
+   "baseline",
+   "hotspots"
+  ],
+  "source": "CityAir — partnerships and outreach archive"
+ }
+]

@@ -1,0 +1,862 @@
+[
+ {
+  "id": "istanbul",
+  "name": "Istanbul",
+  "country": "Türkiye",
+  "region": "Europe & Central Asia",
+  "population": "10M+",
+  "band": "Established",
+  "score": 66,
+  "confidence": 72,
+  "sector": "Transport",
+  "climate": "Coastal temperate",
+  "lat": 41.0082,
+  "lon": 28.9784,
+  "challenges": [
+   "Road transport exposure",
+   "Industrial and port sources",
+   "Cross-agency data integration"
+  ],
+  "actions": [
+   "Expand exposure-focused monitoring",
+   "Link transport measures to indicators",
+   "Publish a shared evidence register"
+  ],
+  "sources": [
+   "Municipal open-data portals",
+   "National monitoring sources",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 78,
+   "Source attribution": 62,
+   "Inventory": 69,
+   "Forecasting": 74,
+   "Health": 58,
+   "EIA": 72,
+   "Decision support": 65,
+   "Engagement": 73,
+   "Legal": 70,
+   "Waste": 64,
+   "Open burning": 55,
+   "Methane": 48
+  }
+ },
+ {
+  "id": "mexico-city",
+  "name": "Mexico City",
+  "country": "Mexico",
+  "region": "Latin America & Caribbean",
+  "population": "10M+",
+  "band": "Advanced",
+  "score": 77,
+  "confidence": 82,
+  "sector": "Transport",
+  "climate": "High-altitude basin",
+  "lat": 19.4326,
+  "lon": -99.1332,
+  "challenges": [
+   "Ozone episodes",
+   "Transport emissions",
+   "Regional airshed coordination"
+  ],
+  "actions": [
+   "Refine cross-boundary attribution",
+   "Strengthen health-outcome evaluation",
+   "Test targeted public alerts"
+  ],
+  "sources": [
+   "Public monitoring networks",
+   "Public emissions information",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 91,
+   "Source attribution": 82,
+   "Inventory": 84,
+   "Forecasting": 86,
+   "Health": 73,
+   "EIA": 76,
+   "Decision support": 81,
+   "Engagement": 84,
+   "Legal": 78,
+   "Waste": 67,
+   "Open burning": 61,
+   "Methane": 59
+  }
+ },
+ {
+  "id": "bishkek",
+  "name": "Bishkek",
+  "country": "Kyrgyz Republic",
+  "region": "Europe & Central Asia",
+  "population": "1M–5M",
+  "band": "Developing",
+  "score": 41,
+  "confidence": 48,
+  "sector": "Household Energy",
+  "climate": "Continental valley",
+  "lat": 42.8746,
+  "lon": 74.5698,
+  "challenges": [
+   "Winter particulate pollution",
+   "Household coal heating",
+   "Limited evidence coverage"
+  ],
+  "actions": [
+   "Build a quality-assurance plan",
+   "Characterize seasonal sources",
+   "Coordinate health and exposure indicators"
+  ],
+  "sources": [
+   "Publicly reported measurements",
+   "Satellite context",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 48,
+   "Source attribution": 37,
+   "Inventory": 39,
+   "Forecasting": 45,
+   "Health": 34,
+   "EIA": 42,
+   "Decision support": 40,
+   "Engagement": 52,
+   "Legal": 49,
+   "Waste": 46,
+   "Open burning": 38,
+   "Methane": 27
+  }
+ },
+ {
+  "id": "delhi",
+  "name": "Delhi",
+  "country": "India",
+  "region": "Asia & Pacific",
+  "population": "10M+",
+  "band": "Established",
+  "score": 60,
+  "confidence": 74,
+  "sector": "Transport",
+  "climate": "Indo-Gangetic plain",
+  "lat": 28.6139,
+  "lon": 77.209,
+  "challenges": [
+   "Intense winter episodes",
+   "Multiple co-located sources",
+   "High population exposure"
+  ],
+  "actions": [
+   "Expand source-apportionment studies",
+   "Tighten enforcement around priority sites",
+   "Publish hyperlocal exposure communication"
+  ],
+  "sources": [
+   "Public monitoring summaries",
+   "Published research",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 76,
+   "Source attribution": 58,
+   "Inventory": 61,
+   "Forecasting": 66,
+   "Health": 63,
+   "EIA": 64,
+   "Decision support": 59,
+   "Engagement": 68,
+   "Legal": 62,
+   "Waste": 55,
+   "Open burning": 49,
+   "Methane": 44
+  }
+ },
+ {
+  "id": "lagos",
+  "name": "Lagos",
+  "country": "Nigeria",
+  "region": "Africa",
+  "population": "10M+",
+  "band": "Developing",
+  "score": 36,
+  "confidence": 42,
+  "sector": "Transport",
+  "climate": "Coastal tropical",
+  "lat": 6.5244,
+  "lon": 3.3792,
+  "challenges": [
+   "Traffic and generator emissions",
+   "Limited network coverage",
+   "Waste burning near communities"
+  ],
+  "actions": [
+   "Stabilise core monitoring sites",
+   "Formalise waste-burning reporting",
+   "Link transport data to exposure estimates"
+  ],
+  "sources": [
+   "Institutional reporting",
+   "Regional datasets",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 44,
+   "Source attribution": 33,
+   "Inventory": 31,
+   "Forecasting": 29,
+   "Health": 36,
+   "EIA": 38,
+   "Decision support": 34,
+   "Engagement": 47,
+   "Legal": 41,
+   "Waste": 33,
+   "Open burning": 42,
+   "Methane": 26
+  }
+ },
+ {
+  "id": "bogota",
+  "name": "Bogotá",
+  "country": "Colombia",
+  "region": "Latin America & Caribbean",
+  "population": "5M–10M",
+  "band": "Established",
+  "score": 67,
+  "confidence": 70,
+  "sector": "Transport",
+  "climate": "High-altitude plateau",
+  "lat": 4.711,
+  "lon": -74.0721,
+  "challenges": [
+   "Fleet and freight emissions",
+   "Seasonal wildfire smoke",
+   "Equity of exposure"
+  ],
+  "actions": [
+   "Extend freight route analysis",
+   "Integrate wildfire smoke forecasting",
+   "Target communication to exposed districts"
+  ],
+  "sources": [
+   "Public monitoring network",
+   "Published plans",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 82,
+   "Source attribution": 71,
+   "Inventory": 68,
+   "Forecasting": 77,
+   "Health": 64,
+   "EIA": 70,
+   "Decision support": 72,
+   "Engagement": 75,
+   "Legal": 74,
+   "Waste": 60,
+   "Open burning": 52,
+   "Methane": 41
+  }
+ },
+ {
+  "id": "nairobi",
+  "name": "Nairobi",
+  "country": "Kenya",
+  "region": "Africa",
+  "population": "1M–5M",
+  "band": "Developing",
+  "score": 44,
+  "confidence": 46,
+  "sector": "Household Energy",
+  "climate": "Highland tropical",
+  "lat": -1.2921,
+  "lon": 36.8219,
+  "challenges": [
+   "Cooking and heating emissions",
+   "Informal-sector exposure",
+   "Fragmented data ownership"
+  ],
+  "actions": [
+   "Document data ownership",
+   "Pilot neighbourhood campaigns",
+   "Align waste and air programmes"
+  ],
+  "sources": [
+   "Research collaborations",
+   "Civil-society monitoring",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 52,
+   "Source attribution": 39,
+   "Inventory": 35,
+   "Forecasting": 41,
+   "Health": 43,
+   "EIA": 45,
+   "Decision support": 42,
+   "Engagement": 56,
+   "Legal": 51,
+   "Waste": 48,
+   "Open burning": 47,
+   "Methane": 30
+  }
+ },
+ {
+  "id": "krakow",
+  "name": "Kraków",
+  "country": "Poland",
+  "region": "Europe & Central Asia",
+  "population": "250k–1M",
+  "band": "Advanced",
+  "score": 76,
+  "confidence": 84,
+  "sector": "Household Energy",
+  "climate": "Continental basin",
+  "lat": 50.0647,
+  "lon": 19.945,
+  "challenges": [
+   "Historic coal heating legacy",
+   "Winter inversion trapping",
+   "Street-level exposure hot spots"
+  ],
+  "actions": [
+   "Maintain the coal-phase-out evidence trail",
+   "Evaluate heating-replacement outcomes",
+   "Publish hyperlocal exposure maps"
+  ],
+  "sources": [
+   "Regional monitoring data",
+   "Municipal programme reports",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 88,
+   "Source attribution": 79,
+   "Inventory": 83,
+   "Forecasting": 81,
+   "Health": 72,
+   "EIA": 74,
+   "Decision support": 78,
+   "Engagement": 80,
+   "Legal": 85,
+   "Waste": 70,
+   "Open burning": 66,
+   "Methane": 52
+  }
+ },
+ {
+  "id": "sarajevo",
+  "name": "Sarajevo",
+  "country": "Bosnia and Herzegovina",
+  "region": "Europe & Central Asia",
+  "population": "250k–1M",
+  "band": "Developing",
+  "score": 49,
+  "confidence": 54,
+  "sector": "Household Energy",
+  "climate": "Mountain valley",
+  "lat": 43.8563,
+  "lon": 18.4131,
+  "challenges": [
+   "Severe winter inversions",
+   "Solid-fuel heating",
+   "Limited open data"
+  ],
+  "actions": [
+   "Publish validated winter datasets",
+   "Quantify solid-fuel contributions",
+   "Coordinate a heating subsidy reform"
+  ],
+  "sources": [
+   "National monitoring reports",
+   "Donor studies",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 61,
+   "Source attribution": 49,
+   "Inventory": 44,
+   "Forecasting": 52,
+   "Health": 45,
+   "EIA": 50,
+   "Decision support": 47,
+   "Engagement": 58,
+   "Legal": 54,
+   "Waste": 51,
+   "Open burning": 43,
+   "Methane": 32
+  }
+ },
+ {
+  "id": "accra",
+  "name": "Accra",
+  "country": "Ghana",
+  "region": "Africa",
+  "population": "1M–5M",
+  "band": "Developing",
+  "score": 41,
+  "confidence": 44,
+  "sector": "Waste-site emissions",
+  "climate": "Coastal savanna",
+  "lat": 5.6037,
+  "lon": -0.187,
+  "challenges": [
+   "Open burning",
+   "Landfill proximity",
+   "Rapid urban expansion"
+  ],
+  "actions": [
+   "Map burning locations systematically",
+   "Formalise waste-collection monitoring",
+   "Link landfill operations to air data"
+  ],
+  "sources": [
+   "Municipal statistics",
+   "Research partnerships",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 47,
+   "Source attribution": 38,
+   "Inventory": 32,
+   "Forecasting": 35,
+   "Health": 40,
+   "EIA": 41,
+   "Decision support": 38,
+   "Engagement": 53,
+   "Legal": 46,
+   "Waste": 44,
+   "Open burning": 51,
+   "Methane": 29
+  }
+ },
+ {
+  "id": "oslo",
+  "name": "Oslo",
+  "country": "Norway",
+  "region": "Europe & Central Asia",
+  "population": "250k–1M",
+  "band": "Advanced",
+  "score": 82,
+  "confidence": 90,
+  "sector": "Transport",
+  "climate": "Nordic coastal",
+  "lat": 59.9139,
+  "lon": 10.7522,
+  "challenges": [
+   "Winter studded-tyre dust",
+   "Port and construction sources",
+   "Ensuring equitable exposure gains"
+  ],
+  "actions": [
+   "Refine road-dust forecasting",
+   "Evaluate low-emission-zone outcomes",
+   "Publish equity analysis"
+  ],
+  "sources": [
+   "Open city data",
+   "National inventories",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 94,
+   "Source attribution": 86,
+   "Inventory": 88,
+   "Forecasting": 89,
+   "Health": 84,
+   "EIA": 82,
+   "Decision support": 90,
+   "Engagement": 88,
+   "Legal": 90,
+   "Waste": 76,
+   "Open burning": 62,
+   "Methane": 58
+  }
+ },
+ {
+  "id": "bangkok",
+  "name": "Bangkok",
+  "country": "Thailand",
+  "region": "Asia & Pacific",
+  "population": "5M–10M",
+  "band": "Established",
+  "score": 64,
+  "confidence": 68,
+  "sector": "Transport",
+  "climate": "Tropical delta",
+  "lat": 13.7563,
+  "lon": 100.5018,
+  "challenges": [
+   "Traffic-related particulates",
+   "Seasonal agricultural smoke",
+   "Industrial estate proximity"
+  ],
+  "actions": [
+   "Coordinate regional smoke forecasting",
+   "Strengthen traffic measures evaluation",
+   "Expand exposure communication"
+  ],
+  "sources": [
+   "Public monitoring dashboards",
+   "Regional programmes",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 79,
+   "Source attribution": 66,
+   "Inventory": 63,
+   "Forecasting": 72,
+   "Health": 61,
+   "EIA": 67,
+   "Decision support": 64,
+   "Engagement": 70,
+   "Legal": 68,
+   "Waste": 59,
+   "Open burning": 54,
+   "Methane": 45
+  }
+ },
+ {
+  "id": "tehran",
+  "name": "Tehran",
+  "country": "Iran",
+  "region": "Middle East & North Africa",
+  "population": "5M–10M",
+  "band": "Established",
+  "score": 59,
+  "confidence": 58,
+  "sector": "Transport",
+  "climate": "Mountain basin",
+  "lat": 35.6892,
+  "lon": 51.389,
+  "challenges": [
+   "Winter inversion episodes",
+   "Ageing vehicle fleet",
+   "Data-access limitations"
+  ],
+  "actions": [
+   "Document network performance publicly",
+   "Review fleet-retirement evidence",
+   "Improve warning thresholds"
+  ],
+  "sources": [
+   "Published measurements",
+   "Academic research",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 74,
+   "Source attribution": 61,
+   "Inventory": 58,
+   "Forecasting": 69,
+   "Health": 55,
+   "EIA": 63,
+   "Decision support": 60,
+   "Engagement": 64,
+   "Legal": 66,
+   "Waste": 52,
+   "Open burning": 45,
+   "Methane": 38
+  }
+ },
+ {
+  "id": "cairo",
+  "name": "Cairo",
+  "country": "Egypt",
+  "region": "Middle East & North Africa",
+  "population": "10M+",
+  "band": "Developing",
+  "score": 50,
+  "confidence": 55,
+  "sector": "Transport",
+  "climate": "Arid river valley",
+  "lat": 30.0444,
+  "lon": 31.2357,
+  "challenges": [
+   "Dust and resuspended particles",
+   "Dense traffic corridors",
+   "Waste burning on the periphery"
+  ],
+  "actions": [
+   "Separate natural dust from managed sources",
+   "Strengthen corridor monitoring",
+   "Register waste-burning incidents"
+  ],
+  "sources": [
+   "National reports",
+   "Research networks",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 63,
+   "Source attribution": 49,
+   "Inventory": 47,
+   "Forecasting": 55,
+   "Health": 48,
+   "EIA": 52,
+   "Decision support": 50,
+   "Engagement": 57,
+   "Legal": 55,
+   "Waste": 53,
+   "Open burning": 42,
+   "Methane": 33
+  }
+ },
+ {
+  "id": "jakarta",
+  "name": "Jakarta",
+  "country": "Indonesia",
+  "region": "Asia & Pacific",
+  "population": "10M+",
+  "band": "Developing",
+  "score": 53,
+  "confidence": 57,
+  "sector": "Transport",
+  "climate": "Coastal tropical",
+  "lat": -6.2088,
+  "lon": 106.8456,
+  "challenges": [
+   "Congestion-related emissions",
+   "Industrial clusters",
+   "Seasonal burning episodes"
+  ],
+  "actions": [
+   "Quantify congestion measure benefits",
+   "Align industrial and air permits",
+   "Expand citizen reporting"
+  ],
+  "sources": [
+   "Public dashboards",
+   "Sector studies",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 67,
+   "Source attribution": 54,
+   "Inventory": 51,
+   "Forecasting": 58,
+   "Health": 52,
+   "EIA": 55,
+   "Decision support": 53,
+   "Engagement": 60,
+   "Legal": 57,
+   "Waste": 49,
+   "Open burning": 44,
+   "Methane": 35
+  }
+ },
+ {
+  "id": "lima",
+  "name": "Lima",
+  "country": "Peru",
+  "region": "Latin America & Caribbean",
+  "population": "5M–10M",
+  "band": "Developing",
+  "score": 47,
+  "confidence": 51,
+  "sector": "Transport",
+  "climate": "Coastal desert",
+  "lat": -12.0464,
+  "lon": -77.0428,
+  "challenges": [
+   "Fleet and industrial emissions",
+   "Limited dispersion in winter",
+   "Informal transport share"
+  ],
+  "actions": [
+   "Improve winter dispersion analysis",
+   "Register informal fleet data",
+   "Publish health-linked indicators"
+  ],
+  "sources": [
+   "Municipal monitoring",
+   "Published studies",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 59,
+   "Source attribution": 47,
+   "Inventory": 52,
+   "Forecasting": 44,
+   "Health": 46,
+   "EIA": 50,
+   "Decision support": 48,
+   "Engagement": 54,
+   "Legal": 52,
+   "Waste": 45,
+   "Open burning": 40,
+   "Methane": 31
+  }
+ },
+ {
+  "id": "tashkent",
+  "name": "Tashkent",
+  "country": "Uzbekistan",
+  "region": "Europe & Central Asia",
+  "population": "1M–5M",
+  "band": "Developing",
+  "score": 46,
+  "confidence": 43,
+  "sector": "Household Energy",
+  "climate": "Semi-arid basin",
+  "lat": 41.2995,
+  "lon": 69.2401,
+  "challenges": [
+   "Winter heating emissions",
+   "Dust events",
+   "Inter-agency data sharing"
+  ],
+  "actions": [
+   "Formalise a data-sharing protocol",
+   "Quantify heating contributions",
+   "Coordinate dust-health messaging"
+  ],
+  "sources": [
+   "National reports",
+   "Regional datasets",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 58,
+   "Source attribution": 44,
+   "Inventory": 41,
+   "Forecasting": 49,
+   "Health": 42,
+   "EIA": 47,
+   "Decision support": 45,
+   "Engagement": 52,
+   "Legal": 56,
+   "Waste": 48,
+   "Open burning": 39,
+   "Methane": 30
+  }
+ },
+ {
+  "id": "marrakesh",
+  "name": "Marrakesh",
+  "country": "Morocco",
+  "region": "Middle East & North Africa",
+  "population": "250k–1M",
+  "band": "Developing",
+  "score": 43,
+  "confidence": 41,
+  "sector": "Dust",
+  "climate": "Semi-arid plain",
+  "lat": 31.6295,
+  "lon": -7.9811,
+  "challenges": [
+   "Mineral dust episodes",
+   "Traffic corridor exposure",
+   "Tourism-season variability"
+  ],
+  "actions": [
+   "Separate dust from managed sources",
+   "Tighten corridor controls",
+   "Maintain consistent reporting"
+  ],
+  "sources": [
+   "National measurements",
+   "Research collaborations",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 51,
+   "Source attribution": 40,
+   "Inventory": 37,
+   "Forecasting": 45,
+   "Health": 39,
+   "EIA": 44,
+   "Decision support": 42,
+   "Engagement": 58,
+   "Legal": 53,
+   "Waste": 47,
+   "Open burning": 36,
+   "Methane": 28
+  }
+ },
+ {
+  "id": "warsaw",
+  "name": "Warsaw",
+  "country": "Poland",
+  "region": "Europe & Central Asia",
+  "population": "1M–5M",
+  "band": "Advanced",
+  "score": 72,
+  "confidence": 78,
+  "sector": "Transport",
+  "climate": "Continental plain",
+  "lat": 52.2297,
+  "lon": 21.0122,
+  "challenges": [
+   "Winter heating legacy",
+   "Traffic corridors",
+   "Cross-border transport of pollution"
+  ],
+  "actions": [
+   "Evaluate low-emission-zone outcomes",
+   "Improve regional modelling",
+   "Publish annual progress reporting"
+  ],
+  "sources": [
+   "Open data portals",
+   "National inventories",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 86,
+   "Source attribution": 74,
+   "Inventory": 76,
+   "Forecasting": 79,
+   "Health": 70,
+   "EIA": 72,
+   "Decision support": 75,
+   "Engagement": 77,
+   "Legal": 79,
+   "Waste": 66,
+   "Open burning": 58,
+   "Methane": 47
+  }
+ },
+ {
+  "id": "santiago",
+  "name": "Santiago",
+  "country": "Chile",
+  "region": "Latin America & Caribbean",
+  "population": "5M–10M",
+  "band": "Advanced",
+  "score": 73,
+  "confidence": 76,
+  "sector": "Transport",
+  "climate": "Andean basin",
+  "lat": -33.4489,
+  "lon": -70.6693,
+  "challenges": [
+   "Winter inversion episodes",
+   "Wood heating in the periphery",
+   "Industrial source mix"
+  ],
+  "actions": [
+   "Quantify wood-heating measures",
+   "Strengthen forecasting and alerts",
+   "Evaluate health outcomes"
+  ],
+  "sources": [
+   "Public monitoring data",
+   "Published programme evaluations",
+   "Illustrative assessment inputs"
+  ],
+  "scores": {
+   "Monitoring": 85,
+   "Source attribution": 77,
+   "Inventory": 80,
+   "Forecasting": 78,
+   "Health": 71,
+   "EIA": 73,
+   "Decision support": 79,
+   "Engagement": 76,
+   "Legal": 81,
+   "Waste": 68,
+   "Open burning": 60,
+   "Methane": 50
+  }
+ }
+]

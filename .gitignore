@@ -1,0 +1,23 @@
+# dependencies & builds
+node_modules/
+dist/
+app/site/
+.wrangler/
+.vercel/
+*.tsbuildinfo
+
+# secrets — never commit
+.dev.vars
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# local artefacts
+hf/space-static/
+.DS_Store
+Thumbs.db
+
+# private correspondence - never published (kept only in the workspace)
+private-archive/

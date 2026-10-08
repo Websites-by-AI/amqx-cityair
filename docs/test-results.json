@@ -1,0 +1,305 @@
+{
+ "results": [
+  {
+   "check": "Home loads and mounts React",
+   "ok": true,
+   "detail": "h1 = 'Turn fragmented city evidence into accountable clean-air action'"
+  },
+  {
+   "check": "Header navigation rendered",
+   "ok": true,
+   "detail": "13 nav links"
+  },
+  {
+   "check": "Hero image present",
+   "ok": true,
+   "detail": "public/images/hero-city.jpg"
+  },
+  {
+   "check": "menu \u201clogo\u201d \u2192 Home",
+   "ok": true,
+   "detail": "hash=#/ h1='Turn fragmented city evidence into accountable clean'"
+  },
+  {
+   "check": "menu \u201cGuidance\u201d \u2192 Guidance",
+   "ok": true,
+   "detail": "hash=#/guidance h1='Twelve domains of air-quality management capacity'"
+  },
+  {
+   "check": "menu \u201cAssess\u201d \u2192 Assess",
+   "ok": true,
+   "detail": "hash=#/assess h1='Score your city across twelve domains'"
+  },
+  {
+   "check": "menu \u201cResults\u201d \u2192 Results",
+   "ok": true,
+   "detail": "hash=#/results h1='No scored answers yet'"
+  },
+  {
+   "check": "menu \u201cAction plan\u201d \u2192 Action plan",
+   "ok": true,
+   "detail": "hash=#/action-plan h1='A phased improvement plan generated from your gaps'"
+  },
+  {
+   "check": "menu \u201cCities\u201d \u2192 Cities",
+   "ok": true,
+   "detail": "hash=#/cities h1='Compare context, capacity and evidence confidence'"
+  },
+  {
+   "check": "menu \u201cInnovations\u201d \u2192 Innovations",
+   "ok": true,
+   "detail": "hash=#/innovations h1='Innovations described honestly enough to assess'"
+  },
+  {
+   "check": "menu \u201cMatches\u201d \u2192 Matches",
+   "ok": true,
+   "detail": "hash=#/innovation-match h1='Innovation matching against your recorded context'"
+  },
+  {
+   "check": "menu \u201cResources\u201d \u2192 Resources",
+   "ok": true,
+   "detail": "hash=#/resources h1='References you can check yourself'"
+  },
+  {
+   "check": "menu \u201cMethod\u201d \u2192 Method",
+   "ok": true,
+   "detail": "hash=#/methodology h1='How CityAir computes a readiness score \u2014 and where i'"
+  },
+  {
+   "check": "menu \u201cAbout\u201d \u2192 About",
+   "ok": true,
+   "detail": "hash=#/about h1='About CityAir'"
+  },
+  {
+   "check": "menu \u201cAssistant\u201d \u2192 Assistant",
+   "ok": true,
+   "detail": "hash=#/assistant h1='Ask questions grounded in the CityAir knowledge base'"
+  },
+  {
+   "check": "Guidance accordion opens",
+   "ok": true,
+   "detail": "domain brief expanded"
+  },
+  {
+   "check": "Innovation brief expands",
+   "ok": true,
+   "detail": "implementation brief expanded"
+  },
+  {
+   "check": "City cards rendered",
+   "ok": true,
+   "detail": "20 compare buttons"
+  },
+  {
+   "check": "Compare 2 cities works",
+   "ok": true,
+   "detail": "grouped bar comparison shown"
+  },
+  {
+   "check": "City detail page",
+   "ok": true,
+   "detail": "hash=#/cities/oslo h1='Oslo, Norway'"
+  },
+  {
+   "check": "Live air-quality block on city page",
+   "ok": true,
+   "detail": "Open-Meteo reading section"
+  },
+  {
+   "check": "Assessment wizard completes \u2192 results",
+   "ok": true,
+   "detail": "h1='Test City \u00b7 Advanced stage'"
+  },
+  {
+   "check": "Results dashboard shows gauge + confidence",
+   "ok": true,
+   "detail": "gauge, confidence dial and domain bars"
+  },
+  {
+   "check": "Action plan generated from scores",
+   "ok": true,
+   "detail": "three phases rendered"
+  },
+  {
+   "check": "Chat widget answers (RAG or retrieval)",
+   "ok": true,
+   "detail": "answer bubble with sources"
+  },
+  {
+   "check": "Mobile: hamburger visible, desktop nav hidden",
+   "ok": true,
+   "detail": "responsive breakpoint behaves"
+  },
+  {
+   "check": "Mobile: drawer menu opens with all links",
+   "ok": true,
+   "detail": "14 links in drawer"
+  },
+  {
+   "check": "Mobile: navigation works from the drawer",
+   "ok": true,
+   "detail": "hash=#/assess"
+  },
+  {
+   "check": "Expo page loads",
+   "ok": true,
+   "detail": "h1='ISAF Smartex 2026 \u2014 cooperation brief for smart-city and air-quality c'"
+  },
+  {
+   "check": "Expo: live status badge + event facts",
+   "ok": true,
+   "detail": "status badge and venue rendered"
+  },
+  {
+   "check": "Expo: cooperation models rendered",
+   "ok": true,
+   "detail": "6 articles on page"
+  },
+  {
+   "check": "Expo: company table rendered",
+   "ok": true,
+   "detail": "41 table rows"
+  },
+  {
+   "check": "Expo: search filters the table",
+   "ok": true,
+   "detail": "21 rows after searching 'sensor'"
+  },
+  {
+   "check": "Expo: priority filter works",
+   "ok": true,
+   "detail": "24 priority-A rows"
+  },
+  {
+   "check": "Expo: row detail expands",
+   "ok": true,
+   "detail": "full brief visible"
+  },
+  {
+   "check": "Expo: outreach kit + org strip present",
+   "ok": true,
+   "detail": "templates, checklist and organisation chips"
+  },
+  {
+   "check": "Expo: copy-to-clipboard works",
+   "ok": true,
+   "detail": "copy button responded"
+  },
+  {
+   "check": "Expo: header link and route reachable from the menu",
+   "ok": true,
+   "detail": "EXPO 2026 in the navigation"
+  },
+  {
+   "check": "Partners page loads",
+   "ok": true,
+   "detail": "h1='Partnerships, outreach & archive'"
+  },
+  {
+   "check": "Partners: timeline renders with the Dialogue and COP31 entries",
+   "ok": true,
+   "detail": "chronology section rendered"
+  },
+  {
+   "check": "Partners: contact register rendered",
+   "ok": true,
+   "detail": "8 contact cards"
+  },
+  {
+   "check": "Partners: status chips and verification flags",
+   "ok": true,
+   "detail": "verification warning and priority chips present"
+  },
+  {
+   "check": "Partners: archive letters rendered",
+   "ok": true,
+   "detail": "5 archive entries"
+  },
+  {
+   "check": "Partners: archive search filters",
+   "ok": true,
+   "detail": "3 of 5 entries after searching 'MoveGreen'"
+  },
+  {
+   "check": "Partners: direction filter works",
+   "ok": true,
+   "detail": "2 outgoing entries"
+  },
+  {
+   "check": "Partners: outgoing letter text present",
+   "ok": true,
+   "detail": "full outgoing message rendered verbatim"
+  },
+  {
+   "check": "Partners: archive-coverage panel shows a percentage",
+   "ok": true,
+   "detail": "coverage section rendered with percent"
+  },
+  {
+   "check": "Partners: per-document coverage bars",
+   "ok": true,
+   "detail": "6 progress bars"
+  },
+  {
+   "check": "Partners: gap register table rendered",
+   "ok": true,
+   "detail": "10 registered gaps"
+  },
+  {
+   "check": "Partners: coverage chips on each archive record",
+   "ok": true,
+   "detail": "per-record coverage chips present"
+  },
+  {
+   "check": "Partners: concept note record is linked",
+   "ok": true,
+   "detail": "concept note PDF link present"
+  },
+  {
+   "check": "Partners: letter copy-to-clipboard works",
+   "ok": true,
+   "detail": "copy button responded"
+  },
+  {
+   "check": "Partners: privacy + org strip present",
+   "ok": true,
+   "detail": "privacy list and organisation links"
+  },
+  {
+   "check": "Partners: header link reachable from the menu",
+   "ok": true,
+   "detail": "Partners in the navigation"
+  },
+  {
+   "check": "Unknown route shows 404 card",
+   "ok": true,
+   "detail": "404 view"
+  },
+  {
+   "check": "Deep link /cities/bishkek resolves",
+   "ok": true,
+   "detail": "/cities/bishkek \u2192 hash=#/cities/bishkek h1='Bishkek, Kyrgyz Republic'"
+  },
+  {
+   "check": "Deep link /guidance works",
+   "ok": true,
+   "detail": "/guidance \u2192 hash=#/guidance"
+  },
+  {
+   "check": "Deep link /about works",
+   "ok": true,
+   "detail": "/about \u2192 hash=#/about"
+  },
+  {
+   "check": "Deep link /methodology works",
+   "ok": true,
+   "detail": "/methodology \u2192 hash=#/methodology"
+  },
+  {
+   "check": "Deep link /partners works",
+   "ok": true,
+   "detail": "/partners \u2192 hash=#/partners"
+  }
+ ],
+ "console": []
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CityAir — concept note: waste &amp; methane pilot with MoveGreen (non-confidential)</title>
+<style>
+  * { box-sizing: border-box; }
+  @page { size: A4; margin: 13mm; }
+  html, body { margin: 0; padding: 0; background: #eef2f7; }
+  body { font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif; color: #0f172a; }
+  .sheet {
+    width: 210mm; min-height: 297mm; margin: 0 auto; padding: 13mm 13mm 10mm;
+    background: #fff; box-shadow: 0 2px 18px rgba(15,23,42,.12);
+  }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 2px solid #0e7490; padding-bottom: 7px; }
+  .brand { display: flex; align-items: center; gap: 8px; }
+  .mark { width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(135deg,#0e7490,#0ea5e9); color: #fff; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  .brand b { font-size: 15px; letter-spacing: .2px; }
+  .meta { text-align: right; font-size: 8.6px; color: #475569; line-height: 1.5; }
+  h1 { font-size: 17px; margin: 9px 0 2px; line-height: 1.25; }
+  .sub { font-size: 9.4px; color: #475569; margin-bottom: 8px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 5px; margin: 6px 0 10px; }
+  .badge { font-size: 8.2px; font-weight: 700; padding: 2.5px 7px; border-radius: 999px; background: #ecfeff; color: #0e7490; border: 1px solid #a5f3fc; }
+  .badge.amber { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+  h2 { font-size: 10.4px; text-transform: uppercase; letter-spacing: .08em; color: #0e7490; margin: 10px 0 4px; }
+  p, li { font-size: 9.5px; line-height: 1.62; }
+  p { margin: 0 0 5px; }
+  ul, ol { margin: 0 0 5px; padding-left: 15px; }
+  li { margin-bottom: 2.5px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card { border: 1px solid #e2e8f0; border-radius: 7px; padding: 7px 9px; background: #f8fafc; }
+  .card h3 { font-size: 9.4px; margin: 0 0 3px; color: #0f172a; }
+  .card.blue { background: #f0f9ff; border-color: #bae6fd; }
+  .card.green { background: #f0fdf4; border-color: #bbf7d0; }
+  .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 7px; }
+  .step { border-left: 3px solid #0ea5e9; padding-left: 7px; }
+  .step b { font-size: 9.2px; display: block; }
+  .step span { font-size: 8.6px; color: #475569; line-height: 1.5; display: block; }
+  .rules { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 7px; padding: 7px 9px; }
+  .foot { margin-top: 9px; border-top: 1px solid #e2e8f0; padding-top: 6px; display: flex; justify-content: space-between; gap: 10px; font-size: 8.2px; color: #475569; }
+  .foot b { color: #0f172a; }
+  .noclaim { font-size: 8.6px; background: #fffbeb; border: 1px solid #fde68a; color: #78350f; border-radius: 7px; padding: 6px 8px; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="top">
+    <div class="brand"><div class="mark">CA</div><b>CityAir <span style="font-weight:400;color:#64748b">by GreenHope</span></b></div>
+    <div class="meta">
+      Concept note — non-confidential<br>
+      Version 1.0 · 8 October 2026<br>
+      Prepared for: MoveGreen · Bishkek, Kyrgyz Republic
+    </div>
+  </div>
+
+  <h1>A waste-and-methane pilot: validating satellite alerts with your ground network</h1>
+  <div class="sub">One page, no confidential content, no commitment. This note exists to answer one question: is a small joint pilot worth a 45-minute call?</div>
+
+  <div class="badges">
+    <span class="badge">1 pilot district</span>
+    <span class="badge">90 days</span>
+    <span class="badge">open method</span>
+    <span class="badge">your network stays yours</span>
+    <span class="badge amber">status: draft — nothing agreed</span>
+  </div>
+
+  <h2>1 · The idea in three sentences</h2>
+  <p>
+    Satellite and thermal alerts (NASA FIRMS, Sentinel-2) already flag burning and hotspots around Bishkek, but nobody has
+    published how often those alerts are actually right. MoveGreen has something almost nobody in the region has: a real
+    ground network and public trust. Pairing the two produces a defensible answer for the city — and a method other cities
+    can copy.
+  </p>
+
+  <h2>2 · What the pilot would produce in 90 days</h2>
+  <div class="steps">
+    <div class="step"><b>Validation note</b><span>How many satellite alerts matched a real ground event — including the false-positive rate, published rather than hidden.</span></div>
+    <div class="step"><b>Hotspot register</b><span>Waste-burning and landfill-risk sites in one district, each entry with how it was detected, how it was checked and who owns the site.</span></div>
+    <div class="step"><b>Baseline statement</b><span>Measured, modelled and unknown kept apart. Methane is handled as a measurement plan, never as a satellite number presented as quantification.</span></div>
+  </div>
+
+  <h2>3 · Division of work</h2>
+  <div class="grid">
+    <div class="card green">
+      <h3>MoveGreen brings</h3>
+      <ul style="margin:0;padding-left:14px">
+        <li>The ground monitoring network and its data</li>
+        <li>Local knowledge of sites, routes and risks</li>
+        <li>Citizen engagement and public communication</li>
+        <li>Convening power with the city and the region</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>CityAir brings</h3>
+      <ul style="margin:0;padding-left:14px">
+        <li>The method: satellite screening, validation, confidence scoring</li>
+        <li>Publishing layer: dashboard, trilingual materials, field-report tool</li>
+        <li>The 12-domain readiness assessment, run with you and the city</li>
+        <li>Open method and open data, so others can reproduce it</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>4 · What we are asking for</h2>
+  <ol style="margin:0;padding-left:15px">
+    <li>One pilot district in Bishkek and one named focal point.</li>
+    <li>Historical PM data for that district, in whatever granularity you are comfortable sharing.</li>
+    <li>One introduction to a waste-management, landfill or university partner.</li>
+    <li>Agreement in writing on what may be published — MoveGreen holds veto over anything describing its own network.</li>
+    <li>Roughly two hours a week of one person's time during the pilot.</li>
+  </ol>
+
+  <h2>5 · Data, privacy and publication rules</h2>
+  <div class="rules">
+    <ul style="margin:0;padding-left:14px">
+      <li>Your data stays yours. Nothing is published or redistributed without written agreement.</li>
+      <li>Anything presented as fact carries its method and its limits; uncertainty is stated, not smoothed over.</li>
+      <li>No partnership is announced until there is a published output both sides have seen.</li>
+      <li>If either side wants to stop, the pilot stops and the joint material is withdrawn on request.</li>
+    </ul>
+  </div>
+
+  <h2>6 · Where this fits</h2>
+  <p>
+    The waste workstream sits on top of existing international guidance (the AQMx platform's waste-management and open
+    waste-burning guidance) and is designed to have one documented pilot result before COP31 in Antalya
+    (9–20 November 2026). CityAir is an independent prototype built by the GreenHope Initiative; it is not an AQMx product
+    and does not speak for any organisation listed here.
+  </p>
+
+  <div class="noclaim">
+    <b>Status today:</b> a reply from MoveGreen expressed interest in learning more; nothing is agreed, funded or
+    announced. This note is the non-confidential one-pager that was offered in our message of 7 October 2026.
+  </div>
+
+  <div class="foot">
+    <div><b>Soheil Sabzevari</b> · GreenHope Initiative<br>LinkedIn: linkedin.com/in/soheil-sabzevari-746237173</div>
+    <div style="text-align:right">Live pages: <b>aqmx.atikova.com</b> (planned) · <b>#/partners</b> and <b>#/expo</b> on the public mirror<br>Contact details beyond LinkedIn are shared privately on request.</div>
+  </div>
+
+</div>
+</body>
+</html>

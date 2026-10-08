@@ -1,0 +1,17 @@
+# Copy to .dev.vars for local development (never commit the real file).
+TELEGRAM_BOT_TOKEN=""
+TELEGRAM_WEBHOOK_SECRET="local-dev-secret"
+HF_TOKEN=""
+HF_MODEL="Qwen/Qwen2.5-7B-Instruct"
+
+# ---- Admin panel (private correspondence database) -------------------------
+# The password itself is NEVER stored, here or anywhere else in the repository.
+# Only a salted SHA-256 is kept, and the real values live in .dev.vars (local)
+# or in Cloudflare Secrets (deployed). With no hash configured the API returns
+# 503 and refuses every login (fail-closed).
+#
+#   node tools/admin-pass.mjs "your-new-password"      # prints the two lines to paste
+#
+ADMIN_NAME="ann"
+ADMIN_PASSWORD_SALT=""
+ADMIN_PASSWORD_SHA256=""
