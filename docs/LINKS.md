@@ -47,6 +47,25 @@
 > **نکته‌ی مهم:** هیچ‌کدام از این‌ها «شراکت امضاشده» نیست. صفحه خودش اول از همه همین را می‌گوید
 > («status stated as it is — no partnership claimed») تا هیچ‌جا برداشت اشتباه ایجاد نشود.
 
+## ۱.۹) 🌍 زبان‌ها و اتصال Hugging Face (جدید)
+
+| چه چیزی | لینک |
+| --- | --- |
+| 🇹🇷 نسخه‌ی ترکی | [https://sosa123454321-amqx-cityair.static.hf.space/?lang=tr#/](https://sosa123454321-amqx-cityair.static.hf.space/?lang=tr#/) |
+| 🇮🇷 نسخه‌ی فارسی (راست‌به‌چپ) | [https://sosa123454321-amqx-cityair.static.hf.space/?lang=fa#/](https://sosa123454321-amqx-cityair.static.hf.space/?lang=fa#/) |
+| 🇸🇦 نسخه‌ی عربی (راست‌به‌چپ) | [https://sosa123454321-amqx-cityair.static.hf.space/?lang=ar#/](https://sosa123454321-amqx-cityair.static.hf.space/?lang=ar#/) |
+| 📖 راهنمای چندزبانه + HF | [https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/I18N.md](https://github.com/Websites-by-AI/amqx-cityair/blob/main/docs/I18N.md) |
+| 🤗 وضعیت زنده‌ی HF API | `http://127.0.0.1:8788/api/hf/status?probe=1` |
+| 📥 کشیدن دانش‌نامه از دیتاست HF | `http://127.0.0.1:8788/api/hf/kb` (نتیجه: ۱۱۴ چانک، ذخیره در KV) |
+| 🤖 دانش‌نامه روی HF | https://huggingface.co/datasets/sosa123454321/amqx-cityair-kb |
+
+**زبان:** رابط + صفحه‌ی خانه در چهار زبان؛ منو، فوتر، دکمه‌ها و هشدارها همه ترجمه شده‌اند و در فارسی/عربی کل چیدمان
+راست‌به‌چپ می‌شود. انتخاب زبان در آدرس (`?lang=fa`) و localStorage ذخیره می‌شود.
+
+**Hugging Face:** وضعیت توکن، دیتاست و مجوز Inference واقعی گزارش می‌شود؛ دستیار پاسخ‌ها را
+**از نسخه‌ی دانش‌نامه‌ی روی Hugging Face** می‌دهد (`kbSource: huggingface-dataset`).
+برای Inference و ساخت Space گرادیو به ترتیب به مجوز توکن و سهمیه‌ی HF نیاز است (شرح در I18N.md).
+
 ## ۱.۸) 🔐 پنل ادمین و دیتابیس خصوصی (جدید)
 
 | چه چیزی | لینک / مسیر |

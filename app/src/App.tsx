@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Expo from "./pages/Expo";
 import Partners from "./pages/Partners";
 import Admin from "./pages/Admin";
+import { LangProvider } from "./i18n";
 import Assistant from "./pages/Assistant";
 import { Button, Card } from "./components/ui";
 
@@ -129,11 +130,13 @@ export default function App() {
     }
 
   return (
-    <Shell route={path}>
-      <div key={path} className="animate-fade-up">
-        {page}
-      </div>
-      <ChatWidget />
-    </Shell>
+    <LangProvider>
+      <Shell route={path}>
+        <div key={path} className="animate-fade-up">
+          {page}
+        </div>
+        <ChatWidget />
+      </Shell>
+    </LangProvider>
   );
 }

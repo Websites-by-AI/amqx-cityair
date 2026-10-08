@@ -1,9 +1,40 @@
 import kbJson from "./kb.json";
-import { buildIndex, search, tokenize } from "./retrieval";
+import { buildIndex, search, tokenize, type Index } from "./retrieval";
 import type { ChatMessage, Env, KbChunk, Scored } from "./types";
 
 const KB = kbJson as KbChunk[];
 const INDEX = buildIndex(KB);
+
+/**
+ * Retrieval index actually used for answering.
+ *
+ * Priority: the copy pulled from the Hugging Face dataset into KV (written by
+ * GET /api/hf/kb) → the bundled copy. The KV copy is cached in the isolate for a
+ * minute, so publishing a new knowledge base on Hugging Face updates the deployed
+ * assistant without a redeploy.
+ */
+let hfIndexCache: { at: number; index: Index } | null = null;
+
+async function activeIndex(env: Env): Promise<{ index: Index; source: "huggingface-dataset" | "bundled" }> {
+  if (!env.AMQX_KV) return { index: INDEX, source: "bundled" };
+  if (hfIndexCache && Date.now() - hfIndexCache.at < 60_000) {
+    return { index: hfIndexCache.index, source: "huggingface-dataset" };
+  }
+  try {
+    const raw = await env.AMQX_KV.get("kb:hf");
+    if (raw) {
+      const chunks = JSON.parse(raw) as KbChunk[];
+      if (Array.isArray(chunks) && chunks.length) {
+        const index = buildIndex(chunks);
+        hfIndexCache = { at: Date.now(), index };
+        return { index, source: "huggingface-dataset" };
+      }
+    }
+  } catch {
+    /* fall through to the bundled copy */
+  }
+  return { index: INDEX, source: "bundled" };
+}
 
 const SYSTEM = `You are the CityAir assistant, a careful technical assistant for city air-quality teams.
 
@@ -19,6 +50,7 @@ Rules:
 export type AnswerResult = {
   answer: string;
   provider: string;
+  kbSource?: string;
   sources: { id: string; title: string; source: string }[];
   retrieved: Scored[];
 };
@@ -135,8 +167,9 @@ export async function answerQuestion(
       : "";
   const query = `${lastUser} ${cityHint}`.trim();
 
-  let hits = search(INDEX, query, 8);
-  if (!hits.length) hits = search(INDEX, tokenize(query).slice(0, 3).join(" "), 6);
+  const { index, source: kbSource } = await activeIndex(env);
+  let hits = search(index, query, 8);
+  if (!hits.length) hits = search(index, tokenize(query).slice(0, 3).join(" "), 6);
   hits = await vectorRerank(env, query, hits);
   hits = hits.slice(0, 6);
 
@@ -164,6 +197,7 @@ export async function answerQuestion(
     return {
       answer: fromWorkersAi,
       provider: `cloudflare-workers-ai:${env.AI_MODEL ?? "@cf/meta/llama-3.1-8b-instruct"}`,
+      kbSource,
       sources,
       retrieved: hits,
     };
@@ -173,6 +207,7 @@ export async function answerQuestion(
     return {
       answer: fromHf,
       provider: `huggingface:${env.HF_MODEL ?? "Qwen/Qwen2.5-7B-Instruct"}`,
+      kbSource,
       sources,
       retrieved: hits,
     };
@@ -180,6 +215,7 @@ export async function answerQuestion(
   return {
     answer: extractive(hits, lastUser.slice(0, 160)),
     provider: "extractive-retrieval",
+    kbSource,
     sources,
     retrieved: hits,
   };

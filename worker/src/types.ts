@@ -18,6 +18,9 @@ export type Env = {
   BOT_USERNAME?: string;
   AI_MODEL?: string;
   HF_MODEL?: string;
+  HF_DATASET?: string;
+  HF_SPACE?: string;
+  HF_KB_FILE?: string;
   HF_TOKEN?: string;
   KB_VERSION?: string;
   TELEGRAM_BOT_TOKEN?: string;

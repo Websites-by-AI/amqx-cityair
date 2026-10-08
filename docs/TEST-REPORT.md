@@ -1,8 +1,8 @@
 # CityAir — browser test report
 
 Target : `http://127.0.0.1:8788`
-When   : 2026-10-08 12:07 UTC
-Result : **68/68 checks passed**
+When   : 2026-10-08 14:17 UTC
+Result : **78/78 checks passed**
 
 | # | Check | Result | Detail |
 | --- | --- | --- | --- |
@@ -68,12 +68,22 @@ Result : **68/68 checks passed**
 | 60 | Admin: contacts show the private-only fields | ✅ | private blocks + unverified flag |
 | 61 | Admin: important notes tab renders | ✅ | notes visible |
 | 62 | Admin: logout returns to the login screen | ✅ | session ended client-side |
-| 63 | Unknown route shows 404 card | ✅ | 404 view |
-| 64 | Deep link /cities/bishkek resolves | ✅ | /cities/bishkek → hash=#/cities/bishkek h1='Bishkek, Kyrgyz Republic' |
-| 65 | Deep link /guidance works | ✅ | /guidance → hash=#/guidance |
-| 66 | Deep link /about works | ✅ | /about → hash=#/about |
-| 67 | Deep link /methodology works | ✅ | /methodology → hash=#/methodology |
-| 68 | Deep link /partners works | ✅ | /partners → hash=#/partners |
+| 63 | Language TR: hero, direction, CTA and footer | ✅ | h1='Dağınık şehir kanıtlar' dir=ltr lang=tr cta='Değerlendirmeyi başlat' footer=ok |
+| 64 | Language FA: hero, direction, CTA and footer | ✅ | h1='شواهد پراکنده\u200cی شهر را' dir=rtl lang=fa cta='شروع ارزیابی' footer=ok |
+| 65 | Language AR: hero, direction, CTA and footer | ✅ | h1='حوِّل أدلة المدينة الم' dir=rtl lang=ar cta='ابدأ التقييم' footer=ok |
+| 66 | Language switcher applies and is shareable | ✅ | stored=ar url=?lang=ar |
+| 67 | Language choice survives navigation | ✅ | lang=ar on #/cities |
+| 68 | RTL does not break the admin login | ✅ | admin form still usable in Persian |
+| 69 | HF API: status endpoint reports token and dataset | ✅ | HTTP 200 · user=sosa123454321 · dataset ok=True |
+| 70 | HF API: inference permission is reported honestly | ✅ | not probed (add ?probe=1) |
+| 71 | HF API: knowledge base is pulled from the HF dataset | ✅ | 114 chunks · 116506 bytes · stored=True |
+| 72 | Assistant answers from the Hugging Face copy | ✅ | kbSource=huggingface-dataset · 6 sources |
+| 73 | Unknown route shows 404 card | ✅ | 404 view |
+| 74 | Deep link /cities/bishkek resolves | ✅ | /cities/bishkek → hash=#/cities/bishkek h1='Bishkek, Kyrgyz Republic' |
+| 75 | Deep link /guidance works | ✅ | /guidance → hash=#/guidance |
+| 76 | Deep link /about works | ✅ | /about → hash=#/about |
+| 77 | Deep link /methodology works | ✅ | /methodology → hash=#/methodology |
+| 78 | Deep link /partners works | ✅ | /partners → hash=#/partners |
 
 ## Console / page errors
 
@@ -108,6 +118,12 @@ Saved in `docs/screenshots`:
 - `23-admin-tasks.png`
 - `24-admin-log.png`
 - `25-admin-login-screen.png`
+- `26-admin-mirror-safe.png`
+- `27-lang-tr-home.png`
+- `28-lang-fa-home.png`
+- `29-lang-ar-home.png`
+- `30-lang-fa-cities.png`
+- `31-lang-ar-cities.png`
 - `menu-assistant.png`
 - `menu-cities.png`
 - `menu-guidance.png`

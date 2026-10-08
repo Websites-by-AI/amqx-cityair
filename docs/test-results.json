@@ -311,6 +311,56 @@
    "detail": "session ended client-side"
   },
   {
+   "check": "Language TR: hero, direction, CTA and footer",
+   "ok": true,
+   "detail": "h1='Da\u011f\u0131n\u0131k \u015fehir kan\u0131tlar' dir=ltr lang=tr cta='De\u011ferlendirmeyi ba\u015flat' footer=ok"
+  },
+  {
+   "check": "Language FA: hero, direction, CTA and footer",
+   "ok": true,
+   "detail": "h1='\u0634\u0648\u0627\u0647\u062f \u067e\u0631\u0627\u06a9\u0646\u062f\u0647\\u200c\u06cc \u0634\u0647\u0631 \u0631\u0627' dir=rtl lang=fa cta='\u0634\u0631\u0648\u0639 \u0627\u0631\u0632\u06cc\u0627\u0628\u06cc' footer=ok"
+  },
+  {
+   "check": "Language AR: hero, direction, CTA and footer",
+   "ok": true,
+   "detail": "h1='\u062d\u0648\u0650\u0651\u0644 \u0623\u062f\u0644\u0629 \u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0627\u0644\u0645' dir=rtl lang=ar cta='\u0627\u0628\u062f\u0623 \u0627\u0644\u062a\u0642\u064a\u064a\u0645' footer=ok"
+  },
+  {
+   "check": "Language switcher applies and is shareable",
+   "ok": true,
+   "detail": "stored=ar url=?lang=ar"
+  },
+  {
+   "check": "Language choice survives navigation",
+   "ok": true,
+   "detail": "lang=ar on #/cities"
+  },
+  {
+   "check": "RTL does not break the admin login",
+   "ok": true,
+   "detail": "admin form still usable in Persian"
+  },
+  {
+   "check": "HF API: status endpoint reports token and dataset",
+   "ok": true,
+   "detail": "HTTP 200 \u00b7 user=sosa123454321 \u00b7 dataset ok=True"
+  },
+  {
+   "check": "HF API: inference permission is reported honestly",
+   "ok": true,
+   "detail": "not probed (add ?probe=1)"
+  },
+  {
+   "check": "HF API: knowledge base is pulled from the HF dataset",
+   "ok": true,
+   "detail": "114 chunks \u00b7 116506 bytes \u00b7 stored=True"
+  },
+  {
+   "check": "Assistant answers from the Hugging Face copy",
+   "ok": true,
+   "detail": "kbSource=huggingface-dataset \u00b7 6 sources"
+  },
+  {
    "check": "Unknown route shows 404 card",
    "ok": true,
    "detail": "404 view"

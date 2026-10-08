@@ -496,6 +496,100 @@ with sync_playwright() as p:
     apage.screenshot(path=str(SHOTS / "25-admin-login-screen.png"), full_page=False)
     apage.close()
 
+
+    # ------------------------------------------------------------------ languages (TR / FA / AR)
+    LANG_EXPECT = {
+        "tr": ("Dağınık", "ltr", "Değerlendirmeyi başlat", "barındırılıyor"),
+        "fa": ("شواهد پراکنده", "rtl", "شروع ارزیابی", "میزبانی"),
+        "ar": ("حوِّل أدلة", "rtl", "ابدأ التقييم", "الاستضافة"),
+    }
+    for code, (head, direction, cta, footer_word) in LANG_EXPECT.items():
+        page.goto(f"{BASE}/?lang={code}#/", wait_until="domcontentloaded")
+        page.wait_for_timeout(1600)
+        doc_dir = page.evaluate("document.documentElement.dir")
+        doc_lang = page.evaluate("document.documentElement.lang")
+        h1_text = h1(page)
+        cta_text = page.locator('header a[href="#/assess"].bg-brand-700').first.inner_text()
+        footer_text = page.locator("footer").inner_text()
+        ok = (
+            head in h1_text
+            and doc_dir == direction
+            and doc_lang == code
+            and cta in cta_text
+            and footer_word in footer_text
+        )
+        record(
+            f"Language {code.upper()}: hero, direction, CTA and footer",
+            ok,
+            f"h1={h1_text[:22]!r} dir={doc_dir} lang={doc_lang} cta={cta_text[:22]!r} footer={'ok' if footer_word in footer_text else 'missing'}",
+        )
+
+    # switcher: click EN → AR, then verify it survives navigation
+    page.goto(f"{BASE}/#/", wait_until="domcontentloaded")
+    page.wait_for_timeout(1400)
+    page.click("[data-testid=lang-switcher]")
+    page.wait_for_timeout(400)
+    page.click("[data-testid=lang-ar]")
+    page.wait_for_timeout(1200)
+    stored = page.evaluate("localStorage.getItem('cityair-lang')")
+    url_lang = page.evaluate("new URLSearchParams(location.search).get('lang')")
+    record(
+        "Language switcher applies and is shareable",
+        stored == "ar" and url_lang == "ar" and page.evaluate("document.documentElement.dir") == "rtl",
+        f"stored={stored} url=?lang={url_lang}",
+    )
+    page.goto(f"{BASE}/#/cityair-not-a-route", wait_until="domcontentloaded")
+    page.wait_for_timeout(900)
+    page.goto(f"{BASE}/#/cities", wait_until="domcontentloaded")
+    page.wait_for_timeout(1500)
+    record(
+        "Language choice survives navigation",
+        page.evaluate("document.documentElement.lang") == "ar",
+        f"lang={page.evaluate('document.documentElement.lang')} on #/cities",
+    )
+    page.screenshot(path=str(SHOTS / "31-lang-ar-cities.png"), full_page=False)
+    page.goto(f"{BASE}/?lang=fa#/admin", wait_until="domcontentloaded")
+    page.wait_for_timeout(1200)
+    record(
+        "RTL does not break the admin login",
+        page.locator("input[type=password]").count() == 1,
+        "admin form still usable in Persian",
+    )
+    page.goto(f"{BASE}/?lang=en#/", wait_until="domcontentloaded")
+    page.wait_for_timeout(900)
+
+    # ------------------------------------------------------------------ Hugging Face API
+    hf_status = page.request.get(f"{BASE}/api/hf/status")
+    hf_body = hf_status.json() if hf_status.ok else {}
+    record(
+        "HF API: status endpoint reports token and dataset",
+        hf_status.ok and hf_body.get("configured") is True and hf_body.get("dataset", {}).get("ok") is True,
+        f"HTTP {hf_status.status} · user={hf_body.get('token', {}).get('user')} · dataset ok={hf_body.get('dataset', {}).get('ok')}",
+    )
+    record(
+        "HF API: inference permission is reported honestly",
+        hf_status.ok and isinstance(hf_body.get("inference", {}).get("permitted"), (bool, type(None))),
+        str(hf_body.get("inference", {}).get("detail"))[:80],
+    )
+    hf_kb = page.request.get(f"{BASE}/api/hf/kb")
+    kb_body = hf_kb.json() if hf_kb.ok else {}
+    record(
+        "HF API: knowledge base is pulled from the HF dataset",
+        hf_kb.ok and kb_body.get("ok") and kb_body.get("chunks", 0) >= 100,
+        f"{kb_body.get('chunks')} chunks · {kb_body.get('bytes')} bytes · stored={kb_body.get('stored')}",
+    )
+    chat = page.request.post(
+        f"{BASE}/api/chat",
+        data=json.dumps({"messages": [{"role": "user", "content": "What is in the knowledge base about Istanbul?"}]}),
+        headers={"content-type": "application/json"},
+    )
+    chat_body = chat.json() if chat.ok else {}
+    record(
+        "Assistant answers from the Hugging Face copy",
+        chat.ok and chat_body.get("kbSource") in ("huggingface-dataset", "bundled") and len(chat_body.get("sources", [])) > 0,
+        f"kbSource={chat_body.get('kbSource')} · {len(chat_body.get('sources', []))} sources",
+    )
+
     page.goto(f"{BASE}/#/does-not-exist", wait_until="domcontentloaded")
     page.wait_for_timeout(700)
     record("Unknown route shows 404 card", page.locator("text=Page not found").count() >= 1, "404 view")

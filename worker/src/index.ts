@@ -1,6 +1,7 @@
 import { answerQuestion, kbStats } from "./ai";
 import { readingForCity, subscribers } from "./aq";
 import { handleAdmin } from "./admin";
+import { hfFetchKb, hfStatus } from "./hf";
 import { handleSetup, handleUpdate, handleWebhook } from "./telegram";
 import type { ChatMessage, Env } from "./types";
 
@@ -78,7 +79,14 @@ export default {
             embeddings: Boolean(env.AI),
           },
           storage: { kv: Boolean(env.AMQX_KV), d1: Boolean(env.DB) },
-          admin: {
+          huggingFace: {
+        token: Boolean(env.HF_TOKEN),
+        model: env.HF_MODEL ?? "Qwen/Qwen2.5-7B-Instruct",
+        dataset: env.HF_DATASET ?? "sosa123454321/amqx-cityair-kb",
+        space: env.HF_SPACE ?? "sosa123454321/amqx-cityair",
+        statusEndpoint: "/api/hf/status",
+      },
+      admin: {
         configured: Boolean(env.ADMIN_PASSWORD_SHA256 && env.ADMIN_PASSWORD_SALT),
         name: env.ADMIN_NAME ?? "ann",
         storage: env.AMQX_KV ? "kv" : "memory",
@@ -119,6 +127,7 @@ export default {
         {
           answer: result.answer,
           provider: result.provider,
+          kbSource: result.kbSource ?? "bundled",
           sources: result.sources,
           retrieved: result.retrieved.map((hit) => ({ id: hit.chunk.id, score: Math.round(hit.score * 100) / 100 })),
           disclaimer:
@@ -139,6 +148,52 @@ export default {
     }
 
     // ---------------------------------------------------------------- kb stats
+    // ---------------------------------------------------------------- hugging face
+    if (url.pathname === "/api/hf/status" && request.method === "GET") {
+      const probe = url.searchParams.get("probe") === "1";
+      const status = await hfStatus(env, probe);
+      return json(
+        {
+          ok: true,
+          provider: "huggingface",
+          space: env.HF_SPACE ?? "sosa123454321/amqx-cityair",
+          ...status,
+          howTo: {
+            inference:
+              "Create a token with the «Make calls to Inference Providers» permission and set it as HF_TOKEN, then the assistant uses that model.",
+            dataset: "The knowledge base is published with tools/build-hf-space.mjs.",
+          },
+        },
+        { headers: { "Cache-Control": "no-store" } },
+        origin,
+      );
+    }
+
+    // Pull the knowledge base from the Hugging Face dataset into KV, so the
+    // deployed assistant can follow the dataset without a redeploy.
+    if (url.pathname === "/api/hf/kb" && request.method === "GET") {
+      const checkOnly = url.searchParams.get("check") === "1";
+      const { result, chunks } = await hfFetchKb(env);
+      if (!result.ok) return json({ ...result, ok: false }, { status: 502 }, origin);
+      if (!checkOnly && env.AMQX_KV && chunks.length) {
+        await env.AMQX_KV.put("kb:hf", JSON.stringify(chunks));
+      }
+      const bundled = kbStats().chunks;
+      return json(
+        {
+          ...result,
+          ok: true,
+          bundled,
+          stored: Boolean(!checkOnly && env.AMQX_KV && chunks.length),
+          storage: env.AMQX_KV ? "kv" : "memory-unavailable",
+          matchesBundle: result.chunks === bundled,
+          tryIt: "/api/chat now answers from the Hugging Face copy when KV holds one.",
+        },
+        { headers: { "Cache-Control": "no-store" } },
+        origin,
+      );
+    }
+
     if (url.pathname === "/api/kb" && request.method === "GET") {
       return json(kbStats(), { headers: { "Cache-Control": "public, max-age=3600" } }, origin);
     }
