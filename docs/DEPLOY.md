@@ -17,10 +17,10 @@
 | اسپیس استاتیک HF (آینه‌ی سایت) | ✅ `sosa123454321/amqx-cityair` |
 | Worker کلودفلر (API + RAG + وبهوک تلگرام + سرو سایت) | ✅ کد آماده، بیلد dry-run موفق (۱۱۱KB) |
 | ربات تلگرام جدید `@AQMX_cityair_tracker_bot` | ✅ توکن تست شد، فعال است |
-| دیپلوی روی Cloudflare | ⛔ **متوقف** — توکن داده‌شده منقضی است |
-| دامنه `aqmx.atikova.com` | ⛔ نیاز به توکن + بررسی اینکه زون در همین اکانت است |
+| دیپلوی روی Cloudflare | ✅ **زنده** — `https://aqmx.atikova.com` (۹ اکتبر ۲۰۲۶، توکن `lively-mouse-0c7c`) |
+| دامنه `aqmx.atikova.com` | ✅ وصل شد (زون `atikova.com` در همان حساب) |
 
-**نکته‌ی مهم درباره‌ی توکن Cloudflare:**
+**تاریخچه (توکن قبلی):**
 توکن `cfat_SSjG…` که فرستادید یک توکن یک‌روزه بود و در `2026-10-07 23:59 UTC`
 منقضی شده است. خروجی تست:
 
@@ -95,7 +95,7 @@ Inference Providers را ندارند**:
 ```bash
 CLOUDFLARE_API_TOKEN="<توکن جدید>" \
 CF_ACCOUNT_ID="88b6e2481cef2473409fdf549c56a54d" \
-TELEGRAM_BOT_TOKEN="8857578316:AAE4JbbSNg-K4tnJYZMUyUmac0nBkfr25r8" \
+TELEGRAM_BOT_TOKEN="<BOT_TOKEN_FROM_BOTFATHER>" \
 DOMAIN="aqmx.atikova.com" \
 WITH_D1=1 WITH_KV=1 \
 bash tools/deploy-cloudflare.sh

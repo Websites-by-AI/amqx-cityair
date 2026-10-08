@@ -187,7 +187,7 @@ for (let i = 0; i < 6; i += 1) {
   const r = await hammer("1111");
   locked = r.status;
   attempts += 1;
-  if (r.status === 429) break;
+  if (r.status === 429 || r.status === 403) break; // 403 = Cloudflare edge rejects client-supplied cf-connecting-ip (error 1000)
 }
 const stillIn = PASSWORD
   ? await post("/api/admin/login", { name: NAME, password: PASSWORD })

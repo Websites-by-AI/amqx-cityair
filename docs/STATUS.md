@@ -1,5 +1,14 @@
 # وضعیت پروژه CityAir — ۸ اکتبر ۲۰۲۶
 
+## ☁️ Cloudflare — زنده (۹ اکتبر ۲۰۲۶)
+
+* حساب: `morning-truth-6d9b` (`88b6e2481cef2473409fdf549c56a54d`) — توکن تازه‌ی `lively-mouse-0c7c`
+* Worker: `amqx-cityair` · دامنه: **https://aqmx.atikova.com** (زون `atikova.com` در همین حساب، فعال)
+* KV `AMQX_KV` و D1 `amqx-cityair` وصل شدند؛ `/api/health` → `kv:true, d1:true, kbChunks:114`
+* وبهوک تلگرام: `https://aqmx.atikova.com/api/telegram/webhook` (`@AQMX_cityair_tracker_bot`)
+* دیتابیس خصوصی ادمین روی سرور زنده وارد شد (۴ نامه، ۵ تماس)
+* ⚠️ `workers.dev` پیش‌فرض: `amqx-cityair.aykanet34.workers.dev` (زیردامنه‌ی حساب؛ همان نام `aykanet34` است)
+
 ## 🐞 دیباگ ۸ اکتبر ۲۰۲۶ — دو نقص پیدا شد، هر دو رفع شد
 
 | نقص | ریشه | رفع | تأیید |

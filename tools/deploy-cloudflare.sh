@@ -62,7 +62,7 @@ src = re.sub(r'\n\s*//\s*"ai":\s*\{[^}]*\},', '', src)
 
 def uncomment(block_name, lines):
     global src
-    pattern = re.compile(r"//\s*" + block_name + r".*?(?=\n\s*(?://)?\s*\"|\n\s*\})", re.S)
+    pattern = re.compile(r"//\s*\"?" + block_name + r"\"?.*?(?=\n\s*(?://)?\s*\"|\n\s*\})", re.S)
     src = pattern.sub(lines, src, count=1)
 
 if with_kv:

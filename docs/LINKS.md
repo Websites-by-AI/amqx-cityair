@@ -129,12 +129,12 @@
 [ورشو](https://sosa123454321-amqx-cityair.static.hf.space/#/cities/warsaw) ·
 [سانتیاگو](https://sosa123454321-amqx-cityair.static.hf.space/#/cities/santiago)
 
-## ۳) API (روی Cloudflare پس از دیپلوی، یعنی `https://aqmx.atikova.com/api/...`)
+## ۳) API (روی Cloudflare — زنده از ۹ اکتبر ۲۰۲۶: `https://aqmx.atikova.com/api/...`)
 
 | اندپوینت | لینک | کار |
 | --- | --- | --- |
 | سلامت سرویس | [/api/health](https://aqmx.atikova.com/api/health) | وضعیت، تعداد چانک دانش، وضعیت ربات |
-| آمار دانش | [/api/kb](https://aqmx.atikova.com/api/kb) | ۷۱ چانک و منابع آن |
+| آمار دانش | [/api/kb](https://aqmx.atikova.com/api/kb) | ۱۱۴ چانک و منابع آن |
 | AQI زنده | [/api/aqi?city=Istanbul](https://aqmx.atikova.com/api/aqi?city=Istanbul) | PM₂.₅ / PM₁₀ / EAQI |
 | چت RAG | `POST /api/chat` | پاسخ + منابع |
 | وبهوک تلگرام | `POST /api/telegram/webhook` | دریافت پیام‌های ربات |
@@ -173,7 +173,7 @@
 
 | فایل | توضیح |
 | --- | --- |
-| [`docs/TEST-REPORT.md`](TEST-REPORT.md) | گزارش تست مرورگری نسخه‌ی Cloudflare (۳۳/۳۳ ✅) |
+| [`docs/TEST-REPORT.md`](TEST-REPORT.md) | گزارش تست مرورگری (۷۹/۷۹ ✅) |
 | [`docs/hf-test/TEST-REPORT.md`](hf-test/TEST-REPORT.md) | گزارش تست همان سایت روی آینه‌ی عمومی HF (۳۳/۳۳ ✅) |
 | [`docs/STATUS.md`](STATUS.md) | وضعیت پروژه و تنها کار باقی‌مانده (توکن Cloudflare) |
 | [`docs/DEPLOY.md`](DEPLOY.md) | راهنمای گام‌به‌گام فارسی دیپلوی |

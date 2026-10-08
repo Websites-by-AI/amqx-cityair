@@ -14,6 +14,9 @@
     "run_worker_first": ["/api/*"]
   },
 
+  "ai": { "binding": "AI" },
+  "kv_namespaces": [{ "binding": "AMQX_KV", "id": "b6fe225412b243e8944424768284c5e8" }],
+  "d1_databases": [{ "binding": "DB", "database_name": "amqx-cityair", "database_id": "4ae3a72e-7424-408f-ac64-8833f20e55d9" }],
   "observability": { "enabled": true },
 
   "vars": {
@@ -38,7 +41,6 @@
   //
   // Workers AI is enabled by uncommenting the binding below (needs the Workers
   // AI product enabled on the account; free tier included):
-  // "ai": { "binding": "AI" },
   //
   // Custom domain (needs the zone atikova.com in the SAME Cloudflare account):
   // "routes": [{ "pattern": "aqmx.atikova.com", "custom_domain": true }]

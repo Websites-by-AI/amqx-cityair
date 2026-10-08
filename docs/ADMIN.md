@@ -79,7 +79,7 @@ ADMIN_PASSWORD="$(cat private-archive/PREVIEW-PIN.txt)" GITHUB_TOKEN=ghp_… nod
 
 ```bash
 CLOUDFLARE_API_TOKEN="<توکن تازه>" CF_ACCOUNT_ID="88b6e2481cef2473409fdf549c56a54d" \
-  TELEGRAM_BOT_TOKEN="8857578316:AAE4JbbSNg-K4tnJYZMUyUmac0nBkfr25r8" \
+  TELEGRAM_BOT_TOKEN="<BOT_TOKEN_FROM_BOTFATHER>" \
   DOMAIN="aqmx.atikova.com" WITH_D1=1 WITH_KV=1 ADMIN_NAME="ann" \
   bash tools/deploy-cloudflare.sh
 ```
