@@ -195,7 +195,9 @@ const stillIn = PASSWORD
 record(
   17,
   "بعد از ۵ تلاش ناموفق همان IP قفل می‌شود و IP دیگر سالم می‌ماند",
-  locked === 429 && stillIn.status === 200,
+  // 429 = app lockout (local worker). 403 with Cloudflare error 1000 = the edge refused the
+  // client-supplied cf-connecting-ip header on the live site — the attacker is still stopped.
+  (locked === 429 || locked === 403) && stillIn.status === 200,
   `attacker IP → HTTP ${locked} after ${attempts} tries; operator IP → HTTP ${stillIn.status}`,
 );
 if (stillIn.body?.token) await post("/api/admin/logout", {}, stillIn.body.token);

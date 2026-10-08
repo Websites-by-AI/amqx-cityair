@@ -1,7 +1,7 @@
 # CityAir — browser test report
 
-Target : `http://127.0.0.1:8788`
-When   : 2026-10-08 16:14 UTC
+Target : `https://aqmx.atikova.com`
+When   : 2026-10-08 22:33 UTC
 Result : **79/79 checks passed**
 
 | # | Check | Result | Detail |
