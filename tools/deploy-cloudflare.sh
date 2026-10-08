@@ -95,6 +95,16 @@ printf '%s' "$TELEGRAM_BOT_TOKEN" | npx wrangler secret put TELEGRAM_BOT_TOKEN
 TELEGRAM_WEBHOOK_SECRET="$(python3 -c 'import secrets;print(secrets.token_hex(24))')"
 printf '%s' "$TELEGRAM_WEBHOOK_SECRET" | npx wrangler secret put TELEGRAM_WEBHOOK_SECRET
 printf '%s' "$ADMIN_KEY" | npx wrangler secret put ADMIN_KEY
+
+if [ -n "${ADMIN_PASSWORD_SALT:-}" ] && [ -n "${ADMIN_PASSWORD_SHA256:-}" ]; then
+  printf '%s' "${ADMIN_NAME:-ann}"        | npx wrangler secret put ADMIN_NAME
+  printf '%s' "$ADMIN_PASSWORD_SALT"      | npx wrangler secret put ADMIN_PASSWORD_SALT
+  printf '%s' "$ADMIN_PASSWORD_SHA256"    | npx wrangler secret put ADMIN_PASSWORD_SHA256
+  echo "   admin login configured for ${ADMIN_NAME:-ann}"
+else
+  echo "   ⚠ ADMIN_PASSWORD_SALT/SHA256 not set — the admin API stays fail-closed (503)."
+  echo "     Generate them: node tools/admin-pass.mjs \"your-long-password\""
+fi
 if [ -n "${HF_TOKEN:-}" ]; then
   printf '%s' "$HF_TOKEN" | npx wrangler secret put HF_TOKEN
   echo "   HF_TOKEN set (Hugging Face Inference fallback enabled)"
@@ -130,3 +140,15 @@ cat <<EOF
 Next: mirror the site to Hugging Face with
    node tools/build-hf-space.mjs "${WORKER_URL}" && bash tools/upload-hf.sh
 EOF
+
+# ---------------------------------------------------------------- post-deploy wiring
+if [ "${SEED_ADMIN:-1}" = "1" ] && [ -n "${ADMIN_PASSWORD_PLAIN:-}" ]; then
+  echo "▶ seeding the private admin database from private-archive/admin-private.json"
+  ADMIN_PASSWORD="$ADMIN_PASSWORD_PLAIN" node "$ROOT/tools/seed-admin.mjs" "https://${DOMAIN}" || true
+fi
+
+if [ "${PULL_HF_KB:-1}" = "1" ]; then
+  echo "▶ pulling the knowledge base from the Hugging Face dataset into KV"
+  curl -fsS "https://${DOMAIN}/api/hf/kb" | head -c 400 || true
+  echo
+fi
