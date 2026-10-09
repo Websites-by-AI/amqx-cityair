@@ -226,6 +226,7 @@ function Footer() {
         { label: t("footer.innovations"), href: "#/innovations" },
         { label: t("footer.expo"), href: "#/expo" },
         { label: t("footer.partners"), href: "#/partners" },
+        { label: t("footer.aiResearch"), href: "#/ai-research" },
         { label: t("footer.assistant"), href: "#/assistant" },
       ],
     },

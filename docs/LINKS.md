@@ -195,3 +195,13 @@
 | کد منبع اپ (Capacitor) | [mobile/](https://github.com/Websites-by-AI/amqx-cityair/tree/main/mobile) |
 
 > APK با کلید دیباگ امضا شده و در Google Play نیست. نسخهٔ iOS (IPA) نیاز به Mac و حساب توسعه‌دهندهٔ Apple دارد؛ فعلاً «افزودن به صفحهٔ اصلی» در Safari جایگزین است.
+
+## ۱۱) پژوهش هوش مصنوعی
+
+| مورد | لینک |
+| --- | --- |
+| صفحهٔ ادعاها، پروژه‌های Hugging Face و مقالات | [aqmx.atikova.com/#/ai-research](https://aqmx.atikova.com/#/ai-research) |
+| داده‌ی خام (JSON) | [ai-research.json](https://github.com/Websites-by-AI/amqx-cityair/blob/main/app/src/data/ai-research.json) |
+| اسکریپت جست‌وجو | [tools/ai-research.mjs](https://github.com/Websites-by-AI/amqx-cityair/blob/main/tools/ai-research.mjs) |
+
+> Papers with Code اکنون به Hugging Face Papers منتقل شده است؛ مقاله‌ها با لینک مخزن کد از آن‌جا گرفته شده‌اند.

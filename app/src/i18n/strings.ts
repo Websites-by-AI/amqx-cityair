@@ -50,6 +50,7 @@ const en: Dict = {
   "footer.about":
     "An independent platform for city teams to diagnose air-quality readiness, plan action and reuse validated implementation knowledge.",
   "footer.platform": "Platform",
+  "footer.aiResearch": "AI research",
   "footer.app": "Get the app",
   "footer.apk": "Android APK",
   "footer.data": "Open data & code",
@@ -210,6 +211,7 @@ const tr: Dict = {
   "footer.about":
     "Şehir ekiplerinin hava kalitesi hazırlığını teşhis etmesi, eylem planlaması ve doğrulanmış uygulama bilgisini yeniden kullanması için bağımsız bir platform.",
   "footer.platform": "Platform",
+  "footer.aiResearch": "Yapay zeka araştırması",
   "footer.app": "Uygulamayı al",
   "footer.apk": "Android APK",
   "footer.data": "Açık veri ve kod",
@@ -370,6 +372,7 @@ const fa: Dict = {
   "footer.about":
     "پلتفرمی مستقل برای تیم‌های شهری تا آمادگی کیفیت هوا را تشخیص دهند، اقدام برنامه‌ریزی کنند و دانش اجرایی آزموده‌شده را بازاستفاده کنند.",
   "footer.platform": "پلتفرم",
+  "footer.aiResearch": "پژوهش هوش مصنوعی",
   "footer.app": "دریافت برنامه",
   "footer.apk": "APK اندروید",
   "footer.data": "داده و کد باز",
@@ -530,6 +533,7 @@ const ar: Dict = {
   "footer.about":
     "منصة مستقلة لفرق المدن لتشخيص جاهزية جودة الهواء وتخطيط العمل وإعادة استخدام المعرفة التنفيذية المُختبرة.",
   "footer.platform": "المنصة",
+  "footer.aiResearch": "أبحاث الذكاء الاصطناعي",
   "footer.app": "احصل على التطبيق",
   "footer.apk": "APK أندرويد",
   "footer.data": "بيانات وكود مفتوح",

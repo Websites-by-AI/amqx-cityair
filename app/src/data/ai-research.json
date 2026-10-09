@@ -1,0 +1,1261 @@
+{
+  "generatedAt": "2026-10-09T09:11:49.543Z",
+  "source": "Hugging Face Hub + Hugging Face Papers (Papers with Code successor)",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "CityAir's AI assistant answers only from a grounded knowledge base (retrieval-augmented generation, RAG) and cites its sources.",
+      "origin": "CityAir platform (own product)",
+      "hf": {
+        "models": [
+          {
+            "id": "sdadas/mmlw-retrieval-roberta-large",
+            "url": "https://huggingface.co/sdadas/mmlw-retrieval-roberta-large",
+            "downloads": 243871,
+            "likes": 14,
+            "task": "sentence-similarity"
+          },
+          {
+            "id": "jinaai/jina-embeddings-v4-vllm-retrieval",
+            "url": "https://huggingface.co/jinaai/jina-embeddings-v4-vllm-retrieval",
+            "downloads": 105693,
+            "likes": 32,
+            "task": "visual-document-retrieval"
+          },
+          {
+            "id": "jinaai/jina-embeddings-v5-text-small-retrieval",
+            "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-small-retrieval",
+            "downloads": 101454,
+            "likes": 31,
+            "task": "sentence-similarity"
+          }
+        ],
+        "spaces": [
+          {
+            "id": "ayush-vatsal/rag-chatbot",
+            "url": "https://huggingface.co/spaces/ayush-vatsal/rag-chatbot",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          }
+        ],
+        "datasets": [
+          {
+            "id": "rl-rag/hle-gpt-oss-120b-no-python-260222",
+            "url": "https://huggingface.co/datasets/rl-rag/hle-gpt-oss-120b-no-python-260222",
+            "downloads": 10403,
+            "likes": 1,
+            "task": null
+          },
+          {
+            "id": "Shanmuk4622/jeb-rag",
+            "url": "https://huggingface.co/datasets/Shanmuk4622/jeb-rag",
+            "downloads": 6095,
+            "likes": 3,
+            "task": null
+          }
+        ]
+      },
+      "papers": [
+        {
+          "title": "Benchmarking Retrieval-Augmented Generation for Medicine",
+          "arxivId": "2402.13178",
+          "url": "https://huggingface.co/papers/2402.13178",
+          "arxiv": "https://arxiv.org/abs/2402.13178",
+          "published": "2024-02-20",
+          "upvotes": 10,
+          "code": "https://github.com/Teddy-XiongGZ/MedRAG",
+          "stars": 603,
+          "match": "exact"
+        },
+        {
+          "title": "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries",
+          "arxivId": "2401.15391",
+          "url": "https://huggingface.co/papers/2401.15391",
+          "arxiv": "https://arxiv.org/abs/2401.15391",
+          "published": "2024-01-27",
+          "upvotes": 6,
+          "code": "https://github.com/yixuantt/MultiHop-RAG",
+          "stars": 474,
+          "match": "exact"
+        },
+        {
+          "title": "CRUD-RAG: A Comprehensive Chinese Benchmark for Retrieval-Augmented Generation of Large Language Models",
+          "arxivId": "2401.17043",
+          "url": "https://huggingface.co/papers/2401.17043",
+          "arxiv": "https://arxiv.org/abs/2401.17043",
+          "published": "2024-01-30",
+          "upvotes": 0,
+          "code": "https://github.com/iaar-shanghai/crud_rag",
+          "stars": 414,
+          "match": "exact"
+        },
+        {
+          "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+          "arxivId": "2309.01431",
+          "url": "https://huggingface.co/papers/2309.01431",
+          "arxiv": "https://arxiv.org/abs/2309.01431",
+          "published": "2023-09-04",
+          "upvotes": 1,
+          "code": "https://github.com/chen700564/RGB",
+          "stars": 377,
+          "match": "exact"
+        },
+        {
+          "title": "Understand What LLM Needs: Dual Preference Alignment for Retrieval-Augmented Generation",
+          "arxivId": "2406.18676",
+          "url": "https://huggingface.co/papers/2406.18676",
+          "arxiv": "https://arxiv.org/abs/2406.18676",
+          "published": "2024-06-26",
+          "upvotes": 6,
+          "code": "https://github.com/dongguanting/dpa-rag",
+          "stars": 68,
+          "match": "exact"
+        },
+        {
+          "title": "RAGGED: Towards Informed Design of Retrieval Augmented Generation Systems",
+          "arxivId": "2403.09040",
+          "url": "https://huggingface.co/papers/2403.09040",
+          "arxiv": "https://arxiv.org/abs/2403.09040",
+          "published": "2024-03-14",
+          "upvotes": 1,
+          "code": "https://github.com/neulab/ragged",
+          "stars": 61,
+          "match": "exact"
+        },
+        {
+          "title": "TRACE the Evidence: Constructing Knowledge-Grounded Reasoning Chains for Retrieval-Augmented Generation",
+          "arxivId": "2406.11460",
+          "url": "https://huggingface.co/papers/2406.11460",
+          "arxiv": "https://arxiv.org/abs/2406.11460",
+          "published": "2024-06-17",
+          "upvotes": 2,
+          "code": "https://github.com/jyfang6/trace",
+          "stars": 35,
+          "match": "exact"
+        },
+        {
+          "title": "NoMIRACL: Knowing When You Don't Know for Robust Multilingual Retrieval-Augmented Generation",
+          "arxivId": "2312.11361",
+          "url": "https://huggingface.co/papers/2312.11361",
+          "arxiv": "https://arxiv.org/abs/2312.11361",
+          "published": "2023-12-18",
+          "upvotes": 1,
+          "code": "https://github.com/project-miracl/nomiracl",
+          "stars": 27,
+          "match": "exact"
+        },
+        {
+          "title": "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation",
+          "arxivId": "2406.01549",
+          "url": "https://huggingface.co/papers/2406.01549",
+          "arxiv": "https://arxiv.org/abs/2406.01549",
+          "published": "2024-06-03",
+          "upvotes": 0,
+          "code": "https://github.com/zhukun1020/noisefilter_ib",
+          "stars": 19,
+          "match": "exact"
+        },
+        {
+          "title": "Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge",
+          "arxivId": "2403.01432",
+          "url": "https://huggingface.co/papers/2403.01432",
+          "arxiv": "https://arxiv.org/abs/2403.01432",
+          "published": "2024-03-03",
+          "upvotes": 3,
+          "code": "https://github.com/heydarsoudani/ragvsft",
+          "stars": 8,
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "Satellite Earth-observation data (Sentinel-2 and similar) is validated against ground air-quality sensors, and machine learning turns it into PM2.5 estimates.",
+      "origin": "Partner correspondence (public summary)",
+      "hf": {
+        "models": [
+          {
+            "id": "cosuleabianca/eea-pm25",
+            "url": "https://huggingface.co/cosuleabianca/eea-pm25",
+            "downloads": 184,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "unknownbb007/smolified-airqualitydelhi",
+            "url": "https://huggingface.co/unknownbb007/smolified-airqualitydelhi",
+            "downloads": 8,
+            "likes": 0,
+            "task": "text-generation"
+          },
+          {
+            "id": "MuhammadFaisalHaroon/milan-air-quality-forecast-lstm",
+            "url": "https://huggingface.co/MuhammadFaisalHaroon/milan-air-quality-forecast-lstm",
+            "downloads": 6,
+            "likes": 1,
+            "task": null
+          }
+        ],
+        "spaces": [
+          {
+            "id": "Adapting/country-air-quality-ranking",
+            "url": "https://huggingface.co/spaces/Adapting/country-air-quality-ranking",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          },
+          {
+            "id": "sm-test/Air-Quality-Predictor",
+            "url": "https://huggingface.co/spaces/sm-test/Air-Quality-Predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "CsanadT/Air_Quality_Index",
+            "url": "https://huggingface.co/spaces/CsanadT/Air_Quality_Index",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          },
+          {
+            "id": "Mangken/PM25_prediction",
+            "url": "https://huggingface.co/spaces/Mangken/PM25_prediction",
+            "downloads": null,
+            "likes": 0,
+            "task": "docker"
+          },
+          {
+            "id": "vlark/pm25-predictor",
+            "url": "https://huggingface.co/spaces/vlark/pm25-predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "Mohitha-123/pm25-predictor",
+            "url": "https://huggingface.co/spaces/Mohitha-123/pm25-predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          }
+        ],
+        "datasets": [
+          {
+            "id": "neuralsorcerer/air-quality",
+            "url": "https://huggingface.co/datasets/neuralsorcerer/air-quality",
+            "downloads": 971,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "AkshayKarthick/india-weather-air-quality",
+            "url": "https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality",
+            "downloads": 367,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "dmariaa70/METRAQ-Air-Quality",
+            "url": "https://huggingface.co/datasets/dmariaa70/METRAQ-Air-Quality",
+            "downloads": 345,
+            "likes": 2,
+            "task": null
+          },
+          {
+            "id": "DeadCardassian/PM25Vision",
+            "url": "https://huggingface.co/datasets/DeadCardassian/PM25Vision",
+            "downloads": 177,
+            "likes": 3,
+            "task": null
+          },
+          {
+            "id": "sumit1703/pm25-forecasting-data",
+            "url": "https://huggingface.co/datasets/sumit1703/pm25-forecasting-data",
+            "downloads": 110,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "goosemaths/tianjin-pm25-data",
+            "url": "https://huggingface.co/datasets/goosemaths/tianjin-pm25-data",
+            "downloads": 94,
+            "likes": 1,
+            "task": null
+          }
+        ]
+      },
+      "papers": [
+        {
+          "title": "SatVision-TOA: A Geospatial Foundation Model for Coarse-Resolution All-Sky Remote Sensing Imagery",
+          "arxivId": "2411.17000",
+          "url": "https://huggingface.co/papers/2411.17000",
+          "arxiv": "https://arxiv.org/abs/2411.17000",
+          "published": "2024-11-26",
+          "upvotes": 0,
+          "code": "https://github.com/nasa-nccs-hpda/pytorch-caney",
+          "stars": 27,
+          "match": "exact"
+        },
+        {
+          "title": "AirPhyNet: Harnessing Physics-Guided Neural Networks for Air Quality Prediction",
+          "arxivId": "2402.03784",
+          "url": "https://huggingface.co/papers/2402.03784",
+          "arxiv": "https://arxiv.org/abs/2402.03784",
+          "published": "2024-02-06",
+          "upvotes": 1,
+          "code": "https://github.com/kethmih/airphynet",
+          "stars": 43,
+          "match": "broader"
+        },
+        {
+          "title": "Real-Time Long Horizon Air Quality Forecasting via Group-Relative Policy Optimization",
+          "arxivId": "2511.22169",
+          "url": "https://huggingface.co/papers/2511.22169",
+          "arxiv": "https://arxiv.org/abs/2511.22169",
+          "published": "2025-11-27",
+          "upvotes": 1,
+          "code": "https://github.com/kaist-cvml/FAKER-Air",
+          "stars": 16,
+          "match": "broader"
+        },
+        {
+          "title": "AirCast: Improving Air Pollution Forecasting Through Multi-Variable Data Alignment",
+          "arxivId": "2502.17919",
+          "url": "https://huggingface.co/papers/2502.17919",
+          "arxiv": "https://arxiv.org/abs/2502.17919",
+          "published": "2025-02-25",
+          "upvotes": 0,
+          "code": "https://github.com/vishalned/aircast",
+          "stars": 10,
+          "match": "broader"
+        },
+        {
+          "title": "AirDDE: Multifactor Neural Delay Differential Equations for Air Quality Forecasting",
+          "arxivId": "2603.17529",
+          "url": "https://huggingface.co/papers/2603.17529",
+          "arxiv": "https://arxiv.org/abs/2603.17529",
+          "published": "2026-03-18",
+          "upvotes": 0,
+          "code": "https://github.com/w2obin/airdde-aaai",
+          "stars": 5,
+          "match": "broader"
+        },
+        {
+          "title": "Urban Air Pollution Forecasting: a Machine Learning Approach leveraging Satellite Observations and Meteorological Forecasts",
+          "arxivId": "2405.19901",
+          "url": "https://huggingface.co/papers/2405.19901",
+          "arxiv": "https://arxiv.org/abs/2405.19901",
+          "published": "2024-05-30",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Using remotely sensed data for air pollution assessment",
+          "arxivId": "2402.06653",
+          "url": "https://huggingface.co/papers/2402.06653",
+          "arxiv": "https://arxiv.org/abs/2402.06653",
+          "published": "2024-02-04",
+          "upvotes": 1,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "A machine learning-based framework for high resolution mapping of PM2.5 in Tehran, Iran, using MAIAC AOD data",
+          "arxivId": "2204.02093",
+          "url": "https://huggingface.co/papers/2204.02093",
+          "arxiv": "https://arxiv.org/abs/2204.02093",
+          "published": "2022-04-05",
+          "upvotes": 1,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "CloudTracks: A Dataset for Localizing Ship Tracks in Satellite Images of Clouds",
+          "arxivId": "2401.14486",
+          "url": "https://huggingface.co/papers/2401.14486",
+          "arxiv": "https://arxiv.org/abs/2401.14486",
+          "published": "2024-01-25",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Environmental Drivers of Respiratory Disease: A District Level Analysis",
+          "arxivId": "2607.04416",
+          "url": "https://huggingface.co/papers/2607.04416",
+          "arxiv": "https://arxiv.org/abs/2607.04416",
+          "published": "2026-07-05",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "Satellite thermal alerts (NASA FIRMS) and deep learning can detect open waste burning, landfill fires and other environmental-risk hotspots.",
+      "origin": "Partner correspondence (public summary)",
+      "hf": {
+        "models": [
+          {
+            "id": "EdBianchi/vit-fire-detection",
+            "url": "https://huggingface.co/EdBianchi/vit-fire-detection",
+            "downloads": 1763,
+            "likes": 12,
+            "task": "image-classification"
+          },
+          {
+            "id": "SalahALHaismawi/yolov26-fire-detection",
+            "url": "https://huggingface.co/SalahALHaismawi/yolov26-fire-detection",
+            "downloads": 561,
+            "likes": 13,
+            "task": "object-detection"
+          },
+          {
+            "id": "aryantyagiase/yolov8-fire-smoke-detection",
+            "url": "https://huggingface.co/aryantyagiase/yolov8-fire-smoke-detection",
+            "downloads": 363,
+            "likes": 1,
+            "task": "object-detection"
+          },
+          {
+            "id": "mradermacher/Qwen2-Wildfire-2B-i1-GGUF",
+            "url": "https://huggingface.co/mradermacher/Qwen2-Wildfire-2B-i1-GGUF",
+            "downloads": 845,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "mradermacher/Qwen2-Wildfire-2B-GGUF",
+            "url": "https://huggingface.co/mradermacher/Qwen2-Wildfire-2B-GGUF",
+            "downloads": 295,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "mradermacher/Qwen2-Wildfire-v1.2-2B-GGUF",
+            "url": "https://huggingface.co/mradermacher/Qwen2-Wildfire-v1.2-2B-GGUF",
+            "downloads": 130,
+            "likes": 0,
+            "task": null
+          }
+        ],
+        "spaces": [
+          {
+            "id": "awon08/wildfire-image-classification",
+            "url": "https://huggingface.co/spaces/awon08/wildfire-image-classification",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          },
+          {
+            "id": "jordancaraballo/alaska-wildfire-occurrence",
+            "url": "https://huggingface.co/spaces/jordancaraballo/alaska-wildfire-occurrence",
+            "downloads": null,
+            "likes": 0,
+            "task": "docker"
+          },
+          {
+            "id": "mattritchey/wildfires",
+            "url": "https://huggingface.co/spaces/mattritchey/wildfires",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          },
+          {
+            "id": "thebestteamever/fire_detection_project",
+            "url": "https://huggingface.co/spaces/thebestteamever/fire_detection_project",
+            "downloads": null,
+            "likes": 1,
+            "task": "gradio"
+          },
+          {
+            "id": "robmarkcole/fire-detection-from-images",
+            "url": "https://huggingface.co/spaces/robmarkcole/fire-detection-from-images",
+            "downloads": null,
+            "likes": 3,
+            "task": "gradio"
+          },
+          {
+            "id": "EdBianchi/Forest-Fire-Detection",
+            "url": "https://huggingface.co/spaces/EdBianchi/Forest-Fire-Detection",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          }
+        ],
+        "datasets": [
+          {
+            "id": "moritzrengert1/wildfire_global",
+            "url": "https://huggingface.co/datasets/moritzrengert1/wildfire_global",
+            "downloads": 818,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "links-ads/effis-wildfire",
+            "url": "https://huggingface.co/datasets/links-ads/effis-wildfire",
+            "downloads": 774,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "links-ads/wildfires-cems",
+            "url": "https://huggingface.co/datasets/links-ads/wildfires-cems",
+            "downloads": 483,
+            "likes": 6,
+            "task": null
+          },
+          {
+            "id": "Simuletic/CCTV-Smoke-Fire-Emergency-Detection-Dataset",
+            "url": "https://huggingface.co/datasets/Simuletic/CCTV-Smoke-Fire-Emergency-Detection-Dataset",
+            "downloads": 2581,
+            "likes": 5,
+            "task": null
+          },
+          {
+            "id": "fireviewer/fire-smoke-detection-corpus-v1",
+            "url": "https://huggingface.co/datasets/fireviewer/fire-smoke-detection-corpus-v1",
+            "downloads": 907,
+            "likes": 1,
+            "task": null
+          },
+          {
+            "id": "fireviewer/fire_and_smoke_detection_very_hard_negative",
+            "url": "https://huggingface.co/datasets/fireviewer/fire_and_smoke_detection_very_hard_negative",
+            "downloads": 318,
+            "likes": 0,
+            "task": null
+          }
+        ]
+      },
+      "papers": [
+        {
+          "title": "RSCC: A Large-Scale Remote Sensing Change Caption Dataset for Disaster Events",
+          "arxivId": "2509.01907",
+          "url": "https://huggingface.co/papers/2509.01907",
+          "arxiv": "https://arxiv.org/abs/2509.01907",
+          "published": "2025-09-02",
+          "upvotes": 2,
+          "code": "https://github.com/Bili-Sakura/RSCC",
+          "stars": 60,
+          "match": "exact"
+        },
+        {
+          "title": "FireRisk: A Remote Sensing Dataset for Fire Risk Assessment with Benchmarks Using Supervised and Self-supervised Learning",
+          "arxivId": "2303.07035",
+          "url": "https://huggingface.co/papers/2303.07035",
+          "arxiv": "https://arxiv.org/abs/2303.07035",
+          "published": "2023-03-13",
+          "upvotes": 0,
+          "code": "https://github.com/charmonyshen/firerisk",
+          "stars": 49,
+          "match": "exact"
+        },
+        {
+          "title": "Location-aware Adaptive Normalization: A Deep Learning Approach For Wildfire Danger Forecasting",
+          "arxivId": "2212.08208",
+          "url": "https://huggingface.co/papers/2212.08208",
+          "arxiv": "https://arxiv.org/abs/2212.08208",
+          "published": "2022-12-16",
+          "upvotes": 1,
+          "code": "https://github.com/HakamShams/LOAN",
+          "stars": 19,
+          "match": "exact"
+        },
+        {
+          "title": "High-Resolution Live Fuel Moisture Content (LFMC) Maps for Wildfire Risk from Multimodal Earth Observation Data",
+          "arxivId": "2506.20132",
+          "url": "https://huggingface.co/papers/2506.20132",
+          "arxiv": "https://arxiv.org/abs/2506.20132",
+          "published": "2025-06-25",
+          "upvotes": 0,
+          "code": "https://github.com/allenai/lfmc",
+          "stars": 19,
+          "match": "exact"
+        },
+        {
+          "title": "CaBuAr: California Burned Areas dataset for delineation",
+          "arxivId": "2401.11519",
+          "url": "https://huggingface.co/papers/2401.11519",
+          "arxiv": "https://arxiv.org/abs/2401.11519",
+          "published": "2024-01-21",
+          "upvotes": 4,
+          "code": "https://github.com/darthreca/cabuar",
+          "stars": 3,
+          "match": "exact"
+        },
+        {
+          "title": "A Multimodal Supervised Machine Learning Approach for Satellite-based Wildfire Identification in Europe",
+          "arxivId": "2308.02508",
+          "url": "https://huggingface.co/papers/2308.02508",
+          "arxiv": "https://arxiv.org/abs/2308.02508",
+          "published": "2023-07-27",
+          "upvotes": 1,
+          "code": "https://github.com/links-ads/igarss-hotspot-disambiguation",
+          "stars": 2,
+          "match": "exact"
+        },
+        {
+          "title": "FireDataForge: A Unified Framework for Multi-Source Wildfire Data Retrieval and Integration",
+          "arxivId": "2606.21198",
+          "url": "https://huggingface.co/papers/2606.21198",
+          "arxiv": "https://arxiv.org/abs/2606.21198",
+          "published": "2026-06-19",
+          "upvotes": 0,
+          "code": "https://github.com/xiazeyu/FireDataForge",
+          "stars": 1,
+          "match": "exact"
+        },
+        {
+          "title": "WIT-UAS: A Wildland-fire Infrared Thermal Dataset to Detect Crew Assets From Aerial Views",
+          "arxivId": "2312.09159",
+          "url": "https://huggingface.co/papers/2312.09159",
+          "arxiv": "https://arxiv.org/abs/2312.09159",
+          "published": "2023-12-14",
+          "upvotes": 2,
+          "code": "https://github.com/castacks/wit-uas-dataset",
+          "stars": 19,
+          "match": "broader"
+        },
+        {
+          "title": "Fire and Smoke Detection with Burning Intensity Representation",
+          "arxivId": "2410.16642",
+          "url": "https://huggingface.co/papers/2410.16642",
+          "arxiv": "https://arxiv.org/abs/2410.16642",
+          "published": "2024-10-22",
+          "upvotes": 0,
+          "code": "https://github.com/xiaoyihan6/fsdmethod",
+          "stars": 14,
+          "match": "broader"
+        },
+        {
+          "title": "Hardware Acceleration for Real-Time Wildfire Detection Onboard Drone Networks",
+          "arxivId": "2401.08105",
+          "url": "https://huggingface.co/papers/2401.08105",
+          "arxiv": "https://arxiv.org/abs/2401.08105",
+          "published": "2024-01-16",
+          "upvotes": 1,
+          "code": "https://github.com/austin-thetrueshinobi/is-win-research",
+          "stars": 6,
+          "match": "broader"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "Diffuse methane emissions from landfills and waste sites can be located and quantified from satellite data with machine learning (XPRIZE Mission Methane).",
+      "origin": "Partner correspondence (public summary)",
+      "hf": {
+        "models": [
+          {
+            "id": "5ch4um1/lfm2.5-vrsbench-MethaneS2CM-methane-lora-450m",
+            "url": "https://huggingface.co/5ch4um1/lfm2.5-vrsbench-MethaneS2CM-methane-lora-450m",
+            "downloads": 180,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "coolKid658/Methane_LLM",
+            "url": "https://huggingface.co/coolKid658/Methane_LLM",
+            "downloads": 20,
+            "likes": 0,
+            "task": "text-generation"
+          },
+          {
+            "id": "akshaydudhane/EarthDial_4B_Methane_UHI",
+            "url": "https://huggingface.co/akshaydudhane/EarthDial_4B_Methane_UHI",
+            "downloads": 14,
+            "likes": 1,
+            "task": null
+          }
+        ],
+        "spaces": [
+          {
+            "id": "methanee/computing",
+            "url": "https://huggingface.co/spaces/methanee/computing",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "methanee/GUI",
+            "url": "https://huggingface.co/spaces/methanee/GUI",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "hsaripalli/Methane_Classifier",
+            "url": "https://huggingface.co/spaces/hsaripalli/Methane_Classifier",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          }
+        ],
+        "datasets": [
+          {
+            "id": "tacofoundation/methaneset",
+            "url": "https://huggingface.co/datasets/tacofoundation/methaneset",
+            "downloads": 13926,
+            "likes": 6,
+            "task": null
+          },
+          {
+            "id": "yuyao42/MethaneUnion",
+            "url": "https://huggingface.co/datasets/yuyao42/MethaneUnion",
+            "downloads": 1290,
+            "likes": 2,
+            "task": null
+          },
+          {
+            "id": "csaybar/MethaneSET",
+            "url": "https://huggingface.co/datasets/csaybar/MethaneSET",
+            "downloads": 771,
+            "likes": 1,
+            "task": null
+          }
+        ]
+      },
+      "papers": [
+        {
+          "title": "Towards Methane Detection Onboard Satellites",
+          "arxivId": "2509.00626",
+          "url": "https://huggingface.co/papers/2509.00626",
+          "arxiv": "https://arxiv.org/abs/2509.00626",
+          "published": "2025-08-30",
+          "upvotes": 0,
+          "code": "https://github.com/spaceml-org/plume-hunter",
+          "stars": 9,
+          "match": "exact"
+        },
+        {
+          "title": "Gasformer: A Transformer-based Architecture for Segmenting Methane Emissions from Livestock in Optical Gas Imaging",
+          "arxivId": "2404.10841",
+          "url": "https://huggingface.co/papers/2404.10841",
+          "arxiv": "https://arxiv.org/abs/2404.10841",
+          "published": "2024-04-16",
+          "upvotes": 0,
+          "code": "https://github.com/toqitahamid/Gasformer",
+          "stars": 7,
+          "match": "exact"
+        },
+        {
+          "title": "Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery",
+          "arxivId": "2410.09032",
+          "url": "https://huggingface.co/papers/2410.09032",
+          "arxiv": "https://arxiv.org/abs/2410.09032",
+          "published": "2024-10-11",
+          "upvotes": 1,
+          "code": "https://github.com/RolnickLab/Alberta_Wells_Dataset",
+          "stars": 7,
+          "match": "exact"
+        },
+        {
+          "title": "Optimizing Methane Detection On Board Satellites: Speed, Accuracy, and Low-Power Solutions for Resource-Constrained Hardware",
+          "arxivId": "2507.01472",
+          "url": "https://huggingface.co/papers/2507.01472",
+          "arxiv": "https://arxiv.org/abs/2507.01472",
+          "published": "2025-07-02",
+          "upvotes": 0,
+          "code": "https://github.com/zaitra/methane-filters-benchmark",
+          "stars": 6,
+          "match": "exact"
+        },
+        {
+          "title": "FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection",
+          "arxivId": "2601.08205",
+          "url": "https://huggingface.co/papers/2601.08205",
+          "arxiv": "https://arxiv.org/abs/2601.08205",
+          "published": "2026-01-13",
+          "upvotes": 0,
+          "code": "https://github.com/taminulislam/fume",
+          "stars": 0,
+          "match": "exact"
+        },
+        {
+          "title": "GasTwinFormer: A Hybrid Vision Transformer for Livestock Methane Emission Segmentation and Dietary Classification in Optical Gas Imaging",
+          "arxivId": "2508.15057",
+          "url": "https://huggingface.co/papers/2508.15057",
+          "arxiv": "https://arxiv.org/abs/2508.15057",
+          "published": "2025-08-20",
+          "upvotes": 1,
+          "code": "https://github.com/toqitahamid/GasTwinFormer",
+          "stars": 1,
+          "match": "broader"
+        },
+        {
+          "title": "A Fast Methane Detection Pipeline on Board Satellites Based on Mag1c-SAS and LinkNet",
+          "arxivId": "2606.03675",
+          "url": "https://huggingface.co/papers/2606.03675",
+          "arxiv": "https://arxiv.org/abs/2606.03675",
+          "published": "2026-06-02",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Operational machine learning for remote spectroscopic detection of CH_{4} point sources",
+          "arxivId": "2511.07719",
+          "url": "https://huggingface.co/papers/2511.07719",
+          "arxiv": "https://arxiv.org/abs/2511.07719",
+          "published": "2025-11-11",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "FLAME: Physics-Guided Neural Operators for Onboard Satellite Methane Detection in Hyperspectral Imagery",
+          "arxivId": "2606.01577",
+          "url": "https://huggingface.co/papers/2606.01577",
+          "arxiv": "https://arxiv.org/abs/2606.01577",
+          "published": "2026-06-01",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "AI for operational methane emitter monitoring from space",
+          "arxivId": "2408.04745",
+          "url": "https://huggingface.co/papers/2408.04745",
+          "arxiv": "https://arxiv.org/abs/2408.04745",
+          "published": "2024-08-08",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "claim": "AI forecasting and spatial models can produce an urban air-quality baseline and identify pollution hotspots for cities.",
+      "origin": "Partner correspondence (public summary)",
+      "hf": {
+        "models": [
+          {
+            "id": "unknownbb007/smolified-airqualitydelhi",
+            "url": "https://huggingface.co/unknownbb007/smolified-airqualitydelhi",
+            "downloads": 8,
+            "likes": 0,
+            "task": "text-generation"
+          },
+          {
+            "id": "MuhammadFaisalHaroon/milan-air-quality-forecast-lstm",
+            "url": "https://huggingface.co/MuhammadFaisalHaroon/milan-air-quality-forecast-lstm",
+            "downloads": 6,
+            "likes": 1,
+            "task": null
+          },
+          {
+            "id": "cosuleabianca/eea-pm25",
+            "url": "https://huggingface.co/cosuleabianca/eea-pm25",
+            "downloads": 184,
+            "likes": 0,
+            "task": null
+          }
+        ],
+        "spaces": [
+          {
+            "id": "Adapting/country-air-quality-ranking",
+            "url": "https://huggingface.co/spaces/Adapting/country-air-quality-ranking",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          },
+          {
+            "id": "sm-test/Air-Quality-Predictor",
+            "url": "https://huggingface.co/spaces/sm-test/Air-Quality-Predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "CsanadT/Air_Quality_Index",
+            "url": "https://huggingface.co/spaces/CsanadT/Air_Quality_Index",
+            "downloads": null,
+            "likes": 0,
+            "task": "streamlit"
+          },
+          {
+            "id": "Mangken/PM25_prediction",
+            "url": "https://huggingface.co/spaces/Mangken/PM25_prediction",
+            "downloads": null,
+            "likes": 0,
+            "task": "docker"
+          },
+          {
+            "id": "vlark/pm25-predictor",
+            "url": "https://huggingface.co/spaces/vlark/pm25-predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "Mohitha-123/pm25-predictor",
+            "url": "https://huggingface.co/spaces/Mohitha-123/pm25-predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          }
+        ],
+        "datasets": [
+          {
+            "id": "neuralsorcerer/air-quality",
+            "url": "https://huggingface.co/datasets/neuralsorcerer/air-quality",
+            "downloads": 971,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "AkshayKarthick/india-weather-air-quality",
+            "url": "https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality",
+            "downloads": 367,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "dmariaa70/METRAQ-Air-Quality",
+            "url": "https://huggingface.co/datasets/dmariaa70/METRAQ-Air-Quality",
+            "downloads": 345,
+            "likes": 2,
+            "task": null
+          }
+        ]
+      },
+      "papers": [
+        {
+          "title": "AirPhyNet: Harnessing Physics-Guided Neural Networks for Air Quality Prediction",
+          "arxivId": "2402.03784",
+          "url": "https://huggingface.co/papers/2402.03784",
+          "arxiv": "https://arxiv.org/abs/2402.03784",
+          "published": "2024-02-06",
+          "upvotes": 1,
+          "code": "https://github.com/kethmih/airphynet",
+          "stars": 43,
+          "match": "exact"
+        },
+        {
+          "title": "Wind speed super-resolution and validation: from ERA5 to CERRA via diffusion models",
+          "arxivId": "2401.15469",
+          "url": "https://huggingface.co/papers/2401.15469",
+          "arxiv": "https://arxiv.org/abs/2401.15469",
+          "published": "2024-01-27",
+          "upvotes": 1,
+          "code": "https://github.com/fmerizzi/era5-to-cerra-via-diffusion-models",
+          "stars": 31,
+          "match": "exact"
+        },
+        {
+          "title": "Real-Time Long Horizon Air Quality Forecasting via Group-Relative Policy Optimization",
+          "arxivId": "2511.22169",
+          "url": "https://huggingface.co/papers/2511.22169",
+          "arxiv": "https://arxiv.org/abs/2511.22169",
+          "published": "2025-11-27",
+          "upvotes": 1,
+          "code": "https://github.com/kaist-cvml/FAKER-Air",
+          "stars": 16,
+          "match": "exact"
+        },
+        {
+          "title": "AirCast: Improving Air Pollution Forecasting Through Multi-Variable Data Alignment",
+          "arxivId": "2502.17919",
+          "url": "https://huggingface.co/papers/2502.17919",
+          "arxiv": "https://arxiv.org/abs/2502.17919",
+          "published": "2025-02-25",
+          "upvotes": 0,
+          "code": "https://github.com/vishalned/aircast",
+          "stars": 10,
+          "match": "exact"
+        },
+        {
+          "title": "AirDDE: Multifactor Neural Delay Differential Equations for Air Quality Forecasting",
+          "arxivId": "2603.17529",
+          "url": "https://huggingface.co/papers/2603.17529",
+          "arxiv": "https://arxiv.org/abs/2603.17529",
+          "published": "2026-03-18",
+          "upvotes": 0,
+          "code": "https://github.com/w2obin/airdde-aaai",
+          "stars": 5,
+          "match": "exact"
+        },
+        {
+          "title": "Urban Air Pollution Forecasting: a Machine Learning Approach leveraging Satellite Observations and Meteorological Forecasts",
+          "arxivId": "2405.19901",
+          "url": "https://huggingface.co/papers/2405.19901",
+          "arxiv": "https://arxiv.org/abs/2405.19901",
+          "published": "2024-05-30",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "NeuroDDAF: Neural Dynamic Diffusion-Advection Fields with Evidential Fusion for Air Quality Forecasting",
+          "arxivId": "2604.01175",
+          "url": "https://huggingface.co/papers/2604.01175",
+          "arxiv": "https://arxiv.org/abs/2604.01175",
+          "published": "2026-04-01",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Tackling Incomplete Data in Air Quality Prediction: A Bayesian Deep Learning Framework for Uncertainty Quantification",
+          "arxivId": "2511.02175",
+          "url": "https://huggingface.co/papers/2511.02175",
+          "arxiv": "https://arxiv.org/abs/2511.02175",
+          "published": "2025-11-04",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "AirQualityBench: A Realistic Evaluation Benchmark for Global Air Quality Forecasting",
+          "arxivId": "2605.05854",
+          "url": "https://huggingface.co/papers/2605.05854",
+          "arxiv": "https://arxiv.org/abs/2605.05854",
+          "published": "2026-05-07",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Advancing global aerosol forecasting with artificial intelligence",
+          "arxivId": "2412.02498",
+          "url": "https://huggingface.co/papers/2412.02498",
+          "arxiv": "https://arxiv.org/abs/2412.02498",
+          "published": "2024-12-03",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "claim": "Low-cost community sensors, calibrated with machine learning, can support independent citizen-science air monitoring.",
+      "origin": "Partner correspondence (public summary)",
+      "hf": {
+        "models": [
+          {
+            "id": "unknownbb007/smolified-airqualitydelhi",
+            "url": "https://huggingface.co/unknownbb007/smolified-airqualitydelhi",
+            "downloads": 8,
+            "likes": 0,
+            "task": "text-generation"
+          },
+          {
+            "id": "MuhammadFaisalHaroon/milan-air-quality-forecast-lstm",
+            "url": "https://huggingface.co/MuhammadFaisalHaroon/milan-air-quality-forecast-lstm",
+            "downloads": 6,
+            "likes": 1,
+            "task": null
+          }
+        ],
+        "spaces": [
+          {
+            "id": "nakas/Air-quality-Monitoring-sensor",
+            "url": "https://huggingface.co/spaces/nakas/Air-quality-Monitoring-sensor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "Mangken/PM25_prediction",
+            "url": "https://huggingface.co/spaces/Mangken/PM25_prediction",
+            "downloads": null,
+            "likes": 0,
+            "task": "docker"
+          },
+          {
+            "id": "vlark/pm25-predictor",
+            "url": "https://huggingface.co/spaces/vlark/pm25-predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          },
+          {
+            "id": "Mohitha-123/pm25-predictor",
+            "url": "https://huggingface.co/spaces/Mohitha-123/pm25-predictor",
+            "downloads": null,
+            "likes": 0,
+            "task": "gradio"
+          }
+        ],
+        "datasets": [
+          {
+            "id": "neuralsorcerer/air-quality",
+            "url": "https://huggingface.co/datasets/neuralsorcerer/air-quality",
+            "downloads": 971,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "AkshayKarthick/india-weather-air-quality",
+            "url": "https://huggingface.co/datasets/AkshayKarthick/india-weather-air-quality",
+            "downloads": 367,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "dmariaa70/METRAQ-Air-Quality",
+            "url": "https://huggingface.co/datasets/dmariaa70/METRAQ-Air-Quality",
+            "downloads": 345,
+            "likes": 2,
+            "task": null
+          },
+          {
+            "id": "DeadCardassian/PM25Vision",
+            "url": "https://huggingface.co/datasets/DeadCardassian/PM25Vision",
+            "downloads": 177,
+            "likes": 3,
+            "task": null
+          },
+          {
+            "id": "sumit1703/pm25-forecasting-data",
+            "url": "https://huggingface.co/datasets/sumit1703/pm25-forecasting-data",
+            "downloads": 110,
+            "likes": 0,
+            "task": null
+          },
+          {
+            "id": "goosemaths/tianjin-pm25-data",
+            "url": "https://huggingface.co/datasets/goosemaths/tianjin-pm25-data",
+            "downloads": 94,
+            "likes": 1,
+            "task": null
+          }
+        ]
+      },
+      "papers": [
+        {
+          "title": "AirPhyNet: Harnessing Physics-Guided Neural Networks for Air Quality Prediction",
+          "arxivId": "2402.03784",
+          "url": "https://huggingface.co/papers/2402.03784",
+          "arxiv": "https://arxiv.org/abs/2402.03784",
+          "published": "2024-02-06",
+          "upvotes": 1,
+          "code": "https://github.com/kethmih/airphynet",
+          "stars": 43,
+          "match": "broader"
+        },
+        {
+          "title": "Real-Time Long Horizon Air Quality Forecasting via Group-Relative Policy Optimization",
+          "arxivId": "2511.22169",
+          "url": "https://huggingface.co/papers/2511.22169",
+          "arxiv": "https://arxiv.org/abs/2511.22169",
+          "published": "2025-11-27",
+          "upvotes": 1,
+          "code": "https://github.com/kaist-cvml/FAKER-Air",
+          "stars": 16,
+          "match": "broader"
+        },
+        {
+          "title": "AirCast: Improving Air Pollution Forecasting Through Multi-Variable Data Alignment",
+          "arxivId": "2502.17919",
+          "url": "https://huggingface.co/papers/2502.17919",
+          "arxiv": "https://arxiv.org/abs/2502.17919",
+          "published": "2025-02-25",
+          "upvotes": 0,
+          "code": "https://github.com/vishalned/aircast",
+          "stars": 10,
+          "match": "broader"
+        },
+        {
+          "title": "AirDDE: Multifactor Neural Delay Differential Equations for Air Quality Forecasting",
+          "arxivId": "2603.17529",
+          "url": "https://huggingface.co/papers/2603.17529",
+          "arxiv": "https://arxiv.org/abs/2603.17529",
+          "published": "2026-03-18",
+          "upvotes": 0,
+          "code": "https://github.com/w2obin/airdde-aaai",
+          "stars": 5,
+          "match": "broader"
+        },
+        {
+          "title": "AirQualityBench: A Realistic Evaluation Benchmark for Global Air Quality Forecasting",
+          "arxivId": "2605.05854",
+          "url": "https://huggingface.co/papers/2605.05854",
+          "arxiv": "https://arxiv.org/abs/2605.05854",
+          "published": "2026-05-07",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "A Framework for Scalable Ambient Air Pollution Concentration Estimation",
+          "arxivId": "2401.08735",
+          "url": "https://huggingface.co/papers/2401.08735",
+          "arxiv": "https://arxiv.org/abs/2401.08735",
+          "published": "2024-01-16",
+          "upvotes": 1,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Tackling Incomplete Data in Air Quality Prediction: A Bayesian Deep Learning Framework for Uncertainty Quantification",
+          "arxivId": "2511.02175",
+          "url": "https://huggingface.co/papers/2511.02175",
+          "arxiv": "https://arxiv.org/abs/2511.02175",
+          "published": "2025-11-04",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Using remotely sensed data for air pollution assessment",
+          "arxivId": "2402.06653",
+          "url": "https://huggingface.co/papers/2402.06653",
+          "arxiv": "https://arxiv.org/abs/2402.06653",
+          "published": "2024-02-04",
+          "upvotes": 1,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "NeuroDDAF: Neural Dynamic Diffusion-Advection Fields with Evidential Fusion for Air Quality Forecasting",
+          "arxivId": "2604.01175",
+          "url": "https://huggingface.co/papers/2604.01175",
+          "arxiv": "https://arxiv.org/abs/2604.01175",
+          "published": "2026-04-01",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        },
+        {
+          "title": "Urban Air Pollution Forecasting: a Machine Learning Approach leveraging Satellite Observations and Meteorological Forecasts",
+          "arxivId": "2405.19901",
+          "url": "https://huggingface.co/papers/2405.19901",
+          "arxiv": "https://arxiv.org/abs/2405.19901",
+          "published": "2024-05-30",
+          "upvotes": 0,
+          "code": null,
+          "stars": null,
+          "match": "exact"
+        }
+      ]
+    }
+  ],
+  "note": "Automatic search results. Each Hugging Face item and paper is matched by keyword and must be reviewed before it is cited as evidence. Papers without a linked code repository are marked code=null."
+}
