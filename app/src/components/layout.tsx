@@ -230,6 +230,10 @@ function Footer() {
       ],
     },
     {
+      title: t("footer.app"),
+      links: [{ label: t("footer.apk"), href: "/downloads/cityair.apk", external: true }],
+    },
+    {
       title: t("footer.data"),
       links: [
         { label: t("footer.repo"), href: SITE.github, external: true },

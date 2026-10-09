@@ -1,0 +1,10 @@
+{
+  "appId": "com.atikova.cityair",
+  "appName": "CityAir",
+  "webDir": "www",
+  "server": {
+    "url": "https://aqmx.atikova.com",
+    "cleartext": false,
+    "androidScheme": "https"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CityAir</string>
+    <string name="title_activity_main">CityAir</string>
+    <string name="package_name">com.atikova.cityair</string>
+    <string name="custom_url_scheme">com.atikova.cityair</string>
+</resources>

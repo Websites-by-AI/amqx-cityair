@@ -54,7 +54,10 @@ push_to() {
   ( cd "$ROOT" && tar --exclude='./.git' --exclude='./node_modules' \
       --exclude='*/node_modules' --exclude='./app/site' --exclude='./app/dist' --exclude='./worker/dist' \
       --exclude='./worker/.wrangler' --exclude='./hf/space-static' --exclude='./private-archive' \
-      --exclude='./app/tsconfig.tsbuildinfo' -cf - . ) | ( cd "$tmp" && tar -xf - )
+      --exclude='./app/tsconfig.tsbuildinfo' \
+      --exclude='./mobile/node_modules' --exclude='./mobile/android/.gradle' \
+      --exclude='./mobile/android/app/build' --exclude='./mobile/android/build' \
+      --exclude='./mobile/android/local.properties' --exclude='./mobile/android/.idea' -cf - . ) | ( cd "$tmp" && tar -xf - )
 
   git -C "$tmp" add -A
   git -C "$tmp" commit -q -m "CityAir ${VERSION:-1.0.0}: readiness platform, city explorer, innovation matching, RAG assistant on Cloudflare + Hugging Face knowledge base"

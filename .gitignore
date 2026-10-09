@@ -24,3 +24,11 @@ private-archive/
 
 # preview PIN for local testing — never published
 private-archive/
+
+# Android / Capacitor build output (the signed APK is published via app/public/downloads)
+mobile/node_modules/
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/build/
+mobile/android/local.properties
+mobile/android/.idea/
