@@ -1,0 +1,292 @@
+{
+  "updated": "2026-10-09",
+  "status": "Hypotheses for outreach. No organisation has agreed to cooperate. Scores are our judgement from the cited evidence, not commitments.",
+  "weights": {
+    "problem": 0.25,
+    "mandate": 0.2,
+    "relation": 0.2,
+    "fit": 0.15,
+    "timing": 0.1,
+    "signal": 0.1
+  },
+  "criteria": {
+    "problem": "How directly the organisation faces the waste-methane, waste-burning or air-data problem CityAir addresses (0–5)",
+    "mandate": "Authority or budget to act: municipal company, ministry or agency (0–5)",
+    "relation": "Existing link to our work: events, exhibitor or partner records, prior contact (0–5)",
+    "fit": "How well CityAir's data, AI assistant and sensor/satellite tools complement what they do (0–5)",
+    "timing": "Near-term window, e.g. COP31 in Antalya, 9–20 Nov 2026 (0–5)",
+    "signal": "Public commitment or scrutiny that makes action more likely (0–5)"
+  },
+  "companies": [
+    {
+      "id": "istac",
+      "name": "İSTAÇ (Istanbul metropolitan waste company)",
+      "country": "Türkiye",
+      "group": "Waste operator",
+      "what": "Operates the Silivri and Şile landfills; burns captured landfill gas for energy.",
+      "scores": {
+        "problem": 5,
+        "mandate": 4,
+        "relation": 2,
+        "fit": 5,
+        "timing": 4,
+        "signal": 4
+      },
+      "why": "Satellite data (Carbon Mapper, analysed by UCLA) rank Silivri as Türkiye's worst super-emitting waste site, averaging 7.4 t methane/hour; Şile emits about 4 t/hour.",
+      "offer": "Satellite-plus-ground validation of landfill plumes and a public dashboard for residents near the site.",
+      "sources": [
+        {
+          "label": "The Guardian, 5 Oct 2026",
+          "url": "https://www.theguardian.com/environment/2026/oct/05/methane-mega-leaks-from-un-climate-summit-host-turkey"
+        },
+        {
+          "label": "Turkish Minute, 5 Oct 2026",
+          "url": "https://www.turkishminute.com/2026/10/05/turkey-urges-methane-cuts-despite-landfill-mega-leaks-report/"
+        }
+      ]
+    },
+    {
+      "id": "carbon-mapper",
+      "name": "Carbon Mapper (satellite methane data)",
+      "country": "United States",
+      "group": "Data & technology",
+      "what": "Nonprofit that tracks methane plumes from satellites; its data was used for the Turkish landfill ranking.",
+      "scores": {
+        "problem": 5,
+        "mandate": 2,
+        "relation": 0,
+        "fit": 4,
+        "timing": 3,
+        "signal": 4
+      },
+      "why": "Already measures the same plumes CityAir wants to validate on the ground; a natural data partner for the methane component.",
+      "offer": "Joint validation study: their plume observations against CityAir ground sensors near Silivri and Bishkek.",
+      "sources": [
+        {
+          "label": "Turkish Minute (Carbon Mapper data)",
+          "url": "https://www.turkishminute.com/2026/10/05/turkey-urges-methane-cuts-despite-landfill-mega-leaks-report/"
+        }
+      ]
+    },
+    {
+      "id": "evreka",
+      "name": "Evreka",
+      "country": "Türkiye",
+      "group": "Waste software",
+      "what": "Waste management software (listed as a target in the ISAF Smartex 2026 company map).",
+      "scores": {
+        "problem": 4,
+        "mandate": 2,
+        "relation": 1,
+        "fit": 4,
+        "timing": 3,
+        "signal": 2
+      },
+      "why": "Waste collection and operations data is the input a landfill-emissions dashboard needs.",
+      "offer": "Connect waste-flow data with CityAir emissions and air-quality indicators.",
+      "sources": [
+        {
+          "label": "CityAir expo company map",
+          "url": "#/expo"
+        }
+      ]
+    },
+    {
+      "id": "netcad",
+      "name": "Netcad",
+      "country": "Türkiye",
+      "group": "GIS & urban data",
+      "what": "GIS and urban data platform (ISAF Smartex 2026 target list).",
+      "scores": {
+        "problem": 3,
+        "mandate": 2,
+        "relation": 1,
+        "fit": 4,
+        "timing": 3,
+        "signal": 2
+      },
+      "why": "Maps of sites, sources and exposed residents are needed for hotspot analysis.",
+      "offer": "Hotspot maps and baseline layers for municipal planning.",
+      "sources": [
+        {
+          "label": "CityAir expo company map",
+          "url": "#/expo"
+        }
+      ]
+    },
+    {
+      "id": "mavili",
+      "name": "Mavili Elektronik",
+      "country": "Türkiye",
+      "group": "Gas & fire detection",
+      "what": "Gas and fire detection (exhibitor at ISAF Smartex 2026).",
+      "scores": {
+        "problem": 3,
+        "mandate": 1,
+        "relation": 3,
+        "fit": 3,
+        "timing": 4,
+        "signal": 2
+      },
+      "why": "Gas and fire sensors complement landfill-fire and methane monitoring. Listed as an exhibitor at the same fair (ISAF Smartex 2026), so an introduction is easy, but no contact has been made.",
+      "offer": "Sensor integration and alerting into the CityAir dashboard.",
+      "sources": [
+        {
+          "label": "CityAir expo company map",
+          "url": "#/expo"
+        }
+      ]
+    },
+    {
+      "id": "sensgreen",
+      "name": "Sensgreen",
+      "country": "Türkiye",
+      "group": "Air-quality IoT",
+      "what": "Indoor air-quality IoT (ISAF Smartex 2026 target list).",
+      "scores": {
+        "problem": 3,
+        "mandate": 1,
+        "relation": 2,
+        "fit": 3,
+        "timing": 3,
+        "signal": 2
+      },
+      "why": "Sensor vendor with an existing air-quality product line.",
+      "offer": "Shared sensor-data standard and calibration support.",
+      "sources": [
+        {
+          "label": "CityAir expo company map",
+          "url": "#/expo"
+        }
+      ]
+    },
+    {
+      "id": "food-generators",
+      "name": "Food-waste generators (food processors, supermarket chains, catering)",
+      "country": "Türkiye",
+      "group": "Waste generators",
+      "what": "Organic waste producers. Zero Waste rules place obligations on chain supermarkets, including waste drop-off points.",
+      "scores": {
+        "problem": 4,
+        "mandate": 2,
+        "relation": 0,
+        "fit": 3,
+        "timing": 2,
+        "signal": 3
+      },
+      "why": "Organic waste is the main source of landfill methane. No specific company has been identified yet.",
+      "offer": "Food-waste diversion data and emissions reporting for their own sites. Targets still to be named.",
+      "sources": [
+        {
+          "label": "Zero Waste regulation overview",
+          "url": "https://www.turkiyearastirmalari.org/en/2026/07/15/publications/ecology-pols/is-zero-waste-possible/"
+        }
+      ]
+    }
+  ],
+  "municipalities": [
+    {
+      "id": "istanbul",
+      "name": "Istanbul Metropolitan Municipality (İBB)",
+      "country": "Türkiye",
+      "scores": {
+        "problem": 5,
+        "mandate": 4,
+        "relation": 3,
+        "fit": 5,
+        "timing": 4,
+        "signal": 4
+      },
+      "why": "Owns the İSTAÇ landfills now under satellite scrutiny. Istanbul also hosted the International Clean Air Dialogue (Sept 2026), and the city is listed as a target in our expo map.",
+      "offer": "Landfill-methane monitoring pilot plus a public air-quality dashboard.",
+      "sources": [
+        {
+          "label": "The Guardian, 5 Oct 2026",
+          "url": "https://www.theguardian.com/environment/2026/oct/05/methane-mega-leaks-from-un-climate-summit-host-turkey"
+        }
+      ]
+    },
+    {
+      "id": "bishkek",
+      "name": "Bishkek city government",
+      "country": "Kyrgyz Republic",
+      "scores": {
+        "problem": 5,
+        "mandate": 3,
+        "relation": 4,
+        "fit": 4,
+        "timing": 3,
+        "signal": 4
+      },
+      "why": "Its dumpsite burns all year, and waste burning is a major PM2.5 source. The Green City Action Plan includes a waste-burning ban. MoveGreen already runs sensors there.",
+      "offer": "Sensor network on the dumpsite fence line and a waste-burning alert system.",
+      "sources": [
+        {
+          "label": "EBRD Green City Action Plan for Bishkek (2024)",
+          "url": "https://ebrdgreencities.com/assets/Uploads/PDF/20240628-GCAP-Bishkek_final_eng.pdf"
+        },
+        {
+          "label": "ADB: strategy for air pollution in Bishkek",
+          "url": "https://blogs.adb.org/blog/strategy-address-air-pollution-and-climate-change-bishkek"
+        },
+        {
+          "label": "Guttikunda et al. (2024), Bishkek emissions",
+          "url": "https://urbanemissions.info/wp-content/uploads/docs/2024-09-MDPI-air-AQ-Bishkek.pdf"
+        }
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "id": "turkiye",
+      "name": "Türkiye",
+      "country": "Türkiye",
+      "scores": {
+        "problem": 5,
+        "mandate": 5,
+        "relation": 4,
+        "fit": 4,
+        "timing": 5,
+        "signal": 3
+      },
+      "why": "Host of COP31 (Antalya, 9–20 Nov 2026) and has made waste-sector methane a priority. It has not joined the Global Methane Pledge, which is a credibility gap a platform can help close.",
+      "offer": "A national landfill-methane transparency pilot tied to the COP31 agenda.",
+      "sources": [
+        {
+          "label": "Circular Economy Mediterranean: COP31 waste methane",
+          "url": "https://www.circemed.org/articles/h/cop31-turkey-focuses-on-reducing-methane-from-waste.html"
+        },
+        {
+          "label": "Turkish Minute, 5 Oct 2026",
+          "url": "https://www.turkishminute.com/2026/10/05/turkey-urges-methane-cuts-despite-landfill-mega-leaks-report/"
+        }
+      ]
+    },
+    {
+      "id": "kyrgyzstan",
+      "name": "Kyrgyz Republic",
+      "country": "Kyrgyz Republic",
+      "scores": {
+        "problem": 5,
+        "mandate": 3,
+        "relation": 4,
+        "fit": 4,
+        "timing": 3,
+        "signal": 4
+      },
+      "why": "National air-quality and waste-burning plans are in place, and civil society (MoveGreen) is already active. ADB supported 50 national sensors in 2021.",
+      "offer": "A national waste-burning and sensor-data partnership with civil society.",
+      "sources": [
+        {
+          "label": "ADB: strategy for air pollution in Bishkek",
+          "url": "https://blogs.adb.org/blog/strategy-address-air-pollution-and-climate-change-bishkek"
+        },
+        {
+          "label": "EBRD Green City Action Plan for Bishkek (2024)",
+          "url": "https://ebrdgreencities.com/assets/Uploads/PDF/20240628-GCAP-Bishkek_final_eng.pdf"
+        }
+      ]
+    }
+  ],
+  "unscored": "Other cities in our 20-city list (Tashkent, Tehran, Cairo, Lagos, Delhi and the rest) and other countries have not been scored yet. They need the same evidence check before ranking."
+}

@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Expo from "./pages/Expo";
 import Partners from "./pages/Partners";
 import AiResearch from "./pages/AiResearch";
+import Market from "./pages/Market";
 import Admin from "./pages/Admin";
 import { LangProvider } from "./i18n";
 import Assistant from "./pages/Assistant";
@@ -99,6 +100,8 @@ export default function App() {
       case "/expo":
         page = <Expo />;
         break;
+      case "/market":
+        return <Market />;
       case "/ai-research":
         return <AiResearch />;
       case "/partners":

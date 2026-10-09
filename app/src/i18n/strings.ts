@@ -24,6 +24,7 @@ const en: Dict = {
   "nav.home": "Home",
   "nav.expo": "EXPO 2026",
   "nav.partners": "Partners",
+  "nav.market": "Market",
   "nav.guidance": "Guidance",
   "nav.assess": "Assess",
   "nav.results": "Results",
@@ -50,6 +51,7 @@ const en: Dict = {
   "footer.about":
     "An independent platform for city teams to diagnose air-quality readiness, plan action and reuse validated implementation knowledge.",
   "footer.platform": "Platform",
+  "footer.market": "Market & partners",
   "footer.aiResearch": "AI research",
   "footer.app": "Get the app",
   "footer.apk": "Android APK",
@@ -185,6 +187,7 @@ const tr: Dict = {
   "nav.home": "Ana sayfa",
   "nav.expo": "FUAR 2026",
   "nav.partners": "Ortaklar",
+  "nav.market": "Pazar",
   "nav.guidance": "Rehber",
   "nav.assess": "Değerlendirme",
   "nav.results": "Sonuçlar",
@@ -211,6 +214,7 @@ const tr: Dict = {
   "footer.about":
     "Şehir ekiplerinin hava kalitesi hazırlığını teşhis etmesi, eylem planlaması ve doğrulanmış uygulama bilgisini yeniden kullanması için bağımsız bir platform.",
   "footer.platform": "Platform",
+  "footer.market": "Pazar ve ortaklar",
   "footer.aiResearch": "Yapay zeka araştırması",
   "footer.app": "Uygulamayı al",
   "footer.apk": "Android APK",
@@ -346,6 +350,7 @@ const fa: Dict = {
   "nav.home": "خانه",
   "nav.expo": "نمایشگاه ۲۰۲۶",
   "nav.partners": "شرکا",
+  "nav.market": "بازار",
   "nav.guidance": "راهنما",
   "nav.assess": "ارزیابی",
   "nav.results": "نتایج",
@@ -372,6 +377,7 @@ const fa: Dict = {
   "footer.about":
     "پلتفرمی مستقل برای تیم‌های شهری تا آمادگی کیفیت هوا را تشخیص دهند، اقدام برنامه‌ریزی کنند و دانش اجرایی آزموده‌شده را بازاستفاده کنند.",
   "footer.platform": "پلتفرم",
+  "footer.market": "بازار و شرکا",
   "footer.aiResearch": "پژوهش هوش مصنوعی",
   "footer.app": "دریافت برنامه",
   "footer.apk": "APK اندروید",
@@ -507,6 +513,7 @@ const ar: Dict = {
   "nav.home": "الرئيسية",
   "nav.expo": "معرض ٢٠٢٦",
   "nav.partners": "الشركاء",
+  "nav.market": "السوق",
   "nav.guidance": "الدليل",
   "nav.assess": "التقييم",
   "nav.results": "النتائج",
@@ -533,6 +540,7 @@ const ar: Dict = {
   "footer.about":
     "منصة مستقلة لفرق المدن لتشخيص جاهزية جودة الهواء وتخطيط العمل وإعادة استخدام المعرفة التنفيذية المُختبرة.",
   "footer.platform": "المنصة",
+  "footer.market": "السوق والشركاء",
   "footer.aiResearch": "أبحاث الذكاء الاصطناعي",
   "footer.app": "احصل على التطبيق",
   "footer.apk": "APK أندرويد",
