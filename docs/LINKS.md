@@ -185,3 +185,13 @@
 - Geocoding: https://open-meteo.com/en/docs/geocoding-api
 - WHO global air-quality guidelines: https://www.who.int/publications/i/item/9789240034228
 - AQMx: https://aqmx.org/ · NASA FIRMS: https://firms.modaps.eosdis.nasa.gov/ · XPRIZE: https://www.xprize.org/
+
+## ۱۰) اپلیکیشن موبایل
+
+| مورد | لینک |
+| --- | --- |
+| صفحهٔ دانلود اپ | [aqmx.atikova.com/downloads/](https://aqmx.atikova.com/downloads/) |
+| فایل APK اندروید (v1.0.0، ۴٫۰ MB) | [cityair.apk](https://aqmx.atikova.com/downloads/cityair.apk) |
+| کد منبع اپ (Capacitor) | [mobile/](https://github.com/Websites-by-AI/amqx-cityair/tree/main/mobile) |
+
+> APK با کلید دیباگ امضا شده و در Google Play نیست. نسخهٔ iOS (IPA) نیاز به Mac و حساب توسعه‌دهندهٔ Apple دارد؛ فعلاً «افزودن به صفحهٔ اصلی» در Safari جایگزین است.
